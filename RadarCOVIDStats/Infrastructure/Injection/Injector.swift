@@ -14,7 +14,7 @@ final class Injector {
     internal var currentContainer = Container()
 
     init() {
-
+        PresentationContainer(container: currentContainer)
     }
 }
 
