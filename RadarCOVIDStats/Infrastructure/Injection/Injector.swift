@@ -14,6 +14,7 @@ final class Injector {
     internal var currentContainer = Container()
 
     init() {
+        CoordinatorsContainer(container: currentContainer)
         PresentationContainer(container: currentContainer)
     }
 }
