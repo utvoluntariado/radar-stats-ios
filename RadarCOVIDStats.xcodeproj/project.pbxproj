@@ -49,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAE0F35A251D27680077BC5F /* RadarCOVIDStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RadarCOVIDStats.entitlements; sourceTree = "<group>"; };
 		E914C39B251CD2DB004A578C /* LastHourStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastHourStats.swift; sourceTree = "<group>"; };
 		E914C39F251CD2F4004A578C /* TodayStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStats.swift; sourceTree = "<group>"; };
 		E914C3A2251CD321004A578C /* LastWeekStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastWeekStats.swift; sourceTree = "<group>"; };
@@ -299,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CBA6FB251B88BD00A7A2EC /* Info.plist */,
+				AAE0F35A251D27680077BC5F /* RadarCOVIDStats.entitlements */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -614,6 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RadarCOVIDStats/RadarCOVIDStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W762WV5CVG;
 				INFOPLIST_FILE = "RadarCOVIDStats/Infrastructure/Supporting files/Info.plist";
@@ -623,6 +626,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgejramos.RadarCOVIDStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -633,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RadarCOVIDStats/RadarCOVIDStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W762WV5CVG;
 				INFOPLIST_FILE = "RadarCOVIDStats/Infrastructure/Supporting files/Info.plist";
@@ -642,6 +647,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgejramos.RadarCOVIDStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
