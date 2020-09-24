@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import PromiseKit
+
+protocol StatsInteractor {
+    var repository: StatsRepository! { get set }
+
+    func run() -> Promise<Stats>
+}
+
+final class StatsInteractorDefault: StatsInteractor {
+    var repository: StatsRepository!
+
+    func run() -> Promise<Stats> {
+        return repository.stats()
+    }
+}
