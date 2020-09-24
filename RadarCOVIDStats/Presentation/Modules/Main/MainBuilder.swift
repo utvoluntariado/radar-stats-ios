@@ -24,6 +24,7 @@ final class MainBuilder {
         var presenter = <~MainPresenter.self
         presenter.router = router
         presenter.view = view
+        presenter.statsInteractor = <~StatsInteractor.self
 
         view.presenter = presenter
 
