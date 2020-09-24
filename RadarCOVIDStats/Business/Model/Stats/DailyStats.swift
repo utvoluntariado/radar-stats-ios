@@ -1,5 +1,5 @@
 //
-//  Stats.swift
+//  DailyStats.swift
 //  RadarCOVIDStats
 //
 //  Original idea by Pedro José Pereira Vieito
