@@ -10,6 +10,6 @@ import Foundation
 
 struct API {
     struct GitHub {
-        static let stats = HTTPEndpoint(address: "https://raw.githubusercontent.com/pvieito/RadarCOVID-Report/master/Data/Resources/Current/RadarCOVID-Report-Summary-Results.json", method: .GET)
+        static let stats = HTTPEndpoint(address: "https://raw.githubusercontent.com/pvieito/RadarCOVID-Report/master/Data/Resources/Current/RadarCOVID-Report-Summary-Results.json", method: .GET, responseDecodingStrategy: .convertFromSnakeCase)
     }
 }

@@ -11,6 +11,7 @@ import Foundation
 struct HTTPEndpoint: Equatable {
     private(set) var address: String
     private(set) var method: HTTPMethod
+    private(set) var responseDecodingStrategy: JSONDecoder.KeyDecodingStrategy?
 }
 
 func == (lhs: HTTPEndpoint, rhs: HTTPEndpoint) -> Bool {

@@ -54,8 +54,6 @@ struct HTTPRequest<ResponseModel: Codable> {
     }
 
     private func defaultHTTPHeaders() -> [String: String] {
-        var headersDictionary = [String: String]()
-        headersDictionary["Accept-Encoding"] = "application/json"
-        return headersDictionary
+        return [:]
     }
 }
