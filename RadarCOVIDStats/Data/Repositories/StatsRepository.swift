@@ -32,7 +32,8 @@ class StatsRepositoryDefault: StatsRepository {
                 httpClient.run(request: &request, { (result) in
                     switch result {
                     case .success(let result):
-                        try? self.storageService.store(item: result, on: .defaults(key: StorageKey.UserDefaults.hourlyStats))
+                        let localStats = LocallyStoredStats(date: Date(), stats: result)
+                        try? self.storageService.store(item: localStats, on: .defaults(key: StorageKey.UserDefaults.hourlyStats))
                         seal.fulfill(result)
 
                     case .failure(let error):
