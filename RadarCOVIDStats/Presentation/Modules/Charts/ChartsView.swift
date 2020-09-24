@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  ChartsView.swift
 //  RadarCOVIDStats
 //
 //  Original idea by Pedro José Pereira Vieito
