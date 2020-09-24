@@ -14,6 +14,6 @@ struct DailyStats: Codable {
     let sharedTeksByGenerationDate: Int
     let sharedTeksByUploadDate: Int
     let sharedDiagnoses: Int
-    let teksPerSharedDisagnosis: Double
+    let teksPerSharedDiagnosis: Double
     let sharedDiagnosesPerCovidCase: Double
 }

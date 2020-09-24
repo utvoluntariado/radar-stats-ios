@@ -14,4 +14,9 @@ protocol MainView {
 
 class MainViewController: UITabBarController, MainView {
     var presenter: MainPresenter!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.gatherStats()
+    }
 }

@@ -51,11 +51,6 @@ class HTTPClientDefault: NSObject, HTTPClient {
     }
 
     private func didCompleteDataTask<ResponseModel: Codable>(response: HTTPURLResponse, request: HTTPRequest<ResponseModel>, data: Data?, error: Error?, completion: @escaping (Result<ResponseModel, Error>) -> Void) {
-        var notificationObject: [String: Any] = ["response": response]
-        if let urlRequest = request.urlRequest { notificationObject["request"] = urlRequest }
-        if let responseData = data { notificationObject["data"] = responseData }
-        if let responseError = error { notificationObject["error"] = responseError }
-
         if let error = error {
             didFail(withError: error, completion: completion)
         } else if let data = data {
@@ -74,7 +69,9 @@ class HTTPClientDefault: NSObject, HTTPClient {
             if request is HTTPRequest<Empty> {
                 completion(Result<ResponseModel, Error>.success(Empty() as! ResponseModel))
             } else {
-                let expectedModel = try JSONDecoder().decode(ResponseModel.self, from: data)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = request.endpoint.responseDecodingStrategy ?? .useDefaultKeys
+                let expectedModel = try decoder.decode(ResponseModel.self, from: data)
                 completion(Result<ResponseModel, Error>.success(expectedModel))
             }
         } catch {

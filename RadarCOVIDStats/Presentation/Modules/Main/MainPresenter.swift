@@ -24,9 +24,9 @@ final class MainPresenterDefault: MainPresenter {
 
     func gatherStats() {
         statsInteractor.run().done { stats in
-            
+            print(stats)
         }.catch { error in
-
+            print(error)
         }
     }
 }
