@@ -13,7 +13,6 @@ class PresentationContainer {
     init(container: Container) { prepareInjections(container: container) }
 
     internal func prepareInjections(container: Container) {
-        container.register(MainRouter.self) { _ in MainRouterDefault() }.inObjectScope(.container)
-        container.register(MainPresenter.self) { _ in MainPresenterDefault() }.inObjectScope(.container)
+        container.register(ChartsPresenter.self) { _ in ChartsPresenterDefault() }.inObjectScope(.container)
     }
 }

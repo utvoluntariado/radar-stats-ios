@@ -20,6 +20,7 @@ final class ChartsBuilder {
 
         var presenter = <~ChartsPresenter.self
         presenter.view = view
+        presenter.statsInteractor = <~StatsInteractor.self
 
         view.presenter = presenter
 

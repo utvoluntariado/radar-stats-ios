@@ -18,19 +18,7 @@ final class MainBuilder {
         viewController = thisViewController
         view = thisViewController as MainView
 
-        var router = <~MainRouter.self
-        router.viewController = (view as! MainViewController)
-
-        var presenter = <~MainPresenter.self
-        presenter.router = router
-        presenter.view = view
-        presenter.statsInteractor = <~StatsInteractor.self
-
-        view.presenter = presenter
-
         var module = Module(controller: viewController)
-        module.router = router
-        module.presenter = presenter
         module.view = view
 
         return module

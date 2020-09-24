@@ -46,6 +46,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-VP-Aa8" customClass="PieChartView" customModule="Charts">
                                                     <rect key="frame" x="20" y="19" width="374" height="208"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="Ny0-XY-xua"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>

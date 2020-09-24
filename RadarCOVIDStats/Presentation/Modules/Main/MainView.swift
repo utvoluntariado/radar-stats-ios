@@ -9,14 +9,13 @@
 import UIKit
 
 protocol MainView {
-    var presenter: MainPresenter! { get set }
+
 }
 
 class MainViewController: UITabBarController, MainView {
-    var presenter: MainPresenter!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.gatherStats()
+        viewControllers = [ChartsBuilder.build.controller]
+        tabBar.clipsToBounds = true
     }
 }

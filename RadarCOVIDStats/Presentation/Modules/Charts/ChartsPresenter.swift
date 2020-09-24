@@ -10,8 +10,21 @@ import Foundation
 
 protocol ChartsPresenter {
     var view: ChartsView! { get set }
+    var statsInteractor: StatsInteractor! { get set }
+
+    func gatherStats()
 }
 
 final class ChartsPresenterDefault: ChartsPresenter {
     var view: ChartsView!
+
+    var statsInteractor: StatsInteractor!
+
+    func gatherStats() {
+        statsInteractor.run().done { stats in
+            print(stats)
+        }.catch { error in
+            print(error)
+        }
+    }
 }
