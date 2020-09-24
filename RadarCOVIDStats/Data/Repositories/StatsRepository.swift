@@ -22,14 +22,20 @@ class StatsRepositoryDefault: StatsRepository {
 
     func stats() -> Promise<Stats> {
         return Promise<Stats> { seal in
-            httpClient.configure(using: .github)
-            var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
-            httpClient.run(request: &request, { (result) in
-                switch result {
-                case .success(let result): seal.fulfill(result)
-                case .failure(let error): seal.reject(error)
-                }
-            })
+            if let storedStats: LocallyStoredStats = storageService.retrieve(from: .defaults(key: StorageKey.UserDefaults.hourlyStats)),
+               let diff = Calendar.current.dateComponents([.hour], from: storedStats.date, to: Date()).hour,
+               diff < 1 {
+                    seal.fulfill(storedStats.stats)
+            } else {
+                httpClient.configure(using: .github)
+                var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
+                httpClient.run(request: &request, { (result) in
+                    switch result {
+                    case .success(let result): seal.fulfill(result)
+                    case .failure(let error): seal.reject(error)
+                    }
+                })
+            }
         }
     }
 }
