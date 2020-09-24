@@ -17,7 +17,7 @@ protocol LaunchCoordinator {
 
 class LaunchCoordinatorDefault: LaunchCoordinator {
     var application: UIApplication?
-    var window = UIWindow(frame: UIScreen.main.bounds)
+    lazy var window = UIWindow(frame: UIScreen.main.bounds)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.application = application
