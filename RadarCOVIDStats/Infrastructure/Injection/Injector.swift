@@ -15,6 +15,9 @@ final class Injector {
 
     init() {
         CoordinatorsContainer(container: currentContainer)
+        BusinessContainer(container: currentContainer)
+        NetworkContainer(container: currentContainer)
+        DataContainer(container: currentContainer)
         PresentationContainer(container: currentContainer)
     }
 }
