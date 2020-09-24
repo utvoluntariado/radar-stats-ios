@@ -13,6 +13,7 @@ struct Empty: Codable {}
 protocol HTTPClient {
     var isConfigured: Bool { get }
 
+    func configure(using standard: HTTPClientStandardConfigurations)
     func configure(using configuration: HTTPClientConfiguration)
     func run<ResponseModel: Codable>(request: inout HTTPRequest<ResponseModel>, _ completion: @escaping (Result<ResponseModel, Error>) -> Void)
 }
@@ -22,6 +23,12 @@ class HTTPClientDefault: NSObject, HTTPClient {
 
     var session: URLSession! { return URLSession.shared }
     private var configuration: HTTPClientConfiguration?
+
+    func configure(using standard: HTTPClientStandardConfigurations) {
+        guard let githubURL = URL(string: "https://raw.githubusercontent.com/pvieito/RadarCOVID-Report/master") else { return }
+        let httpClientConfiguration = HTTPClientConfiguration(baseURL: githubURL)
+        configure(using: httpClientConfiguration)
+    }
 
     func configure(using configuration: HTTPClientConfiguration) {
         self.configuration = configuration

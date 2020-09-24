@@ -22,10 +22,7 @@ class StatsRepositoryDefault: StatsRepository {
 
     func stats() -> Promise<Stats> {
         return Promise<Stats> { seal in
-            guard let githubURL = URL(string: "https://raw.githubusercontent.com/pvieito/RadarCOVID-Report/master") else { seal.reject(HTTPClientError.invalidBaseURL); return }
-            let httpClientConfiguration = HTTPClientConfiguration(baseURL: githubURL)
-            httpClient.configure(using: httpClientConfiguration)
-            
+            httpClient.configure(using: .github)
             var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
             httpClient.run(request: &request, { (result) in
                 switch result {

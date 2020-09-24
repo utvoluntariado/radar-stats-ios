@@ -11,3 +11,7 @@ import Foundation
 struct HTTPClientConfiguration {
     let baseURL: URL
 }
+
+enum HTTPClientStandardConfigurations {
+    case github
+}
