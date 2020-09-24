@@ -9,5 +9,9 @@
 import Foundation
 
 struct Stats: Codable {
-    
+    let extractionDatetime: TimeInterval
+    let lastHour: LastHourStats
+    let today: TodayStats
+    let last7Days: LastWeekStats
+    let dailyResults: [DailyStats]
 }
