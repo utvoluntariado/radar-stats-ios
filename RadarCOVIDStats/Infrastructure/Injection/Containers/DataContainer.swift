@@ -16,6 +16,7 @@ class DataContainer {
         container.register(StatsRepository.self) { resolver in
             let repository = StatsRepositoryDefault()
             repository.httpClient = resolver.resolve(HTTPClient.self)
+            repository.storageService = resolver.resolve(StorageService.self)
             return repository
         }
     }

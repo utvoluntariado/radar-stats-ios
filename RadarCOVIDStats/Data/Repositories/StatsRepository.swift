@@ -11,12 +11,14 @@ import PromiseKit
 
 protocol StatsRepository {
     var httpClient: HTTPClient! { get set }
+    var storageService: StorageService! { get set }
 
     func stats() -> Promise<Stats>
 }
 
 class StatsRepositoryDefault: StatsRepository {
     var httpClient: HTTPClient!
+    var storageService: StorageService!
 
     func stats() -> Promise<Stats> {
         return Promise<Stats> { seal in
