@@ -31,8 +31,12 @@ class StatsRepositoryDefault: StatsRepository {
                 var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
                 httpClient.run(request: &request, { (result) in
                     switch result {
-                    case .success(let result): seal.fulfill(result)
-                    case .failure(let error): seal.reject(error)
+                    case .success(let result):
+                        try? self.storageService.store(item: result, on: .defaults(key: StorageKey.UserDefaults.hourlyStats))
+                        seal.fulfill(result)
+
+                    case .failure(let error):
+                        seal.reject(error)
                     }
                 })
             }
