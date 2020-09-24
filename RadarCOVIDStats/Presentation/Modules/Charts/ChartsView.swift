@@ -15,4 +15,5 @@ protocol ChartsView {
 class ChartsViewController: UIViewController, ChartsView {
     var presenter: ChartsPresenter!
 
+    @IBOutlet private weak var chartsTable: ChartsTableView!
 }

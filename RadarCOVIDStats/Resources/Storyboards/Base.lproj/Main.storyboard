@@ -27,18 +27,58 @@
         <!--Item 1-->
         <scene sceneID="I60-zF-djj">
             <objects>
-                <viewController id="uvw-hk-qWt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Charts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvw-hk-qWt" customClass="ChartsViewController" customModule="RadarCOVIDStats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WrG-ed-rpo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Zd-Nt-gqk" customClass="ChartsTableView" customModule="RadarCOVIDStats" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" rowHeight="246" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="246"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-VP-Aa8" customClass="PieChartView" customModule="Charts">
+                                                    <rect key="frame" x="20" y="19" width="374" height="208"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="edJ-VP-Aa8" secondAttribute="trailing" id="ElR-Uh-xfG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="edJ-VP-Aa8" secondAttribute="bottom" constant="8" id="LfV-Pt-xIz"/>
+                                                <constraint firstItem="edJ-VP-Aa8" firstAttribute="top" secondItem="6Uw-ig-X1u" secondAttribute="topMargin" constant="8" id="NMu-yY-s3f"/>
+                                                <constraint firstItem="edJ-VP-Aa8" firstAttribute="leading" secondItem="6Uw-ig-X1u" secondAttribute="leadingMargin" id="dqu-rU-arJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chartView" destination="edJ-VP-Aa8" id="LCG-vx-You"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uYD-Mm-2g6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="uYD-Mm-2g6" secondAttribute="top" id="HLt-zR-Poe"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="trailing" secondItem="uYD-Mm-2g6" secondAttribute="trailing" id="OrF-yg-NKx"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="bottom" secondItem="uYD-Mm-2g6" secondAttribute="bottom" id="n7S-wb-f1Y"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="uYD-Mm-2g6" secondAttribute="leading" id="zgH-ad-Zam"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="dIj-6h-etg"/>
+                    <connections>
+                        <outlet property="chartsTable" destination="9Zd-Nt-gqk" id="qYh-Cj-QPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXY-a2-M7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="-445"/>
+            <point key="canvasLocation" x="318.84057971014494" y="-445.3125"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="CPp-0L-ptc">
