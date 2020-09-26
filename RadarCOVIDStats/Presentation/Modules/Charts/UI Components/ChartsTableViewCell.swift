@@ -77,32 +77,3 @@ final class ChartsTableViewCell: UITableViewCell {
 
     }
 }
-
-final class NumberAxisFormatter: IAxisValueFormatter {
-    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let number = NSNumber(value: value)
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = false
-        numberFormatter.usesGroupingSeparator = true
-        numberFormatter.groupingSeparator = Locale.current.groupingSeparator
-        return numberFormatter.string(from: number) ?? "NaN"
-    }
-}
-
-final class DateAxisFormatter: IAxisValueFormatter {
-    private let dates: [TimeInterval]
-
-    init(dates: [TimeInterval]) {
-        self.dates = dates
-    }
-
-    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let timestamp = dates[Int(value)]
-        let date = Date(timeIntervalSince1970: timestamp / 1000)
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.dateStyle = .short
-        return formatter.string(from: date)
-    }
-}
