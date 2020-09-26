@@ -17,7 +17,11 @@ enum ChartType: Int {
 
 final class ChartsTableViewCell: UITableViewCell {
     static let reuseIndentifier = "ChartCell"
+
     private var modelset: Stats!
+    private var sortedDailyResults: [DailyStats] {
+        return modelset.dailyResults.sorted(by: { $0.sampleDate < $1.sampleDate })
+    }
 
     @IBOutlet weak var chartView: LineChartView!
 
@@ -32,8 +36,8 @@ final class ChartsTableViewCell: UITableViewCell {
 
     private func drawCovidCasesChart() {
         var dataEntries: [ChartDataEntry] = []
-        for day in modelset.dailyResults.sorted(by: { $0.sampleDate < $1.sampleDate }) {
-            let dataEntry = ChartDataEntry(x: day.sampleDate, y: Double(day.covidCases))
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.covidCases))
             dataEntries.append(dataEntry)
         }
 
@@ -41,22 +45,30 @@ final class ChartsTableViewCell: UITableViewCell {
         chartDataSet.fillColor = .red
         chartDataSet.drawFilledEnabled = true
         chartDataSet.mode = .horizontalBezier
-        chartDataSet.circleRadius = 4
+        chartDataSet.circleRadius = 8
         chartDataSet.circleColors = [.red]
-        chartDataSet.circleHoleRadius = 0
-        chartDataSet.lineWidth = 2
+        chartDataSet.circleHoleRadius = 4
+        chartDataSet.lineWidth = 4
         chartDataSet.colors = [.red]
-        let chartData = LineChartData(dataSet: chartDataSet)
 
+        let chartData = LineChartData(dataSet: chartDataSet)
+        chartView.data = chartData
+
+        let xAxisValueFormatter = DateAxisFormatter(dates: sortedDailyResults.map { $0.sampleDate })
         let xAxis = chartView.xAxis
         xAxis.granularity = 1
         xAxis.granularityEnabled = true
         xAxis.labelPosition = .bottom
-        xAxis.labelRotationAngle = 270
+        xAxis.labelRotationAngle = 60
+        xAxis.valueFormatter = xAxisValueFormatter
         xAxis.drawGridLinesEnabled = false
-        xAxis.valueFormatter = LabelFormatter()
 
-        chartView.data = chartData
+        let yAxisValueFormatter = NumberAxisFormatter()
+        let yAxis = chartView.leftAxis
+        yAxis.valueFormatter = yAxisValueFormatter
+
+        chartView.setVisibleXRangeMaximum(6)
+        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.rightAxis.enabled = false
     }
@@ -66,12 +78,31 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 }
 
-class LabelFormatter: IAxisValueFormatter {
+final class NumberAxisFormatter: IAxisValueFormatter {
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let date = Date(timeIntervalSince1970: value / 1000)
+        let number = NSNumber(value: value)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.allowsFloats = false
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = Locale.current.groupingSeparator
+        return numberFormatter.string(from: number) ?? "NaN"
+    }
+}
+
+final class DateAxisFormatter: IAxisValueFormatter {
+    private let dates: [TimeInterval]
+
+    init(dates: [TimeInterval]) {
+        self.dates = dates
+    }
+
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        let timestamp = dates[Int(value)]
+        let date = Date(timeIntervalSince1970: timestamp / 1000)
         let formatter = DateFormatter()
         formatter.locale = Locale.current
-        formatter.dateFormat = "dd MMM"
+        formatter.dateStyle = .short
         return formatter.string(from: date)
     }
 }
