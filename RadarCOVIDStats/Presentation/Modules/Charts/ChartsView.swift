@@ -10,6 +10,8 @@ import UIKit
 
 protocol ChartsView {
     var presenter: ChartsPresenter! { get set }
+
+    func update(using stats: Stats)
 }
 
 class ChartsViewController: UIViewController, ChartsView {
@@ -20,5 +22,9 @@ class ChartsViewController: UIViewController, ChartsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.gatherStats()
+    }
+
+    func update(using stats: Stats) {
+        chartsTable.update(modelset: stats)
     }
 }

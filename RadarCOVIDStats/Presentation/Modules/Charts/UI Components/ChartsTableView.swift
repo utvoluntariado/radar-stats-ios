@@ -9,5 +9,9 @@
 import UIKit
 
 final class ChartsTableView: UITableView {
+    private var modelset: Stats!
 
+    func update(modelset: Stats) {
+        self.modelset = modelset
+    }
 }

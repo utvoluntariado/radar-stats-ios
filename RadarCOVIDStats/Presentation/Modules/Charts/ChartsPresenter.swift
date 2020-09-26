@@ -22,7 +22,7 @@ final class ChartsPresenterDefault: ChartsPresenter {
 
     func gatherStats() {
         statsInteractor.run().done { stats in
-            print(stats)
+            self.view.update(using: stats)
         }.catch { error in
             print(error)
         }
