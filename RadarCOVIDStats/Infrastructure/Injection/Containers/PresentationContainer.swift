@@ -14,5 +14,6 @@ class PresentationContainer {
 
     internal func prepareInjections(container: Container) {
         container.register(ChartsPresenter.self) { _ in ChartsPresenterDefault() }.inObjectScope(.container)
+        container.register(ChartsFactory.self) { _ in ChartsFactoryDefault() }.inObjectScope(.container)
     }
 }
