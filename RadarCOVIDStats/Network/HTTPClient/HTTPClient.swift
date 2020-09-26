@@ -25,7 +25,7 @@ class HTTPClientDefault: NSObject, HTTPClient {
     private var configuration: HTTPClientConfiguration?
 
     func configure(using standard: HTTPClientStandardConfigurations) {
-        guard let githubURL = URL(string: "https://raw.githubusercontent.com/pvieito/RadarCOVID-Report/master") else { return }
+        guard let githubURL = URL(string: "https://raw.githubusercontent.com/pvieito/RadarCOVID-STATS/master") else { return }
         let httpClientConfiguration = HTTPClientConfiguration(baseURL: githubURL)
         configure(using: httpClientConfiguration)
     }
