@@ -36,18 +36,18 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" rowHeight="246" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" rowHeight="246" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="246"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-VP-Aa8" customClass="PieChartView" customModule="Charts">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-VP-Aa8" customClass="LineChartView" customModule="Charts">
                                                     <rect key="frame" x="20" y="19" width="374" height="208"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="Ny0-XY-xua"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="300" id="Ny0-XY-xua"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

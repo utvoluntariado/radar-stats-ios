@@ -9,7 +9,7 @@
 import UIKit
 
 final class ChartsTableView: UITableView {
-    private var modelset: Stats!
+    private var modelset: Stats?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,13 +23,13 @@ final class ChartsTableView: UITableView {
     }
 }
 
-
 extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return modelset != nil ? 2 : 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let modelset = modelset else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: ChartsTableViewCell.reuseIndentifier, for: indexPath) as! ChartsTableViewCell
         cell.bind(modelset: modelset, for: ChartType(rawValue: indexPath.row) ?? .unknown)
         return cell
