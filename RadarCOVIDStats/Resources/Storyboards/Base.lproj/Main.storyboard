@@ -36,30 +36,42 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" rowHeight="246" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="246"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-VP-Aa8" customClass="LineChartView" customModule="Charts">
-                                                    <rect key="frame" x="20" y="19" width="374" height="208"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="300" id="Ny0-XY-xua"/>
-                                                    </constraints>
-                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Kv-bt-lS9">
+                                                    <rect key="frame" x="20" y="11" width="374" height="271"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-29-NeI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-61-x4L">
+                                                            <rect key="frame" x="0.0" y="21" width="374" height="250"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" priority="999" constant="250" id="sy7-Pa-blE"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="edJ-VP-Aa8" secondAttribute="trailing" id="ElR-Uh-xfG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="edJ-VP-Aa8" secondAttribute="bottom" constant="8" id="LfV-Pt-xIz"/>
-                                                <constraint firstItem="edJ-VP-Aa8" firstAttribute="top" secondItem="6Uw-ig-X1u" secondAttribute="topMargin" constant="8" id="NMu-yY-s3f"/>
-                                                <constraint firstItem="edJ-VP-Aa8" firstAttribute="leading" secondItem="6Uw-ig-X1u" secondAttribute="leadingMargin" id="dqu-rU-arJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6Kv-bt-lS9" secondAttribute="bottom" id="9eW-4U-tn0"/>
+                                                <constraint firstItem="6Kv-bt-lS9" firstAttribute="top" secondItem="6Uw-ig-X1u" secondAttribute="topMargin" id="LiR-rU-WJs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6Kv-bt-lS9" secondAttribute="trailing" id="ldV-qU-1Gd"/>
+                                                <constraint firstItem="6Kv-bt-lS9" firstAttribute="leading" secondItem="6Uw-ig-X1u" secondAttribute="leadingMargin" id="oY2-5D-R9y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chartView" destination="edJ-VP-Aa8" id="LCG-vx-You"/>
+                                            <outlet property="chartTitleLabel" destination="RN8-29-NeI" id="FlT-so-cfy"/>
+                                            <outlet property="chartWrapperView" destination="6Gv-61-x4L" id="taX-Qh-276"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXY-a2-M7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="318.84057971014494" y="-445.3125"/>
+            <point key="canvasLocation" x="474" y="-445"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="CPp-0L-ptc">

@@ -11,6 +11,7 @@ import Charts
 
 protocol ChartsFactory {
     func drawCovidCasesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: LineChartView)
+    func drawSharedDiagnosesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView)
 }
 
 final class ChartsFactoryDefault: ChartsFactory {
@@ -45,5 +46,35 @@ final class ChartsFactoryDefault: ChartsFactory {
         chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.rightAxis.enabled = false
+
+        chartView.notifyDataSetChanged()
+        chartView.moveViewToX(xAxis.axisMaximum)
+    }
+
+    func drawSharedDiagnosesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView) {
+        let chartDataSet = BarChartDataSet(entries: entries)
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chartView.data = chartData
+
+        let xAxisValueFormatter = DateAxisFormatter(dates: xAxisLabelData)
+        let xAxis = chartView.xAxis
+        xAxis.granularity = 1
+        xAxis.granularityEnabled = true
+        xAxis.labelPosition = .bottom
+        xAxis.labelRotationAngle = 60
+        xAxis.valueFormatter = xAxisValueFormatter
+        xAxis.drawGridLinesEnabled = false
+
+        let yAxisValueFormatter = NumberAxisFormatter()
+        let yAxis = chartView.leftAxis
+        yAxis.valueFormatter = yAxisValueFormatter
+
+        chartView.setVisibleXRangeMaximum(6)
+        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
+        chartView.legend.enabled = false
+        chartView.rightAxis.enabled = false
+
+        chartView.notifyDataSetChanged()
+        chartView.moveViewToX(xAxis.axisMaximum)
     }
 }
