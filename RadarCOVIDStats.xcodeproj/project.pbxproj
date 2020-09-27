@@ -20,9 +20,11 @@
 		E914C3CA251CE497004A578C /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3C9251CE497004A578C /* StorageService.swift */; };
 		E914C3CF251CE786004A578C /* LocallyStoredStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3CE251CE786004A578C /* LocallyStoredStats.swift */; };
 		E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3D3251CE81B004A578C /* ServicesContainer.swift */; };
-		E914C3F8251FA6BA004A578C /* NumberAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3F7251FA6BA004A578C /* NumberAxisFormatter.swift */; };
-		E914C3FC251FA6E6004A578C /* DateAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3FB251FA6E6004A578C /* DateAxisFormatter.swift */; };
+		E914C3F8251FA6BA004A578C /* ChartAxisNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3F7251FA6BA004A578C /* ChartAxisNumberFormatter.swift */; };
+		E914C3FC251FA6E6004A578C /* ChartAxisDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3FB251FA6E6004A578C /* ChartAxisDateFormatter.swift */; };
 		E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C401251FA7C2004A578C /* ChartsFactory.swift */; };
+		E914C40625205ADD004A578C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E914C40525205ADD004A578C /* Colors.xcassets */; };
+		E914C40A25205EEA004A578C /* ChartGraphicFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
 		E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */; };
@@ -65,9 +67,11 @@
 		E914C3C9251CE497004A578C /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		E914C3CE251CE786004A578C /* LocallyStoredStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocallyStoredStats.swift; sourceTree = "<group>"; };
 		E914C3D3251CE81B004A578C /* ServicesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesContainer.swift; sourceTree = "<group>"; };
-		E914C3F7251FA6BA004A578C /* NumberAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAxisFormatter.swift; sourceTree = "<group>"; };
-		E914C3FB251FA6E6004A578C /* DateAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAxisFormatter.swift; sourceTree = "<group>"; };
+		E914C3F7251FA6BA004A578C /* ChartAxisNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAxisNumberFormatter.swift; sourceTree = "<group>"; };
+		E914C3FB251FA6E6004A578C /* ChartAxisDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAxisDateFormatter.swift; sourceTree = "<group>"; };
 		E914C401251FA7C2004A578C /* ChartsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsFactory.swift; sourceTree = "<group>"; };
+		E914C40525205ADD004A578C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphicFormatter.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		E9B9A0CF251CAE910092ABC5 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
@@ -162,8 +166,8 @@
 		E914C3F6251FA6AD004A578C /* Axis Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				E914C3F7251FA6BA004A578C /* NumberAxisFormatter.swift */,
-				E914C3FB251FA6E6004A578C /* DateAxisFormatter.swift */,
+				E914C3F7251FA6BA004A578C /* ChartAxisNumberFormatter.swift */,
+				E914C3FB251FA6E6004A578C /* ChartAxisDateFormatter.swift */,
 			);
 			path = "Axis Formatters";
 			sourceTree = "<group>";
@@ -173,6 +177,7 @@
 			children = (
 				E914C400251FA782004A578C /* Factories */,
 				E914C3F6251FA6AD004A578C /* Axis Formatters */,
+				E914C40825205ECB004A578C /* Graphic Formatters */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -183,6 +188,14 @@
 				E914C401251FA7C2004A578C /* ChartsFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		E914C40825205ECB004A578C /* Graphic Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */,
+			);
+			path = "Graphic Formatters";
 			sourceTree = "<group>";
 		};
 		E9B9A0B9251B90330092ABC5 /* Injection */ = {
@@ -325,6 +338,7 @@
 			children = (
 				E9CBA70B251B893900A7A2EC /* Storyboards */,
 				E9CBA6F6251B88BD00A7A2EC /* Assets.xcassets */,
+				E914C40525205ADD004A578C /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -458,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */,
+				E914C40625205ADD004A578C /* Colors.xcassets in Resources */,
 				E9CBA6F7251B88BD00A7A2EC /* Assets.xcassets in Resources */,
 				E9CBA6F5251B88BA00A7A2EC /* Main.storyboard in Resources */,
 			);
@@ -478,7 +493,7 @@
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
-				E914C3F8251FA6BA004A578C /* NumberAxisFormatter.swift in Sources */,
+				E914C3F8251FA6BA004A578C /* ChartAxisNumberFormatter.swift in Sources */,
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
 				E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */,
@@ -491,12 +506,13 @@
 				E9CBA6EE251B88BA00A7A2EC /* AppDelegate.swift in Sources */,
 				E9B9A0E7251CB6F50092ABC5 /* HTTPClientError.swift in Sources */,
 				E914C3A0251CD2F4004A578C /* TodayStats.swift in Sources */,
-				E914C3FC251FA6E6004A578C /* DateAxisFormatter.swift in Sources */,
+				E914C3FC251FA6E6004A578C /* ChartAxisDateFormatter.swift in Sources */,
 				E914C3B7251CDB3B004A578C /* ChartsView.swift in Sources */,
 				E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */,
 				E914C39C251CD2DB004A578C /* LastHourStats.swift in Sources */,
 				E9B9A0E5251CB6F50092ABC5 /* HTTPClient.swift in Sources */,
 				E9B9A0E4251CB6F50092ABC5 /* HTTPMethod.swift in Sources */,
+				E914C40A25205EEA004A578C /* ChartGraphicFormatter.swift in Sources */,
 				E9B9A0E8251CB6F50092ABC5 /* HTTPRequest.swift in Sources */,
 				E9B9A0E3251CB6F50092ABC5 /* HTTPEndpoint.swift in Sources */,
 				E9B9A0FF251CC04F0092ABC5 /* DataContainer.swift in Sources */,

@@ -14,6 +14,11 @@ class PresentationContainer {
 
     internal func prepareInjections(container: Container) {
         container.register(ChartsPresenter.self) { _ in ChartsPresenterDefault() }.inObjectScope(.container)
-        container.register(ChartsFactory.self) { _ in ChartsFactoryDefault() }.inObjectScope(.container)
+        container.register(ChartsFactory.self) { resolver in
+            let factory = ChartsFactoryDefault()
+            factory.graphicFormatter = resolver.resolve(ChartGraphicFormatter.self)
+            return factory
+        }.inObjectScope(.container)
+        container.register(ChartGraphicFormatter.self) { _ in ChartGraphicFormatterDefault() }.inObjectScope(.container)
     }
 }

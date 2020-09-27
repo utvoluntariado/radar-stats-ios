@@ -9,7 +9,7 @@
 import Foundation
 import Charts
 
-final class NumberAxisFormatter: IAxisValueFormatter {
+final class ChartAxisNumberFormatter: IAxisValueFormatter {
     private let numberFormatter = NumberFormatter()
 
     init() {

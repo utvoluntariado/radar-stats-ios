@@ -9,7 +9,7 @@
 import Foundation
 import Charts
 
-final class DateAxisFormatter: IAxisValueFormatter {
+final class ChartAxisDateFormatter: IAxisValueFormatter {
     private let dates: [TimeInterval]
     private let formatter = DateFormatter()
 
