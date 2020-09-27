@@ -36,22 +36,15 @@ final class ChartsFactoryDefault: ChartsFactory {
         let chartData = LineChartData(dataSet: chartDataSet)
         chartView.data = chartData
 
-        let xAxisValueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
         let xAxis = chartView.xAxis
-        xAxis.granularity = 1
-        xAxis.granularityEnabled = true
-        xAxis.labelPosition = .bottom
-        xAxis.valueFormatter = xAxisValueFormatter
-        xAxis.drawGridLinesEnabled = false
-        xAxis.labelFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        graphicFormatter.apply(format: .standard, to: xAxis)
+        xAxis.valueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
 
-        let yAxisValueFormatter = ChartAxisNumberFormatter()
         let yAxis = chartView.leftAxis
-        yAxis.valueFormatter = yAxisValueFormatter
-        yAxis.labelXOffset = -4
-        yAxis.labelFont = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        graphicFormatter.apply(format: .standard, to: yAxis)
+        yAxis.valueFormatter = ChartAxisNumberFormatter()
 
-        chartView.setVisibleXRangeMaximum(6)
+        chartView.setVisibleXRangeMaximum(5)
         chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.rightAxis.enabled = false
@@ -65,20 +58,15 @@ final class ChartsFactoryDefault: ChartsFactory {
         let chartData = BarChartData(dataSet: chartDataSet)
         chartView.data = chartData
 
-        let xAxisValueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
         let xAxis = chartView.xAxis
-        xAxis.granularity = 1
-        xAxis.granularityEnabled = true
-        xAxis.labelPosition = .bottom
-        xAxis.valueFormatter = xAxisValueFormatter
-        xAxis.drawGridLinesEnabled = false
+        graphicFormatter.apply(format: .standard, to: xAxis)
+        xAxis.valueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
 
-        let yAxisValueFormatter = ChartAxisNumberFormatter()
         let yAxis = chartView.leftAxis
-        yAxis.valueFormatter = yAxisValueFormatter
-        yAxis.labelXOffset = -4
+        graphicFormatter.apply(format: .standard, to: yAxis)
+        yAxis.valueFormatter = ChartAxisNumberFormatter()
 
-        chartView.setVisibleXRangeMaximum(6)
+        chartView.setVisibleXRangeMaximum(5)
         chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.rightAxis.enabled = false
