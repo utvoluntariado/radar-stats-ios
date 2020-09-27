@@ -49,6 +49,7 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             xAxis.drawGridLinesEnabled = false
         } else if let yAxis = axis as? YAxis {
             yAxis.labelXOffset = -4
+            yAxis.drawGridLinesEnabled = false
         }
     }
 }
