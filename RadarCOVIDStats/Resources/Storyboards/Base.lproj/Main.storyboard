@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="462" y="211"/>
         </scene>
-        <!--Item 1-->
+        <!--Estadísticas-->
         <scene sceneID="I60-zF-djj">
             <objects>
                 <viewController storyboardIdentifier="Charts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvw-hk-qWt" customClass="ChartsViewController" customModule="RadarCOVIDStats" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,34 +38,34 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="340.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="345.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="340.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="345.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Kv-bt-lS9">
-                                                    <rect key="frame" x="20" y="11" width="374" height="318.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="323.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-1X-E9C">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="65.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4o-e9-p6Y">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="60.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="65.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="44" id="2Rt-Bi-lby"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-29-NeI">
-                                                                    <rect key="frame" x="44" y="0.0" width="286" height="60.5"/>
+                                                                    <rect key="frame" x="44" y="0.0" width="286" height="65.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snB-dL-axl">
-                                                                    <rect key="frame" x="330" y="0.0" width="44" height="60.5"/>
+                                                                    <rect key="frame" x="330" y="0.0" width="44" height="65.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="44" id="8cg-kQ-CpK"/>
                                                                     </constraints>
@@ -77,7 +77,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-61-x4L">
-                                                            <rect key="frame" x="0.0" y="68.5" width="374" height="250"/>
+                                                            <rect key="frame" x="0.0" y="73.5" width="374" height="250"/>
                                                             <color key="backgroundColor" name="viewWrapperBackground"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" priority="999" constant="250" id="sy7-Pa-blE"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="uYD-Mm-2g6" secondAttribute="leading" id="zgH-ad-Zam"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="dIj-6h-etg"/>
+                    <tabBarItem key="tabBarItem" title="Estadísticas" image="chart.pie.fill" catalog="system" id="dIj-6h-etg"/>
                     <connections>
                         <outlet property="chartsTable" destination="9Zd-Nt-gqk" id="qYh-Cj-QPj"/>
                         <segue destination="2pC-cx-VWB" kind="presentation" identifier="SeguePrensentChartInfo" id="uay-aQ-hUy"/>
@@ -171,6 +171,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="tabBarBackground"/>
+                        <color key="selectedImageTintColor" name="tabBarItemTint"/>
                     </tabBar>
                     <connections>
                         <segue destination="uvw-hk-qWt" kind="relationship" relationship="viewControllers" id="xCb-N7-sNW"/>
@@ -183,11 +185,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <namedColor name="fontForeground">
             <color red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="imageButtonTint">
             <color red="0.45490196078431372" green="0.57647058823529407" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarBackground">
+            <color red="0.45490196078431372" green="0.57647058823529407" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarItemTint">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textButtonBackground">
             <color red="0.45490196078431372" green="0.57647058823529407" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
