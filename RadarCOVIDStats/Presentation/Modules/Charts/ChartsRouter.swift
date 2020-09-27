@@ -28,6 +28,6 @@ class ChartsRouterDefault: ChartsRouter {
     }
 
     private func presentInfo(for chartType: ChartType) {
-        
+        viewController.present(ChartInfoBuilder.build(chartType: chartType).controller, animated: true, completion: nil)
     }
 }

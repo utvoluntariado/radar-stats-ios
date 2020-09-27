@@ -9,7 +9,7 @@
 import UIKit
 
 final class ChartInfoBuilder {
-    static var build: Module {
+    static func build(chartType: ChartType) -> Module {
         var view: ChartInfoView
         var viewController: UIViewController
 
@@ -20,6 +20,7 @@ final class ChartInfoBuilder {
 
         var presenter = <~ChartInfoPresenter.self
         presenter.view = view
+        presenter.chartType = chartType
 
         view.presenter = presenter
 

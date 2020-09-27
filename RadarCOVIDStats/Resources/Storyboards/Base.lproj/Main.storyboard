@@ -38,34 +38,34 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVIDStats" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="332"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="335"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="332"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="335"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Kv-bt-lS9">
-                                                    <rect key="frame" x="20" y="11" width="374" height="310"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="313"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-1X-E9C">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4o-e9-p6Y">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="52"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="55"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="44" id="2Rt-Bi-lby"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-29-NeI">
-                                                                    <rect key="frame" x="44" y="0.0" width="286" height="52"/>
+                                                                    <rect key="frame" x="44" y="0.0" width="286" height="55"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snB-dL-axl">
-                                                                    <rect key="frame" x="330" y="0.0" width="44" height="52"/>
+                                                                    <rect key="frame" x="330" y="0.0" width="44" height="55"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="44" id="8cg-kQ-CpK"/>
                                                                     </constraints>
@@ -77,7 +77,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-61-x4L">
-                                                            <rect key="frame" x="0.0" y="60" width="374" height="250"/>
+                                                            <rect key="frame" x="0.0" y="63" width="374" height="250"/>
                                                             <color key="backgroundColor" name="viewWrapperBackground"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" priority="999" constant="250" id="sy7-Pa-blE"/>
@@ -115,11 +115,27 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="dIj-6h-etg"/>
                     <connections>
                         <outlet property="chartsTable" destination="9Zd-Nt-gqk" id="qYh-Cj-QPj"/>
+                        <segue destination="2pC-cx-VWB" kind="presentation" identifier="SeguePrensentChartInfo" id="uay-aQ-hUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXY-a2-M7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="-445"/>
+        </scene>
+        <!--Chart Info View Controller-->
+        <scene sceneID="V90-tv-bQF">
+            <objects>
+                <viewController storyboardIdentifier="ChartInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2pC-cx-VWB" customClass="ChartInfoViewController" customModule="RadarCOVIDStats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Djz-Yn-fym">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="26G-tU-UCl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNu-uB-Bww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="-445"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="CPp-0L-ptc">
