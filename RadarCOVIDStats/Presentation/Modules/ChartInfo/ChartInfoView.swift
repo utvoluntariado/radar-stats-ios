@@ -14,4 +14,8 @@ protocol ChartInfoView {
 
 class ChartInfoViewController: UIViewController, ChartInfoView {
     var presenter: ChartInfoPresenter!
+
+    @IBAction func didTapUnderstoodButton(_ sender: UIButton) {
+        presenter.dismiss()
+    }
 }

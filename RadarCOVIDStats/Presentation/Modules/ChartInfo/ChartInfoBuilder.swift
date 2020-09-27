@@ -18,13 +18,18 @@ final class ChartInfoBuilder {
         viewController = thisViewController
         view = thisViewController as ChartInfoView
 
+        let router = <~ChartInfoRouter.self
+        router.viewController = thisViewController
+
         var presenter = <~ChartInfoPresenter.self
+        presenter.router = router
         presenter.view = view
         presenter.chartType = chartType
 
         view.presenter = presenter
 
         var module = Module(controller: viewController)
+        module.router = router
         module.presenter = presenter
         module.view = view
 
