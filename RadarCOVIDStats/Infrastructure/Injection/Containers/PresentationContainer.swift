@@ -13,6 +13,7 @@ class PresentationContainer {
     init(container: Container) { prepareInjections(container: container) }
 
     internal func prepareInjections(container: Container) {
+        container.register(ChartsRouter.self) { _ in ChartsRouterDefault() }.inObjectScope(.container)
         container.register(ChartsPresenter.self) { _ in ChartsPresenterDefault() }.inObjectScope(.container)
         container.register(ChartsFactory.self) { resolver in
             let factory = ChartsFactoryDefault()

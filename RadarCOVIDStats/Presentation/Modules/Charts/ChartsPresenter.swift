@@ -10,6 +10,7 @@ import Foundation
 
 protocol ChartsPresenter {
     var view: ChartsView! { get set }
+    var router: ChartsRouter! { get set }
     var statsInteractor: StatsInteractor! { get set }
 
     func gatherStats()
@@ -17,6 +18,7 @@ protocol ChartsPresenter {
 
 final class ChartsPresenterDefault: ChartsPresenter {
     var view: ChartsView!
+    var router: ChartsRouter!
 
     var statsInteractor: StatsInteractor!
 

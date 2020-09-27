@@ -28,6 +28,7 @@
 		E91F56AA2520FF9B005CD2CE /* ChartInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56A92520FF9B005CD2CE /* ChartInfoBuilder.swift */; };
 		E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */; };
 		E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */; };
+		E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B32521004A005CD2CE /* ChartsRouter.swift */; };
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
@@ -79,6 +80,7 @@
 		E91F56A92520FF9B005CD2CE /* ChartInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoBuilder.swift; sourceTree = "<group>"; };
 		E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenter.swift; sourceTree = "<group>"; };
 		E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoView.swift; sourceTree = "<group>"; };
+		E91F56B32521004A005CD2CE /* ChartsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouter.swift; sourceTree = "<group>"; };
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				E914C3BB251CDCF0004A578C /* UI Components */,
 				E914C3AF251CDB2B004A578C /* ChartsBuilder.swift */,
+				E91F56B32521004A005CD2CE /* ChartsRouter.swift */,
 				E914C3B3251CDB34004A578C /* ChartsPresenter.swift */,
 				E914C3B6251CDB3B004A578C /* ChartsView.swift */,
 			);
@@ -526,6 +529,7 @@
 				E9B9A0F9251CBE530092ABC5 /* Stats.swift in Sources */,
 				E914C3B0251CDB2B004A578C /* ChartsBuilder.swift in Sources */,
 				E9B9A0DA251CB1790092ABC5 /* API.swift in Sources */,
+				E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
 				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,

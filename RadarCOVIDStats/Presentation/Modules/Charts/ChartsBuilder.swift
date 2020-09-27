@@ -18,13 +18,18 @@ final class ChartsBuilder {
         viewController = thisViewController
         view = thisViewController as ChartsView
 
+        let router = <~ChartsRouter.self
+        router.viewController = thisViewController
+
         var presenter = <~ChartsPresenter.self
         presenter.view = view
+        presenter.router = router
         presenter.statsInteractor = <~StatsInteractor.self
 
         view.presenter = presenter
 
         var module = Module(controller: viewController)
+        module.router = router
         module.presenter = presenter
         module.view = view
 
