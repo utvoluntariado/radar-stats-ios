@@ -25,6 +25,7 @@
 		E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C401251FA7C2004A578C /* ChartsFactory.swift */; };
 		E914C40625205ADD004A578C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E914C40525205ADD004A578C /* Colors.xcassets */; };
 		E914C40A25205EEA004A578C /* ChartGraphicFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */; };
+		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
 		E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */; };
@@ -72,6 +73,7 @@
 		E914C401251FA7C2004A578C /* ChartsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsFactory.swift; sourceTree = "<group>"; };
 		E914C40525205ADD004A578C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphicFormatter.swift; sourceTree = "<group>"; };
+		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		E9B9A0CF251CAE910092ABC5 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E914C400251FA782004A578C /* Factories */,
+				E93CB85925206ADC00AE249C /* Value Formatters */,
 				E914C3F6251FA6AD004A578C /* Axis Formatters */,
 				E914C40825205ECB004A578C /* Graphic Formatters */,
 			);
@@ -196,6 +199,23 @@
 				E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */,
 			);
 			path = "Graphic Formatters";
+			sourceTree = "<group>";
+		};
+		E93CB8572520668700AE249C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E9CBA6F6251B88BD00A7A2EC /* Assets.xcassets */,
+				E914C40525205ADD004A578C /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E93CB85925206ADC00AE249C /* Value Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */,
+			);
+			path = "Value Formatters";
 			sourceTree = "<group>";
 		};
 		E9B9A0B9251B90330092ABC5 /* Injection */ = {
@@ -337,8 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CBA70B251B893900A7A2EC /* Storyboards */,
-				E9CBA6F6251B88BD00A7A2EC /* Assets.xcassets */,
-				E914C40525205ADD004A578C /* Colors.xcassets */,
+				E93CB8572520668700AE249C /* Assets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -492,6 +511,7 @@
 				E9B9A0DA251CB1790092ABC5 /* API.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
+				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
 				E914C3F8251FA6BA004A578C /* ChartAxisNumberFormatter.swift in Sources */,
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,

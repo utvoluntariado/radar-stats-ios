@@ -23,12 +23,13 @@ final class ChartsFactoryDefault: ChartsFactory {
         let chartDataSet = LineChartDataSet(entries: entries)
         chartDataSet.fillColor = #colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)
         chartDataSet.drawFilledEnabled = true
-        chartDataSet.mode = .cubicBezier
         chartDataSet.circleRadius = 8
         chartDataSet.circleColors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
         chartDataSet.circleHoleRadius = 4
         chartDataSet.lineWidth = 4
         chartDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
+        chartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        chartDataSet.valueFormatter = ChartValueNumberFormatter()
 
         graphicFormatter.apply(gradient: .standard, to: chartDataSet)
 
@@ -40,13 +41,15 @@ final class ChartsFactoryDefault: ChartsFactory {
         xAxis.granularity = 1
         xAxis.granularityEnabled = true
         xAxis.labelPosition = .bottom
-        xAxis.labelRotationAngle = 60
         xAxis.valueFormatter = xAxisValueFormatter
         xAxis.drawGridLinesEnabled = false
+        xAxis.labelFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
 
         let yAxisValueFormatter = ChartAxisNumberFormatter()
         let yAxis = chartView.leftAxis
         yAxis.valueFormatter = yAxisValueFormatter
+        yAxis.labelXOffset = -4
+        yAxis.labelFont = UIFont.systemFont(ofSize: 12, weight: .semibold)
 
         chartView.setVisibleXRangeMaximum(6)
         chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
@@ -67,13 +70,13 @@ final class ChartsFactoryDefault: ChartsFactory {
         xAxis.granularity = 1
         xAxis.granularityEnabled = true
         xAxis.labelPosition = .bottom
-        xAxis.labelRotationAngle = 60
         xAxis.valueFormatter = xAxisValueFormatter
         xAxis.drawGridLinesEnabled = false
 
         let yAxisValueFormatter = ChartAxisNumberFormatter()
         let yAxis = chartView.leftAxis
         yAxis.valueFormatter = yAxisValueFormatter
+        yAxis.labelXOffset = -4
 
         chartView.setVisibleXRangeMaximum(6)
         chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)

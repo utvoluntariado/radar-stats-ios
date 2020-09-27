@@ -17,7 +17,7 @@ final class ChartAxisDateFormatter: IAxisValueFormatter {
         self.dates = dates
 
         formatter.locale = Locale.current
-        formatter.dateStyle = .short
+        formatter.dateFormat = "dd MMM"
     }
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {

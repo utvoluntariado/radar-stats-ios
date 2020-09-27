@@ -29,6 +29,8 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
 
         if let currentDataSet = dataSet as? ILineChartDataSet {
             currentDataSet.fill = Fill.fillWithLinearGradient(selectedGradient, angle: 90.0)
+        } else if let currentDataSet = dataSet as? BarChartDataSet {
+            
         }
     }
 }

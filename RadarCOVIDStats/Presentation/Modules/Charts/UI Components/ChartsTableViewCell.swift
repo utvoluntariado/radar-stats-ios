@@ -50,14 +50,16 @@ final class ChartsTableViewCell: UITableViewCell {
         let lineChartView = LineChartView()
         lineChartView.translatesAutoresizingMaskIntoConstraints = false
         chartWrapperView.addSubview(lineChartView)
-        lineChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor).isActive = true
+        lineChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
         lineChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
-        lineChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor).isActive = true
-        lineChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor).isActive = true
+        lineChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
+        lineChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16).isActive = true
 
         factory.drawCovidCasesChart(using: dataEntries,
                                     xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                     on: lineChartView)
+
+        chartWrapperView.layoutIfNeeded()
     }
 
     private func drawSharedDiagnosesChart() {
@@ -74,13 +76,21 @@ final class ChartsTableViewCell: UITableViewCell {
         let barChartView = BarChartView()
         barChartView.translatesAutoresizingMaskIntoConstraints = false
         chartWrapperView.addSubview(barChartView)
-        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor).isActive = true
+        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
         barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
-        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor).isActive = true
-        barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor).isActive = true
+        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
+        barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16).isActive = true
 
         factory.drawSharedDiagnosesChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                          on: barChartView)
+
+        chartWrapperView.layoutIfNeeded()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        chartWrapperView.layer.cornerRadius = 12
     }
 }
