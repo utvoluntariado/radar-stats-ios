@@ -20,5 +20,7 @@ class PresentationContainer {
             return factory
         }.inObjectScope(.container)
         container.register(ChartGraphicFormatter.self) { _ in ChartGraphicFormatterDefault() }.inObjectScope(.container)
+
+        container.register(ChartInfoPresenter.self) { _ in ChartInfoPresenterDefault() }.inObjectScope(.container)
     }
 }

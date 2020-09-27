@@ -25,6 +25,9 @@
 		E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C401251FA7C2004A578C /* ChartsFactory.swift */; };
 		E914C40625205ADD004A578C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E914C40525205ADD004A578C /* Colors.xcassets */; };
 		E914C40A25205EEA004A578C /* ChartGraphicFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */; };
+		E91F56AA2520FF9B005CD2CE /* ChartInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56A92520FF9B005CD2CE /* ChartInfoBuilder.swift */; };
+		E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */; };
+		E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */; };
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
@@ -73,6 +76,9 @@
 		E914C401251FA7C2004A578C /* ChartsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsFactory.swift; sourceTree = "<group>"; };
 		E914C40525205ADD004A578C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartGraphicFormatter.swift; sourceTree = "<group>"; };
+		E91F56A92520FF9B005CD2CE /* ChartInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoBuilder.swift; sourceTree = "<group>"; };
+		E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenter.swift; sourceTree = "<group>"; };
+		E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoView.swift; sourceTree = "<group>"; };
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
@@ -199,6 +205,16 @@
 				E914C40925205EEA004A578C /* ChartGraphicFormatter.swift */,
 			);
 			path = "Graphic Formatters";
+			sourceTree = "<group>";
+		};
+		E91F56A82520FF87005CD2CE /* ChartInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E91F56A92520FF9B005CD2CE /* ChartInfoBuilder.swift */,
+				E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */,
+				E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */,
+			);
+			path = ChartInfo;
 			sourceTree = "<group>";
 		};
 		E93CB8572520668700AE249C /* Assets */ = {
@@ -394,6 +410,7 @@
 			children = (
 				E9CBA70E251B8AC300A7A2EC /* Main */,
 				E914C3AD251CDAFF004A578C /* Charts */,
+				E91F56A82520FF87005CD2CE /* ChartInfo */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -513,6 +530,7 @@
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
 				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
+				E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */,
 				E914C3F8251FA6BA004A578C /* ChartAxisNumberFormatter.swift in Sources */,
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
@@ -540,6 +558,8 @@
 				E914C3C0251CDD0B004A578C /* ChartsTableViewCell.swift in Sources */,
 				E9B9A0FC251CC0060092ABC5 /* BusinessContainer.swift in Sources */,
 				E914C3A6251CD33D004A578C /* DailyStats.swift in Sources */,
+				E91F56AA2520FF9B005CD2CE /* ChartInfoBuilder.swift in Sources */,
+				E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */,
 				E914C3CF251CE786004A578C /* LocallyStoredStats.swift in Sources */,
 				E9B9A102251CC07F0092ABC5 /* NetworkContainer.swift in Sources */,
 			);

@@ -19,6 +19,7 @@ final class ChartsTableViewCell: UITableViewCell {
     static let reuseIndentifier = "ChartCell"
 
     private var modelset: Stats!
+    private var chartType: ChartType!
     private let factory = <~ChartsFactory.self
     private var sortedDailyResults: [DailyStats] {
         return modelset.dailyResults.sorted(by: { $0.sampleDate < $1.sampleDate })
@@ -29,6 +30,8 @@ final class ChartsTableViewCell: UITableViewCell {
 
     func bind(modelset: Stats, for chartType: ChartType) {
         self.modelset = modelset
+        self.chartType = chartType
+
         switch chartType {
         case .covidCases: drawCovidCasesChart()
         case .sharedDiagnoses: drawSharedDiagnosesChart()
@@ -86,6 +89,10 @@ final class ChartsTableViewCell: UITableViewCell {
                                          on: barChartView)
 
         chartWrapperView.layoutIfNeeded()
+    }
+
+    @IBAction func didTapInfoButton(_ sender: UIButton) {
+        
     }
 
     override func layoutSubviews() {
