@@ -30,6 +30,7 @@ protocol ChartGraphicFormatter {
 struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
     private let noGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[UIColor.clear.cgColor] as CFArray, locations: [1.0])!
     private let standardGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[#colorLiteral(red: 0.5529411765, green: 0.5019607843, blue: 0.6784313725, alpha: 1).cgColor, #colorLiteral(red: 0.5529411765, green: 0.5019607843, blue: 0.6784313725, alpha: 0.35).cgColor] as CFArray, locations: [1.0, 0.0])
+    private let valueFontColor = UIColor(named: "chartValuesFontForeground")! // Current Charts version doesn't support modern color asset expression for font colors
 
     func apply(format: DataSetFormat, to dataSet: IChartDataSet) {
         let selectedGradient: CGGradient
@@ -43,13 +44,15 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             lineChartDataSet.circleHoleRadius = 4
             lineChartDataSet.lineWidth = 4
             lineChartDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
-            lineChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
             lineChartDataSet.drawFilledEnabled = true
             lineChartDataSet.fill = Fill.fillWithLinearGradient(selectedGradient, angle: 90.0)
+            lineChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+            lineChartDataSet.valueColors = [valueFontColor]
         } else if let barChartDataSet = dataSet as? BarChartDataSet {
             // TODO: Charts v4.0.0 will include gradients for bar charts
-            barChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
             barChartDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
+            barChartDataSet.valueColors = [valueFontColor]
+            barChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
         }
     }
 
@@ -60,9 +63,11 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             xAxis.granularityEnabled = true
             xAxis.labelPosition = .bottom
             xAxis.drawGridLinesEnabled = false
+            xAxis.labelTextColor = valueFontColor
         } else if let yAxis = axis as? YAxis {
             yAxis.labelXOffset = -4
             yAxis.drawGridLinesEnabled = false
+            yAxis.labelTextColor = valueFontColor
         }
     }
 
