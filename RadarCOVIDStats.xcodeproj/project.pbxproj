@@ -29,6 +29,7 @@
 		E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */; };
 		E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */; };
 		E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B32521004A005CD2CE /* ChartsRouter.swift */; };
+		E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */; };
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
@@ -82,6 +83,7 @@
 		E91F56AD2520FFA5005CD2CE /* ChartInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenter.swift; sourceTree = "<group>"; };
 		E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoView.swift; sourceTree = "<group>"; };
 		E91F56B32521004A005CD2CE /* ChartsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouter.swift; sourceTree = "<group>"; };
+		E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettedSymbolButton.swift; sourceTree = "<group>"; };
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -221,6 +223,14 @@
 				E91F56B02520FFAF005CD2CE /* ChartInfoView.swift */,
 			);
 			path = ChartInfo;
+			sourceTree = "<group>";
+		};
+		E92F4235252108A500B7E8C8 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */,
+			);
+			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		E93CB8572520668700AE249C /* Assets */ = {
@@ -424,6 +434,7 @@
 		E9CBA70D251B8ABF00A7A2EC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E92F4235252108A500B7E8C8 /* UI Components */,
 				E9CBA710251B8B2800A7A2EC /* Patterns */,
 			);
 			path = Common;
@@ -542,6 +553,7 @@
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,
 				E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */,
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
+				E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */,
 				E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */,
 				E914C3BD251CDD01004A578C /* ChartsTableView.swift in Sources */,
 				E9B9A0D0251CAE910092ABC5 /* LaunchCoordinator.swift in Sources */,
