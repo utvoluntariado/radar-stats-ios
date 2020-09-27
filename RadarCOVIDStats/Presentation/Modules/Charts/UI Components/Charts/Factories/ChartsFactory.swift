@@ -55,8 +55,13 @@ final class ChartsFactoryDefault: ChartsFactory {
 
     func drawSharedDiagnosesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView) {
         let chartDataSet = BarChartDataSet(entries: entries)
+        chartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        chartDataSet.valueFormatter = ChartValueNumberFormatter()
+        
         let chartData = BarChartData(dataSet: chartDataSet)
         chartView.data = chartData
+
+        graphicFormatter.apply(gradient: .standard, to: chartDataSet)
 
         let xAxis = chartView.xAxis
         graphicFormatter.apply(format: .standard, to: xAxis)

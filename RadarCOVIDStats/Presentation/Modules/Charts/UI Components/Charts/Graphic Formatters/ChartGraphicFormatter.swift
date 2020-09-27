@@ -34,8 +34,9 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
 
         if let currentDataSet = dataSet as? ILineChartDataSet {
             currentDataSet.fill = Fill.fillWithLinearGradient(selectedGradient, angle: 90.0)
-        } else if let _ = dataSet as? BarChartDataSet {
+        } else if let currentDataSet = dataSet as? BarChartDataSet {
             // TODO: Charts v4.0.0 will include gradients for bar charts
+            currentDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
         }
     }
 
