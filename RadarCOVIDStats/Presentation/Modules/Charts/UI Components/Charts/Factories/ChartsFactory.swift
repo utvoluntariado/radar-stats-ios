@@ -44,13 +44,7 @@ final class ChartsFactoryDefault: ChartsFactory {
         graphicFormatter.apply(format: .standard, to: yAxis)
         yAxis.valueFormatter = ChartAxisNumberFormatter()
 
-        chartView.setVisibleXRangeMaximum(5)
-        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
-        chartView.legend.enabled = false
-        chartView.rightAxis.enabled = false
-
-        chartView.notifyDataSetChanged()
-        chartView.moveViewToX(xAxis.axisMaximum)
+        graphicFormatter.apply(format: .standard, to: chartView)
     }
 
     func drawSharedDiagnosesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView) {
@@ -71,12 +65,6 @@ final class ChartsFactoryDefault: ChartsFactory {
         graphicFormatter.apply(format: .standard, to: yAxis)
         yAxis.valueFormatter = ChartAxisNumberFormatter()
 
-        chartView.setVisibleXRangeMaximum(5)
-        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
-        chartView.legend.enabled = false
-        chartView.rightAxis.enabled = false
-
-        chartView.notifyDataSetChanged()
-        chartView.moveViewToX(xAxis.axisMaximum)
+        graphicFormatter.apply(format: .standard, to: chartView)
     }
 }

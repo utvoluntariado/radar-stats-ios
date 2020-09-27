@@ -9,6 +9,10 @@
 import UIKit
 import Charts
 
+enum ChartFormat {
+    case standard
+}
+
 enum AxisFormat {
     case standard
 }
@@ -20,6 +24,7 @@ enum FillGradient {
 protocol ChartGraphicFormatter {
     func apply(gradient: FillGradient, to dataSet: IChartDataSet)
     func apply(format: AxisFormat, to axis: AxisBase)
+    func apply(format: ChartFormat, to chartView: ChartViewBase)
 }
 
 struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
@@ -50,6 +55,24 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
         } else if let yAxis = axis as? YAxis {
             yAxis.labelXOffset = -4
             yAxis.drawGridLinesEnabled = false
+        }
+    }
+
+    func apply(format: ChartFormat, to chartView: ChartViewBase) {
+        switch format {
+        case .standard: applyStandardFormat(on: chartView)
+        }
+    }
+
+    private func applyStandardFormat(on chartView: ChartViewBase) {
+        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
+        chartView.legend.enabled = false
+        chartView.notifyDataSetChanged()
+
+        if let barLineChartView = chartView as? BarLineChartViewBase {
+            barLineChartView.setVisibleXRangeMaximum(5)
+            barLineChartView.rightAxis.enabled = false
+            barLineChartView.moveViewToX(barLineChartView.xAxis.axisMaximum)
         }
     }
 }
