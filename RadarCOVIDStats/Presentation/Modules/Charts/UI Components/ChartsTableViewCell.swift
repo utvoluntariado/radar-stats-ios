@@ -15,8 +15,14 @@ enum ChartType: Int {
     case unknown
 }
 
+protocol ChartsTableViewCellDelegate: class {
+    func didTapInfoButton(on chartType: ChartType)
+}
+
 final class ChartsTableViewCell: UITableViewCell {
     static let reuseIndentifier = "ChartCell"
+
+    weak var delegate: ChartsTableViewCellDelegate?
 
     private var modelset: Stats!
     private var chartType: ChartType!
@@ -92,7 +98,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     @IBAction func didTapInfoButton(_ sender: UIButton) {
-        
+        delegate?.didTapInfoButton(on: chartType)
     }
 
     override func layoutSubviews() {

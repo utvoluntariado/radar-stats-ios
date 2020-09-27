@@ -14,6 +14,7 @@ protocol ChartsPresenter {
     var statsInteractor: StatsInteractor! { get set }
 
     func gatherStats()
+    func presentInfo(for chartType: ChartType)
 }
 
 final class ChartsPresenterDefault: ChartsPresenter {
@@ -28,5 +29,9 @@ final class ChartsPresenterDefault: ChartsPresenter {
         }.catch { error in
             print(error)
         }
+    }
+
+    func presentInfo(for chartType: ChartType) {
+        router.navigate(to: .info(chartType: chartType))
     }
 }

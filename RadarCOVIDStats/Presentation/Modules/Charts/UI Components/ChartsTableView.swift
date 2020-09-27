@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ChartsTableViewActionDelegate: class {
+    func showInformationAbout(chartType: ChartType)
+}
+
 final class ChartsTableView: UITableView {
+    weak var actionDelegate: ChartsTableViewActionDelegate?
+
     private var modelset: Stats?
 
     override func awakeFromNib() {
@@ -32,6 +38,13 @@ extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
         guard let modelset = modelset else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: ChartsTableViewCell.reuseIndentifier, for: indexPath) as! ChartsTableViewCell
         cell.bind(modelset: modelset, for: ChartType(rawValue: indexPath.row) ?? .unknown)
+        cell.delegate = self
         return cell
+    }
+}
+
+extension ChartsTableView: ChartsTableViewCellDelegate {
+    func didTapInfoButton(on chartType: ChartType) {
+        actionDelegate?.showInformationAbout(chartType: chartType)
     }
 }

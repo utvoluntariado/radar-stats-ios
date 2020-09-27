@@ -21,10 +21,17 @@ class ChartsViewController: UIViewController, ChartsView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        chartsTable.actionDelegate = self
         presenter.gatherStats()
     }
 
     func update(using stats: Stats) {
         chartsTable.update(modelset: stats)
+    }
+}
+
+extension ChartsViewController: ChartsTableViewActionDelegate {
+    func showInformationAbout(chartType: ChartType) {
+        presenter.presentInfo(for: chartType)
     }
 }
