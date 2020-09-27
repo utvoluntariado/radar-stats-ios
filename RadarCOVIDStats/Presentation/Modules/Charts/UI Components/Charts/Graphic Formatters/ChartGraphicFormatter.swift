@@ -17,12 +17,12 @@ enum AxisFormat {
     case standard
 }
 
-enum FillGradient {
+enum DataSetFormat {
     case standard
 }
 
 protocol ChartGraphicFormatter {
-    func apply(gradient: FillGradient, to dataSet: IChartDataSet)
+    func apply(format: DataSetFormat, to dataSet: IChartDataSet)
     func apply(format: AxisFormat, to axis: AxisBase)
     func apply(format: ChartFormat, to chartView: ChartViewBase)
 }
@@ -31,17 +31,25 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
     private let noGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[UIColor.clear.cgColor] as CFArray, locations: [1.0])!
     private let standardGradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[#colorLiteral(red: 0.5529411765, green: 0.5019607843, blue: 0.6784313725, alpha: 1).cgColor, #colorLiteral(red: 0.5529411765, green: 0.5019607843, blue: 0.6784313725, alpha: 0.35).cgColor] as CFArray, locations: [1.0, 0.0])
 
-    func apply(gradient: FillGradient, to dataSet: IChartDataSet) {
+    func apply(format: DataSetFormat, to dataSet: IChartDataSet) {
         let selectedGradient: CGGradient
-        switch gradient {
+        switch format {
         case .standard: selectedGradient = standardGradient ?? noGradient
         }
 
-        if let currentDataSet = dataSet as? ILineChartDataSet {
-            currentDataSet.fill = Fill.fillWithLinearGradient(selectedGradient, angle: 90.0)
-        } else if let currentDataSet = dataSet as? BarChartDataSet {
+        if let lineChartDataSet = dataSet as? LineChartDataSet {
+            lineChartDataSet.circleRadius = 8
+            lineChartDataSet.circleColors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
+            lineChartDataSet.circleHoleRadius = 4
+            lineChartDataSet.lineWidth = 4
+            lineChartDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
+            lineChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+            lineChartDataSet.drawFilledEnabled = true
+            lineChartDataSet.fill = Fill.fillWithLinearGradient(selectedGradient, angle: 90.0)
+        } else if let barChartDataSet = dataSet as? BarChartDataSet {
             // TODO: Charts v4.0.0 will include gradients for bar charts
-            currentDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
+            barChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+            barChartDataSet.colors = [#colorLiteral(red: 0.4549019608, green: 0.5764705882, blue: 0.9294117647, alpha: 1)]
         }
     }
 
