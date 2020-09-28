@@ -28,7 +28,7 @@ class ChartsViewController: UIViewController, ChartsView {
     }
 
     func update(using stats: Stats) {
-
+        summaryStackView.update(using: stats)
         chartsTable.update(modelset: stats)
     }
 

@@ -16,6 +16,7 @@ enum SummaryMode: Int {
 @IBDesignable
 final class SummaryStackView: UIStackView {
     private var stats: Stats!
+    private(set) var mode: SummaryMode = .today
 
     @IBOutlet private weak var uploadedTEKsStackView: UIStackView!
     @IBOutlet private weak var uploadedTEKsTitleLabel: UILabel!
@@ -35,14 +36,43 @@ final class SummaryStackView: UIStackView {
 
     func update(using stats: Stats) {
         self.stats = stats
+        switch mode {
+        case .today: updateTodayStats()
+        case .week: updateWeekStats()
+        }
     }
 
     func layout(mode: SummaryMode) {
         switch mode {
         case .today:
+            updateTodayStats()
             layoutTodayMode()
         case .week:
+            updateWeekStats()
             layoutWeekMode()
+        }
+    }
+
+    private func updateTodayStats() {
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut) {
+            self.uploadedTEKsValueLabel.alpha = 0.0
+            self.sharedDiagnosesValueLabel.alpha = 0.0
+            self.diagnosisTEKsValueLabel.alpha = 0.0
+            self.usageRatioValueLabel.alpha = 0.0
+        } completion: { (completed) in
+            if completed {
+                self.uploadedTEKsValueLabel.text = "~\(self.stats.today.sharedTeksByUploadDate)"
+                self.sharedDiagnosesValueLabel.text = "~\(self.stats.today.sharedDiagnoses)"
+                self.diagnosisTEKsValueLabel.text = "~\(self.stats.today.teksPerSharedDiagnosis)"
+                self.usageRatioValueLabel.text = "~\(self.stats.today.formattedUsageRatio())"
+
+                UIView.animate(withDuration: 0.25) {
+                    self.uploadedTEKsValueLabel.alpha = 1.0
+                    self.sharedDiagnosesValueLabel.alpha = 1.0
+                    self.diagnosisTEKsValueLabel.alpha = 1.0
+                    self.usageRatioValueLabel.alpha = 1.0
+                }
+            }
         }
     }
 
@@ -52,6 +82,23 @@ final class SummaryStackView: UIStackView {
             self.diagnosisTEKsStackView.isHidden = false
             self.uploadedTEKsStackView.alpha = 1.0
             self.diagnosisTEKsStackView.alpha = 1.0
+        }
+    }
+
+    private func updateWeekStats() {
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut) {
+            self.sharedDiagnosesValueLabel.alpha = 0.0
+            self.usageRatioValueLabel.alpha = 0.0
+        } completion: { (completed) in
+            if completed {
+                self.sharedDiagnosesValueLabel.text = "~\(self.stats.last7Days.sharedDiagnoses)"
+                self.usageRatioValueLabel.text = "~\(self.stats.last7Days.formattedUsageRatio())"
+
+                UIView.animate(withDuration: 0.25) {
+                    self.sharedDiagnosesValueLabel.alpha = 1.0
+                    self.usageRatioValueLabel.alpha = 1.0
+                }
+            }
         }
     }
 
