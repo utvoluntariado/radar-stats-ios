@@ -58,6 +58,7 @@
 		E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CBA6F8251B88BD00A7A2EC /* LaunchScreen.storyboard */; };
 		E9CBA712251B8B3300A7A2EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA711251B8B3300A7A2EC /* Module.swift */; };
 		E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */; };
+		E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		E9CBA6FB251B88BD00A7A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CBA711251B8B3300A7A2EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +157,8 @@
 		E914C3BB251CDCF0004A578C /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */,
 				E914C3FE251FA775004A578C /* Charts */,
-				E914C3BC251CDD01004A578C /* ChartsTableView.swift */,
-				E914C3BF251CDD0B004A578C /* ChartsTableViewCell.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -190,6 +191,8 @@
 		E914C3FE251FA775004A578C /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				E914C3BC251CDD01004A578C /* ChartsTableView.swift */,
+				E914C3BF251CDD0B004A578C /* ChartsTableViewCell.swift */,
 				E914C400251FA782004A578C /* Factories */,
 				E93CB85925206ADC00AE249C /* Value Formatters */,
 				E914C3F6251FA6AD004A578C /* Axis Formatters */,
@@ -555,6 +558,7 @@
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
 				E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */,
 				E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */,
+				E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */,
 				E914C3BD251CDD01004A578C /* ChartsTableView.swift in Sources */,
 				E9B9A0D0251CAE910092ABC5 /* LaunchCoordinator.swift in Sources */,
 				E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */,

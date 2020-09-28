@@ -17,6 +17,8 @@ protocol ChartsView {
 class ChartsViewController: UIViewController, ChartsView {
     var presenter: ChartsPresenter!
 
+    @IBOutlet private weak var summarySegmented: UISegmentedControl!
+    @IBOutlet private weak var summaryStackView: SummaryStackView!
     @IBOutlet private weak var chartsTable: ChartsTableView!
 
     override func viewDidLoad() {
@@ -27,6 +29,14 @@ class ChartsViewController: UIViewController, ChartsView {
 
     func update(using stats: Stats) {
         chartsTable.update(modelset: stats)
+    }
+
+    @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
+        switch summarySegmented.selectedSegmentIndex {
+        case 0: summaryStackView.mode = .today
+        case 1: summaryStackView.mode = .week
+        default: break
+        }
     }
 }
 

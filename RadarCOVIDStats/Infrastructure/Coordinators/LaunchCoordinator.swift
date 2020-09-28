@@ -21,6 +21,7 @@ class LaunchCoordinatorDefault: LaunchCoordinator {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.application = application
+        prepareBasicAppearances()
         defineInitialModule()
         window.makeKeyAndVisible()
         return true
@@ -29,5 +30,10 @@ class LaunchCoordinatorDefault: LaunchCoordinator {
     internal func defineInitialModule() {
         window.backgroundColor = .black
         window.rootViewController = MainBuilder.build.controller
+    }
+
+    private func prepareBasicAppearances() {
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)], for: .normal)
     }
 }

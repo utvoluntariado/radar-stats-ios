@@ -62,7 +62,9 @@ final class ChartsTableViewCell: UITableViewCell {
         lineChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
         lineChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
         lineChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
-        lineChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16).isActive = true
+        let bottomConstraint = lineChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
+        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
+        bottomConstraint.isActive = true
 
         factory.drawCovidCasesChart(using: dataEntries,
                                     xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
@@ -88,7 +90,9 @@ final class ChartsTableViewCell: UITableViewCell {
         barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
         barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
         barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
-        barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16).isActive = true
+        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
+        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
+        bottomConstraint.isActive = true
 
         factory.drawSharedDiagnosesChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
