@@ -32,9 +32,9 @@ class ChartsViewController: UIViewController, ChartsView {
     }
 
     @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
-        switch summarySegmented.selectedSegmentIndex {
-        case 0: summaryStackView.mode = .today
-        case 1: summaryStackView.mode = .week
+        switch sender.selectedSegmentIndex {
+        case 0: summaryStackView.prepareTodayMode()
+        case 1: summaryStackView.prepareWeekMode()
         default: break
         }
     }
