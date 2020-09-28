@@ -27,7 +27,7 @@ final class SummaryStackView: UIStackView {
     @IBOutlet private weak var usageRatioValueLabel: UILabel!
 
     func prepareTodayMode() {
-        UIView.animate(withDuration: 0.35) { [unowned self] in
+        UIView.animate(withDuration: 0.35) {
             self.uploadedTEKsStackView.isHidden = false
             self.diagnosisTEKsStackView.isHidden = false
             self.uploadedTEKsStackView.alpha = 1.0
@@ -36,7 +36,7 @@ final class SummaryStackView: UIStackView {
     }
 
     func prepareWeekMode() {
-        UIView.animate(withDuration: 0.35) { [unowned self] in
+        UIView.animate(withDuration: 0.35) {
             self.uploadedTEKsStackView.isHidden = true
             self.diagnosisTEKsStackView.isHidden = true
             self.uploadedTEKsStackView.alpha = 0.0
