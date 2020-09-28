@@ -8,8 +8,15 @@
 
 import UIKit
 
+enum SummaryMode: Int {
+    case today
+    case week
+}
+
 @IBDesignable
 final class SummaryStackView: UIStackView {
+    private var stats: Stats!
+
     @IBOutlet private weak var uploadedTEKsStackView: UIStackView!
     @IBOutlet private weak var uploadedTEKsTitleLabel: UILabel!
     @IBOutlet private weak var uploadedTEKsValueLabel: UILabel!
@@ -26,7 +33,20 @@ final class SummaryStackView: UIStackView {
     @IBOutlet private weak var usageRatioTitleLabel: UILabel!
     @IBOutlet private weak var usageRatioValueLabel: UILabel!
 
-    func prepareTodayMode() {
+    func update(using stats: Stats) {
+        self.stats = stats
+    }
+
+    func layout(mode: SummaryMode) {
+        switch mode {
+        case .today:
+            layoutTodayMode()
+        case .week:
+            layoutWeekMode()
+        }
+    }
+
+    private func layoutTodayMode() {
         UIView.animate(withDuration: 0.35) {
             self.uploadedTEKsStackView.isHidden = false
             self.diagnosisTEKsStackView.isHidden = false
@@ -35,7 +55,7 @@ final class SummaryStackView: UIStackView {
         }
     }
 
-    func prepareWeekMode() {
+    private func layoutWeekMode() {
         UIView.animate(withDuration: 0.35) {
             self.uploadedTEKsStackView.isHidden = true
             self.diagnosisTEKsStackView.isHidden = true

@@ -28,15 +28,13 @@ class ChartsViewController: UIViewController, ChartsView {
     }
 
     func update(using stats: Stats) {
+
         chartsTable.update(modelset: stats)
     }
 
     @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0: summaryStackView.prepareTodayMode()
-        case 1: summaryStackView.prepareWeekMode()
-        default: break
-        }
+        guard let summaryMode = SummaryMode(rawValue: sender.selectedSegmentIndex) else { return }
+        summaryStackView.layout(mode: summaryMode)
     }
 }
 
