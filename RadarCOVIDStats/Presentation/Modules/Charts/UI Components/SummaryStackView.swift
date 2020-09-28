@@ -27,16 +27,20 @@ final class SummaryStackView: UIStackView {
     @IBOutlet private weak var usageRatioValueLabel: UILabel!
 
     func prepareTodayMode() {
-        addArrangedSubview(uploadedTEKsStackView)
-        addArrangedSubview(diagnosisTEKsStackView)
-        uploadedTEKsStackView.isHidden = false
-        diagnosisTEKsStackView.isHidden = false
+        UIView.animate(withDuration: 0.35) { [unowned self] in
+            self.uploadedTEKsStackView.isHidden = false
+            self.diagnosisTEKsStackView.isHidden = false
+            self.uploadedTEKsStackView.alpha = 1.0
+            self.diagnosisTEKsStackView.alpha = 1.0
+        }
     }
 
     func prepareWeekMode() {
-        removeArrangedSubview(uploadedTEKsStackView)
-        removeArrangedSubview(diagnosisTEKsStackView)
-        uploadedTEKsStackView.isHidden = true
-        diagnosisTEKsStackView.isHidden = true
+        UIView.animate(withDuration: 0.35) { [unowned self] in
+            self.uploadedTEKsStackView.isHidden = true
+            self.diagnosisTEKsStackView.isHidden = true
+            self.uploadedTEKsStackView.alpha = 0.0
+            self.diagnosisTEKsStackView.alpha = 0.0
+        }
     }
 }
