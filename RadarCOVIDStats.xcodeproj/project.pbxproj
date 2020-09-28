@@ -104,7 +104,7 @@
 		E9B9A0FB251CC0060092ABC5 /* BusinessContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessContainer.swift; sourceTree = "<group>"; };
 		E9B9A0FE251CC04F0092ABC5 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		E9B9A101251CC07F0092ABC5 /* NetworkContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContainer.swift; sourceTree = "<group>"; };
-		E9CBA6EA251B88BA00A7A2EC /* RadarCOVIDStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadarCOVIDStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CBA6EA251B88BA00A7A2EC /* RadarCOVID STATS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RadarCOVID STATS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CBA6ED251B88BA00A7A2EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CBA6F1251B88BA00A7A2EC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E9CBA6F4251B88BA00A7A2EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 		E9CBA6EB251B88BA00A7A2EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9CBA6EA251B88BA00A7A2EC /* RadarCOVIDStats.app */,
+				E9CBA6EA251B88BA00A7A2EC /* RadarCOVID STATS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,9 +463,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9CBA6E9251B88BA00A7A2EC /* RadarCOVIDStats */ = {
+		E9CBA6E9251B88BA00A7A2EC /* RadarCOVID STATS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarCOVIDStats" */;
+			buildConfigurationList = E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarCOVID STATS" */;
 			buildPhases = (
 				E9CBA6E6251B88BA00A7A2EC /* Sources */,
 				E9CBA6E7251B88BA00A7A2EC /* Frameworks */,
@@ -475,14 +475,14 @@
 			);
 			dependencies = (
 			);
-			name = RadarCOVIDStats;
+			name = "RadarCOVID STATS";
 			packageProductDependencies = (
 				E9B9A0B6251B900A0092ABC5 /* Swinject */,
 				E9B9A0EF251CBDC60092ABC5 /* PromiseKit */,
 				E914C3AA251CD9B3004A578C /* Charts */,
 			);
 			productName = RadarCOVIDStats;
-			productReference = E9CBA6EA251B88BA00A7A2EC /* RadarCOVIDStats.app */;
+			productReference = E9CBA6EA251B88BA00A7A2EC /* RadarCOVID STATS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -517,7 +517,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9CBA6E9251B88BA00A7A2EC /* RadarCOVIDStats */,
+				E9CBA6E9251B88BA00A7A2EC /* RadarCOVID STATS */,
 			);
 		};
 /* End PBXProject section */
@@ -781,7 +781,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarCOVIDStats" */ = {
+		E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarCOVID STATS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9CBA6FF251B88BD00A7A2EC /* Debug */,

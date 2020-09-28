@@ -46,7 +46,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawCovidCasesChart() {
-        chartTitleLabel.text = "Casos COVID19"
+        chartTitleLabel.text = "Casos COVID-19 (Estimados)"
 
         var dataEntries: [ChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -74,7 +74,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawSharedDiagnosesChart() {
-        chartTitleLabel.text = "Diagnósticos compartidos"
+        chartTitleLabel.text = "Diagnósticos compartidos (Estimados)"
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {

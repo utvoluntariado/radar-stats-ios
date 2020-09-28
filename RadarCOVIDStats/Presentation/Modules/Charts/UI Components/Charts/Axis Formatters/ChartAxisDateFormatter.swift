@@ -21,7 +21,11 @@ final class ChartAxisDateFormatter: IAxisValueFormatter {
     }
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let timestamp = dates[Int(value)]
+        let index = Int(value)
+        guard index < dates.count else {
+            return ""
+        }
+        let timestamp = dates[index]
         let date = Date(timeIntervalSince1970: timestamp / 1000)
         return formatter.string(from: date)
     }
