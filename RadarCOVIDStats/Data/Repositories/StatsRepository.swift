@@ -32,8 +32,7 @@ class StatsRepositoryDefault: StatsRepository {
                 httpClient.run(request: &request, { (result) in
                     switch result {
                     case .success(let result):
-                        let localStats = LocallyStoredStats(date: Date(), stats: result)
-                        try? self.storageService.store(item: localStats, on: .defaults(key: StorageKey.UserDefaults.hourlyStats))
+                        self.locallyStore(stats: result)
                         seal.fulfill(result)
 
                     case .failure(let error):
@@ -48,5 +47,10 @@ class StatsRepositoryDefault: StatsRepository {
         guard let storedStats: LocallyStoredStats = storageService.retrieve(from: .defaults(key: StorageKey.UserDefaults.hourlyStats)) else { return nil }
         guard let diff = Calendar.current.dateComponents([.hour], from: storedStats.date, to: Date()).hour else { return nil }
         return diff < 1 ? storedStats : nil
+    }
+
+    private func locallyStore(stats: Stats) {
+        let localStats = LocallyStoredStats(date: Date(), stats: stats)
+        try? self.storageService.store(item: localStats, on: .defaults(key: StorageKey.UserDefaults.hourlyStats))
     }
 }
