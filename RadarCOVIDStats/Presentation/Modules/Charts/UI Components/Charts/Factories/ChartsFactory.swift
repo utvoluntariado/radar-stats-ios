@@ -29,6 +29,8 @@ final class ChartsFactoryDefault: ChartsFactory {
         chartView.data = chartData
 
         let xAxis = chartView.xAxis
+        xAxis.spaceMin = 0.3
+        xAxis.spaceMax = 0.3
         graphicFormatter.apply(format: .standard, to: xAxis)
         xAxis.valueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
 
