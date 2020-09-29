@@ -101,7 +101,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">RadarCOVID STATS es una proyecto de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
-Todos los datos que usa RadarCOVID STATS para hacer los calculos provienen de APIs publicas como Narrativa API o Radar COVID.</string>
+Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de APIs públicas como Narrativa API o Radar COVID.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="fontForeground"/>
                                                     <nil key="highlightedColor"/>
