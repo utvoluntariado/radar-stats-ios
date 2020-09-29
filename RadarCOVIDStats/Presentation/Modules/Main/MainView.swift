@@ -15,7 +15,7 @@ protocol MainView {
 class MainViewController: UITabBarController, MainView {
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = [ChartsBuilder.build.controller]
+        viewControllers = [ChartsBuilder.build.controller, AboutBuilder.build.controller]
         tabBar.clipsToBounds = true
     }
 }

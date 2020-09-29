@@ -9,7 +9,7 @@
 import UIKit
 
 final class AboutBuilder {
-    static func build(chartType: ChartType) -> Module {
+    static var build: Module {
         var view: AboutView
         var viewController: UIViewController
 
