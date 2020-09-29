@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ChartsView: Loadable {
+protocol ChartsView: Loadable, Noticeable {
     var presenter: ChartsPresenter! { get set }
 
     func update(using stats: Stats)

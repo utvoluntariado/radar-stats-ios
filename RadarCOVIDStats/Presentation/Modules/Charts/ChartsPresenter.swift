@@ -28,7 +28,7 @@ final class ChartsPresenterDefault: ChartsPresenter {
         statsInteractor.run().done { stats in
             self.view.hideLoading { self.view.update(using: stats) }
         }.catch { error in
-            print(error)
+            self.view.hideLoading { self.view.show(error: error) }
         }
     }
 

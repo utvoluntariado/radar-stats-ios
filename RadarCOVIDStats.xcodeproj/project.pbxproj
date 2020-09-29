@@ -33,10 +33,12 @@
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E95A168C2523AA82003010F0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168B2523AA82003010F0 /* NetworkService.swift */; };
 		E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168E2523AEBF003010F0 /* NetworkError.swift */; };
+		E95A16962523B044003010F0 /* Noticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16952523B044003010F0 /* Noticeable.swift */; };
+		E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16982523B0AC003010F0 /* NoticeView.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
-		E9B57442252385BD007B0012 /* LoadingLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B57441252385BD007B0012 /* LoadingLayerView.swift */; };
+		E9B57442252385BD007B0012 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B57441252385BD007B0012 /* LoadingView.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
 		E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */; };
@@ -102,10 +104,12 @@
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E95A168B2523AA82003010F0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E95A168E2523AEBF003010F0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
+		E95A16982523B0AC003010F0 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B5743825237211007B0012 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		E9B5743D25237F72007B0012 /* SystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCoordinator.swift; sourceTree = "<group>"; };
-		E9B57441252385BD007B0012 /* LoadingLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLayerView.swift; sourceTree = "<group>"; };
+		E9B57441252385BD007B0012 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		E9B9A0CF251CAE910092ABC5 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
@@ -282,9 +286,19 @@
 			path = "Value Formatters";
 			sourceTree = "<group>";
 		};
+		E95A16942523B038003010F0 /* Noticeable */ = {
+			isa = PBXGroup;
+			children = (
+				E95A16952523B044003010F0 /* Noticeable.swift */,
+				E95A16982523B0AC003010F0 /* NoticeView.swift */,
+			);
+			path = Noticeable;
+			sourceTree = "<group>";
+		};
 		E9B5743725237206007B0012 /* Capabilities */ = {
 			isa = PBXGroup;
 			children = (
+				E95A16942523B038003010F0 /* Noticeable */,
 				E9B57440252385AC007B0012 /* Loadable */,
 			);
 			path = Capabilities;
@@ -294,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B5743825237211007B0012 /* Loadable.swift */,
-				E9B57441252385BD007B0012 /* LoadingLayerView.swift */,
+				E9B57441252385BD007B0012 /* LoadingView.swift */,
 			);
 			path = Loadable;
 			sourceTree = "<group>";
@@ -626,7 +640,7 @@
 				E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
 				E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */,
-				E9B57442252385BD007B0012 /* LoadingLayerView.swift in Sources */,
+				E9B57442252385BD007B0012 /* LoadingView.swift in Sources */,
 				E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */,
 				E9E51E2C252301C700F222AB /* AboutAuthorsTableViewCell.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
@@ -668,10 +682,12 @@
 				E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */,
 				E914C3C0251CDD0B004A578C /* ChartsTableViewCell.swift in Sources */,
 				E9B9A0FC251CC0060092ABC5 /* BusinessContainer.swift in Sources */,
+				E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */,
 				E9E51E242522F19100F222AB /* AboutView.swift in Sources */,
 				E914C3A6251CD33D004A578C /* DailyStats.swift in Sources */,
 				E91F56AA2520FF9B005CD2CE /* ChartInfoBuilder.swift in Sources */,
 				E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */,
+				E95A16962523B044003010F0 /* Noticeable.swift in Sources */,
 				E914C3CF251CE786004A578C /* LocallyStoredStats.swift in Sources */,
 				E9B9A102251CC07F0092ABC5 /* NetworkContainer.swift in Sources */,
 			);
