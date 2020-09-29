@@ -14,6 +14,7 @@ enum ChartType: Int {
     case sharedDiagnoses
     case generationDateSharedTEKs
     case uploadDateSharedTEKs
+    case uploadedTEKsPerSharedDiagnosis
     case unknown
 }
 
@@ -45,6 +46,7 @@ final class ChartsTableViewCell: UITableViewCell {
         case .sharedDiagnoses: drawSharedDiagnosesChart()
         case .generationDateSharedTEKs: drawGenerationDateSharedTEKsChart()
         case .uploadDateSharedTEKs: drawUploadDateSharedTEKsChart()
+        case .uploadedTEKsPerSharedDiagnosis: drawUploadedTEKsPerSharedDiagnosisChart()
         case .unknown: break
         }
     }
@@ -133,6 +135,32 @@ final class ChartsTableViewCell: UITableViewCell {
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
             let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByUploadDate))
+            dataEntries.append(dataEntry)
+        }
+
+        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
+
+        let barChartView = BarChartView()
+        barChartView.translatesAutoresizingMaskIntoConstraints = false
+        chartWrapperView.addSubview(barChartView)
+        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
+        barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
+        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
+        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
+        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
+        bottomConstraint.isActive = true
+
+        factory.drawBarChart(using: dataEntries,
+                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
+                                         on: barChartView)
+    }
+
+    private func drawUploadedTEKsPerSharedDiagnosisChart() {
+        chartTitleLabel.text = "TEKs compartidos por cada caso COVID"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnosesPerCovidCase))
             dataEntries.append(dataEntry)
         }
 
