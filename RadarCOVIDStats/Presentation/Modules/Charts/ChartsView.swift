@@ -3,18 +3,20 @@
 //  RadarCOVIDStats
 //
 //  Original idea by Pedro José Pereira Vieito
-//  Created by Jorge J. Ramos on 24/09/2020.
+//  Created by Jorge Juan Ramos Garnero on 24/09/2020.
 //
 
 import UIKit
 
-protocol ChartsView {
+protocol ChartsView: Loadable {
     var presenter: ChartsPresenter! { get set }
 
     func update(using stats: Stats)
 }
 
 class ChartsViewController: UIViewController, ChartsView {
+    var loadingView: UIView?
+
     var presenter: ChartsPresenter!
 
     @IBOutlet private weak var summarySegmented: UISegmentedControl!
@@ -26,8 +28,8 @@ class ChartsViewController: UIViewController, ChartsView {
         chartsTable.actionDelegate = self
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.gatherStats()
     }
 

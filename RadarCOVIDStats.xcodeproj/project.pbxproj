@@ -34,6 +34,7 @@
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
+		E9B57442252385BD007B0012 /* LoadingLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B57441252385BD007B0012 /* LoadingLayerView.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
 		E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */; };
@@ -100,6 +101,7 @@
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B5743825237211007B0012 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		E9B5743D25237F72007B0012 /* SystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCoordinator.swift; sourceTree = "<group>"; };
+		E9B57441252385BD007B0012 /* LoadingLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingLayerView.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		E9B9A0CF251CAE910092ABC5 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
@@ -278,9 +280,18 @@
 		E9B5743725237206007B0012 /* Capabilities */ = {
 			isa = PBXGroup;
 			children = (
-				E9B5743825237211007B0012 /* Loadable.swift */,
+				E9B57440252385AC007B0012 /* Loadable */,
 			);
 			path = Capabilities;
+			sourceTree = "<group>";
+		};
+		E9B57440252385AC007B0012 /* Loadable */ = {
+			isa = PBXGroup;
+			children = (
+				E9B5743825237211007B0012 /* Loadable.swift */,
+				E9B57441252385BD007B0012 /* LoadingLayerView.swift */,
+			);
+			path = Loadable;
 			sourceTree = "<group>";
 		};
 		E9B9A0B9251B90330092ABC5 /* Injection */ = {
@@ -608,6 +619,7 @@
 				E9E51E332523025700F222AB /* AboutDataTableViewCell.swift in Sources */,
 				E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
+				E9B57442252385BD007B0012 /* LoadingLayerView.swift in Sources */,
 				E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */,
 				E9E51E2C252301C700F222AB /* AboutAuthorsTableViewCell.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,

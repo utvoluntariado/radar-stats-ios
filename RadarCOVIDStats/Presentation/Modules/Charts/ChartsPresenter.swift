@@ -3,7 +3,7 @@
 //  RadarCOVIDStats
 //
 //  Original idea by Pedro José Pereira Vieito
-//  Created by Jorge J. Ramos on 24/09/2020.
+//  Created by Jorge Juan Ramos Garnero on 24/09/2020.
 //
 
 import Foundation
@@ -24,8 +24,9 @@ final class ChartsPresenterDefault: ChartsPresenter {
     var statsInteractor: StatsInteractor!
 
     func gatherStats() {
+        view.showLoading()
         statsInteractor.run().done { stats in
-            self.view.update(using: stats)
+            self.view.hideLoading { self.view.update(using: stats) }
         }.catch { error in
             print(error)
         }
