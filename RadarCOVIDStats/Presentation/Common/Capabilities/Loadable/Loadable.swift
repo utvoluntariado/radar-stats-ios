@@ -20,7 +20,7 @@ extension Loadable {
         if !systemCoordinator.isAnyModuleLoading {
             systemCoordinator.isAnyModuleLoading.toggle()
 
-            let loadingView = LoadingLayerView(frame: keyWindow.frame)
+            let loadingView = LoadingView(frame: keyWindow.frame)
             loadingView.backgroundColor = .black
             loadingView.alpha = 0.0
             keyWindow.insertSubview(loadingView, at: keyWindow.subviews.count)
@@ -31,7 +31,7 @@ extension Loadable {
 
     mutating func hideLoading(_ completion: (() -> Void)?) {
         guard let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
-        guard let loadingView = keyWindow.subviews.filter({ $0 is LoadingLayerView }).first else { return }
+        guard let loadingView = keyWindow.subviews.filter({ $0 is LoadingView }).first else { return }
 
         var systemCoordinator = <~SystemCoordinator.self
         if systemCoordinator.isAnyModuleLoading {
