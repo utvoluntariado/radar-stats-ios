@@ -35,6 +35,7 @@
 		E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168E2523AEBF003010F0 /* NetworkError.swift */; };
 		E95A16962523B044003010F0 /* Noticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16952523B044003010F0 /* Noticeable.swift */; };
 		E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16982523B0AC003010F0 /* NoticeView.swift */; };
+		E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A169E2523B686003010F0 /* MulticastDelegate.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
@@ -106,6 +107,7 @@
 		E95A168E2523AEBF003010F0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
 		E95A16982523B0AC003010F0 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		E95A169E2523B686003010F0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B5743825237211007B0012 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		E9B5743D25237F72007B0012 /* SystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCoordinator.swift; sourceTree = "<group>"; };
@@ -295,6 +297,14 @@
 			path = Noticeable;
 			sourceTree = "<group>";
 		};
+		E95A169D2523B672003010F0 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				E95A169E2523B686003010F0 /* MulticastDelegate.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
 		E9B5743725237206007B0012 /* Capabilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +427,7 @@
 				E9B9A0CE251CAE830092ABC5 /* Coordinators */,
 				E9B9A0B9251B90330092ABC5 /* Injection */,
 				E914C3C8251CE485004A578C /* Services */,
+				E95A169D2523B672003010F0 /* Patterns */,
 				E9CBA708251B88E300A7A2EC /* Supporting files */,
 			);
 			path = Infrastructure;
@@ -642,6 +653,7 @@
 				E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */,
 				E9B57442252385BD007B0012 /* LoadingView.swift in Sources */,
 				E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */,
+				E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */,
 				E9E51E2C252301C700F222AB /* AboutAuthorsTableViewCell.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
 				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,
