@@ -39,6 +39,7 @@ final class ChartsFactoryDefault: ChartsFactory {
         yAxis.valueFormatter = ChartAxisNumberFormatter()
 
         graphicFormatter.apply(format: .standard, to: chartView)
+        chartView.setScaleEnabled(false)
     }
 
     func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor) {
@@ -59,5 +60,6 @@ final class ChartsFactoryDefault: ChartsFactory {
         yAxis.valueFormatter = ChartAxisNumberFormatter()
 
         graphicFormatter.apply(format: .standard, to: chartView)
+        chartView.setScaleEnabled(false)
     }
 }

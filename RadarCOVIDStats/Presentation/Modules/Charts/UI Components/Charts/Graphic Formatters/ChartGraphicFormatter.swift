@@ -75,14 +75,18 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
     }
 
     private func applyStandardFormat(on chartView: ChartViewBase) {
-        chartView.animate(yAxisDuration: 2.0, easingOption: .easeInOutSine)
+        chartView.animate(yAxisDuration: 0.8, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.notifyDataSetChanged()
 
-        if let barLineChartView = chartView as? BarLineChartViewBase {
-            barLineChartView.setVisibleXRangeMaximum(5)
-            barLineChartView.rightAxis.enabled = false
-            barLineChartView.moveViewToX(barLineChartView.xAxis.axisMaximum)
+        if let barChartView = chartView as? BarChartView {
+            barChartView.setVisibleXRangeMaximum(6)
+            barChartView.rightAxis.enabled = false
+            barChartView.moveViewToX(barChartView.xAxis.axisMaximum)
+        } else if let lineChartView = chartView as? LineChartView {
+            lineChartView.setVisibleXRangeMaximum(5)
+            lineChartView.rightAxis.enabled = false
+            lineChartView.moveViewToX(lineChartView.xAxis.axisMaximum)
         }
     }
 }
