@@ -12,6 +12,7 @@ import Charts
 enum ChartType: Int {
     case covidCases
     case sharedDiagnoses
+    case generationDateSharedTEKs
     case unknown
 }
 
@@ -41,6 +42,7 @@ final class ChartsTableViewCell: UITableViewCell {
         switch chartType {
         case .covidCases: drawCovidCasesChart()
         case .sharedDiagnoses: drawSharedDiagnosesChart()
+        case .generationDateSharedTEKs: drawGenerationDateSharedTEKsChart()
         case .unknown: break
         }
     }
@@ -77,6 +79,32 @@ final class ChartsTableViewCell: UITableViewCell {
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
             let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnoses))
+            dataEntries.append(dataEntry)
+        }
+
+        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
+
+        let barChartView = BarChartView()
+        barChartView.translatesAutoresizingMaskIntoConstraints = false
+        chartWrapperView.addSubview(barChartView)
+        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
+        barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
+        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
+        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
+        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
+        bottomConstraint.isActive = true
+
+        factory.drawSharedDiagnosesChart(using: dataEntries,
+                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
+                                         on: barChartView)
+    }
+
+    private func drawGenerationDateSharedTEKsChart() {
+        chartTitleLabel.text = "TEKs compartidos por fecha de creación"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByGenerationDate))
             dataEntries.append(dataEntry)
         }
 

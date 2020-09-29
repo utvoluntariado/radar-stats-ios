@@ -14,6 +14,7 @@ protocol ChartsFactory {
 
     func drawCovidCasesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: LineChartView)
     func drawSharedDiagnosesChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView)
+    func drawSharedTEKsByGenerationDateChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView)
 }
 
 final class ChartsFactoryDefault: ChartsFactory {
@@ -43,6 +44,26 @@ final class ChartsFactoryDefault: ChartsFactory {
         let chartDataSet = BarChartDataSet(entries: entries)
         chartDataSet.valueFormatter = ChartValueNumberFormatter()
         
+        let chartData = BarChartData(dataSet: chartDataSet)
+        chartView.data = chartData
+
+        graphicFormatter.apply(format: .standard, to: chartDataSet)
+
+        let xAxis = chartView.xAxis
+        graphicFormatter.apply(format: .standard, to: xAxis)
+        xAxis.valueFormatter = ChartAxisDateFormatter(dates: xAxisLabelData)
+
+        let yAxis = chartView.leftAxis
+        graphicFormatter.apply(format: .standard, to: yAxis)
+        yAxis.valueFormatter = ChartAxisNumberFormatter()
+
+        graphicFormatter.apply(format: .standard, to: chartView)
+    }
+
+    func drawSharedTEKsByGenerationDateChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView) {
+        let chartDataSet = BarChartDataSet(entries: entries)
+        chartDataSet.valueFormatter = ChartValueNumberFormatter()
+
         let chartData = BarChartData(dataSet: chartDataSet)
         chartView.data = chartData
 
