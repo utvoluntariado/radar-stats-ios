@@ -14,5 +14,6 @@ class ServicesContainer {
 
     internal func prepareInjections(container: Container) {
         container.register(StorageService.self) { _ in StorageServiceDefault() }.inObjectScope(.container)
+        container.register(NetworkService.self) { _ in NetworkServiceDefault() }.inObjectScope(.container)
     }
 }
