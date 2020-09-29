@@ -59,7 +59,7 @@ final class ChartsTableViewCell: UITableViewCell {
             let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.covidCases))
             dataEntries.append(dataEntry)
         }
-
+        
         drawLineChart(using: dataEntries, color: #colorLiteral(red: 0.5843137255, green: 0.6862745098, blue: 0.7529411765, alpha: 1))
     }
 
@@ -111,7 +111,7 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.8784313725, green: 0.337254902, blue: 0.9921568627, alpha: 1))
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.9176470588, green: 0.5254901961, blue: 0.5215686275, alpha: 1))
         layoutIfNeeded()
     }
 

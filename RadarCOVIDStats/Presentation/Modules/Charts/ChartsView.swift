@@ -32,7 +32,7 @@ class ChartsViewController: UIViewController, ChartsView {
     }
 
     func update(using stats: Stats) {
-        summarySegmented.setTitle("Hoy \(stats.formattedExtrationDate(style: .medium))", forSegmentAt: 0)
+        summarySegmented.setTitle("Hoy, \(stats.formattedExtrationDate(style: .medium))", forSegmentAt: 0)
         summaryStackView.update(using: stats)
         chartsTable.update(modelset: stats)
     }
