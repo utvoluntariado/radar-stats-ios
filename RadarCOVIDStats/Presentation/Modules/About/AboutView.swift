@@ -15,7 +15,10 @@ protocol AboutView {
 class AboutViewController: UIViewController, AboutView {
     var presenter: AboutPresenter!
 
-    @IBAction func didTapDoneButton(_ sender: UIButton) {
-        presenter.dismiss()
+    @IBOutlet private weak var aboutTable: AboutTableView!
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        aboutTable.reloadData()
     }
 }
