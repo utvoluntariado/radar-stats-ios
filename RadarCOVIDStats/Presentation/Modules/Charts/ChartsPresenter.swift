@@ -12,7 +12,9 @@ protocol ChartsPresenter {
     var view: ChartsView! { get set }
     var router: ChartsRouter! { get set }
     var statsInteractor: StatsInteractor! { get set }
+    var networkService: NetworkService! { get set }
 
+    func viewDidLoad()
     func gatherStats()
     func presentInfo(for chartType: ChartType)
 }
@@ -22,6 +24,11 @@ final class ChartsPresenterDefault: ChartsPresenter {
     var router: ChartsRouter!
 
     var statsInteractor: StatsInteractor!
+    var networkService: NetworkService!
+
+    func viewDidLoad() {
+        networkService.delegate += self
+    }
 
     func gatherStats() {
         view.showLoading()
@@ -34,5 +41,13 @@ final class ChartsPresenterDefault: ChartsPresenter {
 
     func presentInfo(for chartType: ChartType) {
         router.navigate(to: .info(chartType: chartType))
+    }
+}
+
+extension ChartsPresenterDefault: NetworkServiceMulticastDelegate {
+    func networkService(_ service: NetworkService, didChangeReachability reachable: Bool) {
+        if !reachable {
+            view.show(error: NetworkError.notReachable)
+        }
     }
 }

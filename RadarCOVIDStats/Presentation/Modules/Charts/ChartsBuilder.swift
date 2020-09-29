@@ -25,6 +25,7 @@ final class ChartsBuilder {
         presenter.view = view
         presenter.router = router
         presenter.statsInteractor = <~StatsInteractor.self
+        presenter.networkService = <~NetworkService.self
 
         view.presenter = presenter
 

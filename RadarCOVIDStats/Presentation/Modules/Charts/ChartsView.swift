@@ -25,6 +25,7 @@ class ChartsViewController: UIViewController, ChartsView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         chartsTable.actionDelegate = self
     }
 
