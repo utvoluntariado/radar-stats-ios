@@ -26,7 +26,7 @@ class StatsRepositoryDefault: StatsRepository {
         return Promise<Stats> { seal in
             if let storedStats = validLocallyStoredStats() {
                 seal.fulfill(storedStats.stats)
-            } else {
+            } else if networkService.isReachable {
                 httpClient.configure(using: .github)
                 var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
                 httpClient.run(request: &request, { (result) in
@@ -39,6 +39,8 @@ class StatsRepositoryDefault: StatsRepository {
                         seal.reject(error)
                     }
                 })
+            } else {
+                seal.reject(NetworkError.notReachable)
             }
         }
     }
