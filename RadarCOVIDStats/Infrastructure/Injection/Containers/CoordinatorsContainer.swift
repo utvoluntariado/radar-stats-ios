@@ -13,7 +13,12 @@ class CoordinatorsContainer {
     init(container: Container) { prepareInjections(container: container) }
 
     internal func prepareInjections(container: Container) {
-        container.register(LaunchCoordinator.self) { _ in LaunchCoordinatorDefault() }.inObjectScope(.container)
+        container.register(LaunchCoordinator.self) { resolver in
+            var coordinator = LaunchCoordinatorDefault()
+            coordinator.networkService = resolver.resolve(NetworkService.self)
+            return coordinator
+        }.inObjectScope(.container)
+        
         container.register(SystemCoordinator.self) { _ in SystemCoordinatorDefault() }.inObjectScope(.container)
     }
 }

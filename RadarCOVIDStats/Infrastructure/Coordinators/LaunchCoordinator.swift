@@ -11,6 +11,7 @@ import UIKit
 protocol LaunchCoordinator {
     var application: UIApplication? { get set }
     var window: UIWindow { get }
+    var networkService: NetworkService! { get set }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 }
@@ -18,16 +19,22 @@ protocol LaunchCoordinator {
 class LaunchCoordinatorDefault: LaunchCoordinator {
     var application: UIApplication?
     lazy var window = UIWindow(frame: UIScreen.main.bounds)
+    var networkService: NetworkService!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.application = application
+        beginSystemTasks()
         prepareBasicAppearances()
         defineInitialModule()
         window.makeKeyAndVisible()
         return true
     }
 
-    internal func defineInitialModule() {
+    private func beginSystemTasks() {
+        networkService.startMonitoringReachability()
+    }
+
+    private func defineInitialModule() {
         window.backgroundColor = .black
         window.rootViewController = MainBuilder.build.controller
     }
