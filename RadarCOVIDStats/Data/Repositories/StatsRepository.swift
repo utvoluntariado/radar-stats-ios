@@ -24,10 +24,8 @@ class StatsRepositoryDefault: StatsRepository {
 
     func stats() -> Promise<Stats> {
         return Promise<Stats> { seal in
-            if let storedStats: LocallyStoredStats = storageService.retrieve(from: .defaults(key: StorageKey.UserDefaults.hourlyStats)),
-               let diff = Calendar.current.dateComponents([.hour], from: storedStats.date, to: Date()).hour,
-               diff < 1 {
-                    seal.fulfill(storedStats.stats)
+            if let storedStats = validLocallyStoredStats() {
+                seal.fulfill(storedStats.stats)
             } else {
                 httpClient.configure(using: .github)
                 var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
@@ -44,5 +42,11 @@ class StatsRepositoryDefault: StatsRepository {
                 })
             }
         }
+    }
+
+    private func validLocallyStoredStats() -> LocallyStoredStats? {
+        guard let storedStats: LocallyStoredStats = storageService.retrieve(from: .defaults(key: StorageKey.UserDefaults.hourlyStats)) else { return nil }
+        guard let diff = Calendar.current.dateComponents([.hour], from: storedStats.date, to: Date()).hour else { return nil }
+        return diff < 1 ? storedStats : nil
     }
 }
