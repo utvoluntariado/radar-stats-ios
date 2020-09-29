@@ -24,6 +24,10 @@ class ChartsViewController: UIViewController, ChartsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         chartsTable.actionDelegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter.gatherStats()
     }
 

@@ -41,6 +41,10 @@ extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layoutIfNeeded()
+    }
 }
 
 extension ChartsTableView: ChartsTableViewCellDelegate {

@@ -69,8 +69,6 @@ final class ChartsTableViewCell: UITableViewCell {
         factory.drawCovidCasesChart(using: dataEntries,
                                     xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                     on: lineChartView)
-
-        chartWrapperView.layoutIfNeeded()
     }
 
     private func drawSharedDiagnosesChart() {
@@ -97,17 +95,9 @@ final class ChartsTableViewCell: UITableViewCell {
         factory.drawSharedDiagnosesChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                          on: barChartView)
-
-        chartWrapperView.layoutIfNeeded()
     }
 
     @IBAction func didTapInfoButton(_ sender: UIButton) {
         delegate?.didTapInfoButton(on: chartType)
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        chartWrapperView.layer.cornerRadius = 12
     }
 }
