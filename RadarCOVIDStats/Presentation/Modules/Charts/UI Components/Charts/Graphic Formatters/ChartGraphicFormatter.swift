@@ -39,6 +39,7 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             lineChartDataSet.lineWidth = 4
             lineChartDataSet.colors = [color]
             lineChartDataSet.drawFilledEnabled = true
+            lineChartDataSet.highlightEnabled = false
 
             let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[color.cgColor, color.withAlphaComponent(0.4).cgColor] as CFArray, locations: [1.0, 0.0])
             lineChartDataSet.fill = Fill.fillWithLinearGradient(gradient ?? noGradient, angle: 90.0)
@@ -50,6 +51,7 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             barChartDataSet.colors = [color]
             barChartDataSet.valueColors = [valueFontColor]
             barChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
+            barChartDataSet.highlightEnabled = false
         }
     }
 
