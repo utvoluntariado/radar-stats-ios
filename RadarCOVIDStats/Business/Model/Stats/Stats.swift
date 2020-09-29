@@ -15,3 +15,14 @@ struct Stats: Codable {
     let last7Days: LastWeekStats
     let dailyResults: [DailyStats]
 }
+
+extension Stats {
+    func formattedExtrationDate(style: DateFormatter.Style) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateStyle = style
+        formatter.timeStyle = .none
+        let date = Date(timeIntervalSince1970: extractionDatetime / 1000)
+        return formatter.string(from: date)
+    }
+}

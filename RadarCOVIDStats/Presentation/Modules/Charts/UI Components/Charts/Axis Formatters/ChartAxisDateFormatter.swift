@@ -15,7 +15,6 @@ final class ChartAxisDateFormatter: IAxisValueFormatter {
 
     init(dates: [TimeInterval]) {
         self.dates = dates
-
         formatter.locale = Locale.current
         formatter.dateFormat = "dd MMM"
     }
