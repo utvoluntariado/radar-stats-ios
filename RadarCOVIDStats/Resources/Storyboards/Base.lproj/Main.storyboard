@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17503.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,32 +42,13 @@
                                                                 <constraint firstAttribute="height" priority="999" constant="70" id="sbb-ec-TiJ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RadarCOVID Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
-                                                            <rect key="frame" x="0.0" y="78" width="374" height="43.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RadarCOVID STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
+                                                            <rect key="frame" x="0.0" y="78" width="374" height="98.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                             <color key="textColor" name="fontForeground"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ayf-pd-QNZ">
-                                                            <rect key="frame" x="0.0" y="129.5" width="374" height="47"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idea original:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYt-j7-eeH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
-                                                                    <color key="textColor" name="fontForeground"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro José Pereira Vieito" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Sg-Kcu">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="374" height="21.5"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                                    <color key="textColor" name="fontForeground"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-2t-5hl">
                                                             <rect key="frame" x="0.0" y="184.5" width="374" height="72.5"/>
                                                             <subviews>
@@ -118,9 +99,9 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
                                                     <rect key="frame" x="20" y="27" width="374" height="225"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">RadarCOVID STATS es una proyecto de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos RadarCOVID.
+                                                    <string key="text">RadarCOVID STATS es una proyecto de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
-Este proyecto no realiza ningún tipo de ingeniería inversa sobre RadarCOVID, sino que se basa en el propio API publicado de RadarCOVID.</string>
+Todos los datos que usa RadarCOVID STATS para hacer los calculos provienen de APIs publicas como Narrativa API o Radar COVID.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="fontForeground"/>
                                                     <nil key="highlightedColor"/>
@@ -163,7 +144,7 @@ Este proyecto no realiza ningún tipo de ingeniería inversa sobre RadarCOVID, s
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="RadarCOVID Stats DATA" image="gitHub">
+                                                                    <state key="normal" title="RadarCOVID STATS" image="gitHub">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -193,7 +174,7 @@ Este proyecto no realiza ningún tipo de ingeniería inversa sobre RadarCOVID, s
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="RadarCOVID Stats iOS APP" image="gitHub">
+                                                                    <state key="normal" title="RadarCOVID STATS – iOS" image="gitHub">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -595,7 +576,7 @@ Este proyecto no realiza ningún tipo de ingeniería inversa sobre RadarCOVID, s
                         <viewControllerLayoutGuide type="bottom" id="5cR-yb-iPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Djz-Yn-fym">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puN-Ar-S9p">
@@ -653,7 +634,7 @@ Este proyecto no realiza ningún tipo de ingeniería inversa sobre RadarCOVID, s
     </scenes>
     <designables>
         <designable name="snB-dL-axl">
-            <size key="intrinsicContentSize" width="25" height="24"/>
+            <size key="intrinsicContentSize" width="49" height="48"/>
         </designable>
     </designables>
     <resources>
