@@ -70,7 +70,7 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawCovidCasesChart(using: dataEntries,
+        factory.drawLineChart(using: dataEntries,
                                     xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                     on: lineChartView)
     }
@@ -96,7 +96,7 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawSharedDiagnosesChart(using: dataEntries,
+        factory.drawBarChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                          on: barChartView)
     }
@@ -122,7 +122,7 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawSharedDiagnosesChart(using: dataEntries,
+        factory.drawBarChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                          on: barChartView)
     }
@@ -148,7 +148,7 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawSharedDiagnosesChart(using: dataEntries,
+        factory.drawBarChart(using: dataEntries,
                                          xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                                          on: barChartView)
     }
