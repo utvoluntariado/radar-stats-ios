@@ -60,7 +60,7 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawLineChart(using: dataEntries)
+        drawLineChart(using: dataEntries, color: #colorLiteral(red: 0.5843137255, green: 0.6862745098, blue: 0.7529411765, alpha: 1))
     }
 
     private func drawSharedDiagnosesChart() {
@@ -72,7 +72,8 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries)
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.7294117647, green: 0.862745098, blue: 0.3450980392, alpha: 1))
+        layoutIfNeeded()
     }
 
     private func drawGenerationDateSharedTEKsChart() {
@@ -84,7 +85,8 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries)
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 1, green: 0.7450980392, blue: 0.462745098, alpha: 1))
+        layoutIfNeeded()
     }
 
     private func drawUploadDateSharedTEKsChart() {
@@ -96,7 +98,8 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries)
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.4941176471, green: 0.8392156863, blue: 0.8745098039, alpha: 1))
+        layoutIfNeeded()
     }
 
     private func drawUploadedTEKsPerSharedDiagnosisChart() {
@@ -108,10 +111,11 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries)
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.8784313725, green: 0.337254902, blue: 0.9921568627, alpha: 1))
+        layoutIfNeeded()
     }
 
-    private func drawLineChart(using entries: [ChartDataEntry]) {
+    private func drawLineChart(using entries: [ChartDataEntry], color: UIColor) {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let lineChartView = LineChartView()
@@ -126,10 +130,11 @@ final class ChartsTableViewCell: UITableViewCell {
 
         factory.drawLineChart(using: entries,
                               xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                              on: lineChartView)
+                              on: lineChartView,
+                              with: color)
     }
 
-    private func drawBarChart(using entries: [BarChartDataEntry]) {
+    private func drawBarChart(using entries: [BarChartDataEntry], color: UIColor) {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let barChartView = BarChartView()
@@ -144,7 +149,8 @@ final class ChartsTableViewCell: UITableViewCell {
 
         factory.drawBarChart(using: entries,
                              xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                             on: barChartView)
+                             on: barChartView,
+                             with: color)
     }
 
     @IBAction func didTapInfoButton(_ sender: UIButton) {
