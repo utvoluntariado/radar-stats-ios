@@ -62,9 +62,9 @@ final class SummaryStackView: UIStackView {
         } completion: { (completed) in
             if completed {
                 self.uploadedTEKsValueLabel.text = "\(self.stats.today.sharedTeksByUploadDate)"
-                self.sharedDiagnosesValueLabel.text = "≤\(self.stats.today.sharedDiagnoses)"
-                self.diagnosisTEKsValueLabel.text = "≥\(self.stats.today.teksPerSharedDiagnosis)"
-                self.usageRatioValueLabel.text = "≤\(self.stats.today.formattedUsageRatio())"
+                self.sharedDiagnosesValueLabel.text = "≤ \(self.stats.today.sharedDiagnoses)"
+                self.diagnosisTEKsValueLabel.text = "≥ \(self.stats.today.teksPerSharedDiagnosis)"
+                self.usageRatioValueLabel.text = "≤ \(self.stats.today.formattedUsageRatio())"
 
                 UIView.animate(withDuration: 0.25) {
                     self.uploadedTEKsValueLabel.alpha = 1.0
@@ -91,8 +91,8 @@ final class SummaryStackView: UIStackView {
             self.usageRatioValueLabel.alpha = 0.0
         } completion: { (completed) in
             if completed {
-                self.sharedDiagnosesValueLabel.text = "≤\(self.stats.last7Days.sharedDiagnoses)"
-                self.usageRatioValueLabel.text = "≤\(self.stats.last7Days.formattedUsageRatio())"
+                self.sharedDiagnosesValueLabel.text = "≤ \(self.stats.last7Days.sharedDiagnoses)"
+                self.usageRatioValueLabel.text = "≤ \(self.stats.last7Days.formattedUsageRatio())"
 
                 UIView.animate(withDuration: 0.25) {
                     self.sharedDiagnosesValueLabel.alpha = 1.0
