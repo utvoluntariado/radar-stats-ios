@@ -24,4 +24,12 @@ extension TodayStats {
         numberFormatter.maximumFractionDigits = 2
         return numberFormatter.string(from: number) ?? "NaN"
     }
+
+    func formattedTeksPerSharedDiagnosis() -> String {
+        let number = NSNumber(value: teksPerSharedDiagnosis)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter.string(from: number) ?? "NaN"
+    }
 }

@@ -63,7 +63,7 @@ final class SummaryStackView: UIStackView {
             if completed {
                 self.uploadedTEKsValueLabel.text = "\(self.stats.today.sharedTeksByUploadDate)"
                 self.sharedDiagnosesValueLabel.text = "≤ \(self.stats.today.sharedDiagnoses)"
-                self.diagnosisTEKsValueLabel.text = "≥ \(self.stats.today.teksPerSharedDiagnosis)"
+                self.diagnosisTEKsValueLabel.text = "≥ \(self.stats.today.formattedTeksPerSharedDiagnosis())"
                 self.usageRatioValueLabel.text = "≤ \(self.stats.today.formattedUsageRatio())"
 
                 UIView.animate(withDuration: 0.25) {
