@@ -60,6 +60,58 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
+        drawLineChart(using: dataEntries)
+    }
+
+    private func drawSharedDiagnosesChart() {
+        chartTitleLabel.text = "Diagnósticos compartidos (Estimados)"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnoses))
+            dataEntries.append(dataEntry)
+        }
+
+        drawBarChart(using: dataEntries)
+    }
+
+    private func drawGenerationDateSharedTEKsChart() {
+        chartTitleLabel.text = "TEKs compartidos por fecha de creación"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByGenerationDate))
+            dataEntries.append(dataEntry)
+        }
+
+        drawBarChart(using: dataEntries)
+    }
+
+    private func drawUploadDateSharedTEKsChart() {
+        chartTitleLabel.text = "TEKs compartidos por fecha de subida"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByUploadDate))
+            dataEntries.append(dataEntry)
+        }
+
+        drawBarChart(using: dataEntries)
+    }
+
+    private func drawUploadedTEKsPerSharedDiagnosisChart() {
+        chartTitleLabel.text = "TEKs compartidos por cada caso COVID"
+
+        var dataEntries: [BarChartDataEntry] = []
+        for (index, day) in sortedDailyResults.enumerated() {
+            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnosesPerCovidCase))
+            dataEntries.append(dataEntry)
+        }
+
+        drawBarChart(using: dataEntries)
+    }
+
+    private func drawLineChart(using entries: [ChartDataEntry]) {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let lineChartView = LineChartView()
@@ -72,20 +124,12 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawLineChart(using: dataEntries,
-                                    xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                                    on: lineChartView)
+        factory.drawLineChart(using: entries,
+                              xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
+                              on: lineChartView)
     }
 
-    private func drawSharedDiagnosesChart() {
-        chartTitleLabel.text = "Diagnósticos compartidos (Estimados)"
-
-        var dataEntries: [BarChartDataEntry] = []
-        for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnoses))
-            dataEntries.append(dataEntry)
-        }
-
+    private func drawBarChart(using entries: [BarChartDataEntry]) {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let barChartView = BarChartView()
@@ -98,87 +142,9 @@ final class ChartsTableViewCell: UITableViewCell {
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         bottomConstraint.isActive = true
 
-        factory.drawBarChart(using: dataEntries,
-                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                                         on: barChartView)
-    }
-
-    private func drawGenerationDateSharedTEKsChart() {
-        chartTitleLabel.text = "TEKs compartidos por fecha de creación"
-
-        var dataEntries: [BarChartDataEntry] = []
-        for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByGenerationDate))
-            dataEntries.append(dataEntry)
-        }
-
-        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
-
-        let barChartView = BarChartView()
-        barChartView.translatesAutoresizingMaskIntoConstraints = false
-        chartWrapperView.addSubview(barChartView)
-        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
-        barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
-        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
-        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
-        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
-        bottomConstraint.isActive = true
-
-        factory.drawBarChart(using: dataEntries,
-                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                                         on: barChartView)
-    }
-
-    private func drawUploadDateSharedTEKsChart() {
-        chartTitleLabel.text = "TEKs compartidos por fecha de subida"
-
-        var dataEntries: [BarChartDataEntry] = []
-        for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedTeksByUploadDate))
-            dataEntries.append(dataEntry)
-        }
-
-        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
-
-        let barChartView = BarChartView()
-        barChartView.translatesAutoresizingMaskIntoConstraints = false
-        chartWrapperView.addSubview(barChartView)
-        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
-        barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
-        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
-        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
-        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
-        bottomConstraint.isActive = true
-
-        factory.drawBarChart(using: dataEntries,
-                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                                         on: barChartView)
-    }
-
-    private func drawUploadedTEKsPerSharedDiagnosisChart() {
-        chartTitleLabel.text = "TEKs compartidos por cada caso COVID"
-
-        var dataEntries: [BarChartDataEntry] = []
-        for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = BarChartDataEntry(x: Double(index), y: Double(day.sharedDiagnosesPerCovidCase))
-            dataEntries.append(dataEntry)
-        }
-
-        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
-
-        let barChartView = BarChartView()
-        barChartView.translatesAutoresizingMaskIntoConstraints = false
-        chartWrapperView.addSubview(barChartView)
-        barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
-        barChartView.trailingAnchor.constraint(equalTo: chartWrapperView.trailingAnchor).isActive = true
-        barChartView.topAnchor.constraint(equalTo: chartWrapperView.topAnchor, constant: 16).isActive = true
-        let bottomConstraint = barChartView.bottomAnchor.constraint(equalTo: chartWrapperView.bottomAnchor, constant: -16)
-        bottomConstraint.priority = UILayoutPriority(rawValue: 999)
-        bottomConstraint.isActive = true
-
-        factory.drawBarChart(using: dataEntries,
-                                         xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
-                                         on: barChartView)
+        factory.drawBarChart(using: entries,
+                             xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
+                             on: barChartView)
     }
 
     @IBAction func didTapInfoButton(_ sender: UIButton) {
