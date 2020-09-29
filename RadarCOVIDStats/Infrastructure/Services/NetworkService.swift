@@ -9,14 +9,12 @@
 import Foundation
 import Network
 
-protocol NetworkServiceDelegate: class {
-    var isReachable: Bool { get }
-
+protocol NetworkServiceMulticastDelegate {
     func networkService(_ service: NetworkService, didChangeReachability reachable: Bool)
 }
 
 protocol NetworkService {
-    var delegate: NetworkServiceDelegate? { get set }
+    var delegate: MulticastDelegate<NetworkServiceMulticastDelegate> { get set }
     var isReachable: Bool { get }
 
     func startMonitoringReachability()
@@ -24,7 +22,7 @@ protocol NetworkService {
 }
 
 class NetworkServiceDefault: NetworkService {
-    weak var delegate: NetworkServiceDelegate?
+    var delegate = MulticastDelegate<NetworkServiceMulticastDelegate>()
 
     private(set) var isReachable = false
 
@@ -34,10 +32,10 @@ class NetworkServiceDefault: NetworkService {
         networkMonitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
                 self.isReachable = true
-                self.delegate?.networkService(self, didChangeReachability: true)
+                self.delegate ~~> { delegate in delegate.networkService(self, didChangeReachability: true) }
             } else {
                 self.isReachable = false
-                self.delegate?.networkService(self, didChangeReachability: false)
+                self.delegate ~~> { delegate in delegate.networkService(self, didChangeReachability: false) }
             }
         }
 
