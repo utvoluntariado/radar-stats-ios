@@ -58,6 +58,10 @@
 		E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CBA6F8251B88BD00A7A2EC /* LaunchScreen.storyboard */; };
 		E9CBA712251B8B3300A7A2EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA711251B8B3300A7A2EC /* Module.swift */; };
 		E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */; };
+		E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E1A2522F16C00F222AB /* AboutBuilder.swift */; };
+		E9E51E1E2522F17600F222AB /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E1D2522F17600F222AB /* AboutRouter.swift */; };
+		E9E51E212522F18900F222AB /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E202522F18900F222AB /* AboutPresenter.swift */; };
+		E9E51E242522F19100F222AB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E232522F19100F222AB /* AboutView.swift */; };
 		E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,10 @@
 		E9CBA6FB251B88BD00A7A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CBA711251B8B3300A7A2EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		E9E51E1A2522F16C00F222AB /* AboutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBuilder.swift; sourceTree = "<group>"; };
+		E9E51E1D2522F17600F222AB /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		E9E51E202522F18900F222AB /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		E9E51E232522F19100F222AB /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -430,6 +438,7 @@
 				E9CBA70E251B8AC300A7A2EC /* Main */,
 				E914C3AD251CDAFF004A578C /* Charts */,
 				E91F56A82520FF87005CD2CE /* ChartInfo */,
+				E9E51E192522F14D00F222AB /* About */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -458,6 +467,17 @@
 				E9CBA711251B8B3300A7A2EC /* Module.swift */,
 			);
 			path = Patterns;
+			sourceTree = "<group>";
+		};
+		E9E51E192522F14D00F222AB /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E9E51E1A2522F16C00F222AB /* AboutBuilder.swift */,
+				E9E51E1D2522F17600F222AB /* AboutRouter.swift */,
+				E9E51E202522F18900F222AB /* AboutPresenter.swift */,
+				E9E51E232522F19100F222AB /* AboutView.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,6 +568,7 @@
 				E9B9A0DA251CB1790092ABC5 /* API.swift in Sources */,
 				E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
+				E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
 				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
@@ -558,6 +579,7 @@
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
 				E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */,
 				E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */,
+				E9E51E212522F18900F222AB /* AboutPresenter.swift in Sources */,
 				E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */,
 				E914C3BD251CDD01004A578C /* ChartsTableView.swift in Sources */,
 				E9B9A0D0251CAE910092ABC5 /* LaunchCoordinator.swift in Sources */,
@@ -572,6 +594,7 @@
 				E914C3B7251CDB3B004A578C /* ChartsView.swift in Sources */,
 				E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */,
 				E914C39C251CD2DB004A578C /* LastHourStats.swift in Sources */,
+				E9E51E1E2522F17600F222AB /* AboutRouter.swift in Sources */,
 				E9B9A0E5251CB6F50092ABC5 /* HTTPClient.swift in Sources */,
 				E9B9A0E4251CB6F50092ABC5 /* HTTPMethod.swift in Sources */,
 				E914C40A25205EEA004A578C /* ChartGraphicFormatter.swift in Sources */,
@@ -581,6 +604,7 @@
 				E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */,
 				E914C3C0251CDD0B004A578C /* ChartsTableViewCell.swift in Sources */,
 				E9B9A0FC251CC0060092ABC5 /* BusinessContainer.swift in Sources */,
+				E9E51E242522F19100F222AB /* AboutView.swift in Sources */,
 				E914C3A6251CD33D004A578C /* DailyStats.swift in Sources */,
 				E91F56AA2520FF9B005CD2CE /* ChartInfoBuilder.swift in Sources */,
 				E91F56B12520FFAF005CD2CE /* ChartInfoView.swift in Sources */,

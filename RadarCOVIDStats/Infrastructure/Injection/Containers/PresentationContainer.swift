@@ -24,5 +24,8 @@ class PresentationContainer {
 
         container.register(ChartInfoRouter.self) { _ in ChartInfoRouterDefault() }.inObjectScope(.container)
         container.register(ChartInfoPresenter.self) { _ in ChartInfoPresenterDefault() }.inObjectScope(.container)
+
+        container.register(AboutRouter.self) { _ in AboutRouterDefault() }.inObjectScope(.container)
+        container.register(AboutPresenter.self) { _ in AboutPresenterDefault() }.inObjectScope(.container)
     }
 }
