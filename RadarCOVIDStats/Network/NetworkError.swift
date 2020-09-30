@@ -10,10 +10,12 @@ import Foundation
 
 enum NetworkError: LocalizedError {
     case notReachable
+    case generic
 
     var errorDescription: String? {
         switch self {
         case .notReachable: return "No hay conexión a Internet"
+        case .generic: return "se ha producido un error inesperado"
         }
     }
 }

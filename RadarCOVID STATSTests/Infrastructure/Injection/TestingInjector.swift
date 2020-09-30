@@ -14,7 +14,12 @@ import Swinject
 final class TestingInjector {
     static func prepareMockInjections() {
         let mockContainer = Container()
-
+        CoordinatorsContainer(container: mockContainer)
+        ServicesContainer(container: mockContainer)
+        BusinessContainer(container: mockContainer)
+        NetworkContainer(container: mockContainer)
+        PresentationContainerMock(container: mockContainer)
+        DataContainerMock(container: mockContainer)
         Injector.shared.use(container: mockContainer)
     }
 

@@ -36,6 +36,7 @@
 		E95A16962523B044003010F0 /* Noticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16952523B044003010F0 /* Noticeable.swift */; };
 		E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16982523B0AC003010F0 /* NoticeView.swift */; };
 		E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A169E2523B686003010F0 /* MulticastDelegate.swift */; };
+		E961E0C425248AA3003FEF0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1EA2524545800448D15 /* main.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
@@ -66,6 +67,13 @@
 		E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CBA6F8251B88BD00A7A2EC /* LaunchScreen.storyboard */; };
 		E9CBA712251B8B3300A7A2EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA711251B8B3300A7A2EC /* Module.swift */; };
 		E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */; };
+		E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */; };
+		E9D7AEE525247B4E00B1AB74 /* ChartsRouterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */; };
+		E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */; };
+		E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */; };
+		E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEF8252484B400B1AB74 /* DataContainerMock.swift */; };
+		E9D7AEFE2524856A00B1AB74 /* stats-mocked.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AEFD2524856A00B1AB74 /* stats-mocked.json */; };
+		E9D7AF022524877C00B1AB74 /* ChartsExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AF012524877C00B1AB74 /* ChartsExpectation.swift */; };
 		E9E51E1B2522F16C00F222AB /* AboutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E1A2522F16C00F222AB /* AboutBuilder.swift */; };
 		E9E51E1E2522F17600F222AB /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E1D2522F17600F222AB /* AboutRouter.swift */; };
 		E9E51E212522F18900F222AB /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E202522F18900F222AB /* AboutPresenter.swift */; };
@@ -76,9 +84,8 @@
 		E9E51E332523025700F222AB /* AboutDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E322523025700F222AB /* AboutDataTableViewCell.swift */; };
 		E9E51E362523026700F222AB /* AboutThirdPartiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E51E352523026700F222AB /* AboutThirdPartiesTableViewCell.swift */; };
 		E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */; };
-		E9F9A1D52524535000448D15 /* RadarCOVID_STATSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1D42524535000448D15 /* RadarCOVID_STATSTests.swift */; };
+		E9F9A1D52524535000448D15 /* ChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1D42524535000448D15 /* ChartsTests.swift */; };
 		E9F9A1E3252453E700448D15 /* TestingInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1E2252453E700448D15 /* TestingInjector.swift */; };
-		E9F9A1EB2524545800448D15 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1EA2524545800448D15 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +158,13 @@
 		E9CBA6FB251B88BD00A7A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CBA711251B8B3300A7A2EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainerMock.swift; sourceTree = "<group>"; };
+		E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouterTestable.swift; sourceTree = "<group>"; };
+		E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenterTestable.swift; sourceTree = "<group>"; };
+		E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsRepositoryMock.swift; sourceTree = "<group>"; };
+		E9D7AEF8252484B400B1AB74 /* DataContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainerMock.swift; sourceTree = "<group>"; };
+		E9D7AEFD2524856A00B1AB74 /* stats-mocked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "stats-mocked.json"; sourceTree = "<group>"; };
+		E9D7AF012524877C00B1AB74 /* ChartsExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsExpectation.swift; sourceTree = "<group>"; };
 		E9E51E1A2522F16C00F222AB /* AboutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBuilder.swift; sourceTree = "<group>"; };
 		E9E51E1D2522F17600F222AB /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
 		E9E51E202522F18900F222AB /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
@@ -162,7 +176,7 @@
 		E9E51E352523026700F222AB /* AboutThirdPartiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutThirdPartiesTableViewCell.swift; sourceTree = "<group>"; };
 		E9EB45FA252228AC003A11A2 /* SummaryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryStackView.swift; sourceTree = "<group>"; };
 		E9F9A1D22524535000448D15 /* RadarCOVID STATSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RadarCOVID STATSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9F9A1D42524535000448D15 /* RadarCOVID_STATSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarCOVID_STATSTests.swift; sourceTree = "<group>"; };
+		E9F9A1D42524535000448D15 /* ChartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTests.swift; sourceTree = "<group>"; };
 		E9F9A1D62524535000448D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F9A1DF252453C100448D15 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		E9F9A1E2252453E700448D15 /* TestingInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingInjector.swift; sourceTree = "<group>"; };
@@ -564,6 +578,57 @@
 			path = Patterns;
 			sourceTree = "<group>";
 		};
+		E9D7AEDB25247ADA00B1AB74 /* Test Containers */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */,
+				E9D7AEF8252484B400B1AB74 /* DataContainerMock.swift */,
+			);
+			path = "Test Containers";
+			sourceTree = "<group>";
+		};
+		E9D7AEE225247B2C00B1AB74 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AEE325247B3400B1AB74 /* Charts */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E9D7AEE325247B3400B1AB74 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AF012524877C00B1AB74 /* ChartsExpectation.swift */,
+				E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */,
+				E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		E9D7AEF02524831100B1AB74 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AEF12524831700B1AB74 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E9D7AEF12524831700B1AB74 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E9D7AEFC2524855E00B1AB74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AEFD2524856A00B1AB74 /* stats-mocked.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E9E51E192522F14D00F222AB /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,7 +657,10 @@
 			isa = PBXGroup;
 			children = (
 				E9F9A1DE252453AE00448D15 /* Infrastructure */,
-				E9F9A1D42524535000448D15 /* RadarCOVID_STATSTests.swift */,
+				E9D7AEF02524831100B1AB74 /* Data */,
+				E9D7AEE225247B2C00B1AB74 /* Presentation */,
+				E9D7AEFC2524855E00B1AB74 /* Resources */,
+				E9F9A1D42524535000448D15 /* ChartsTests.swift */,
 			);
 			path = "RadarCOVID STATSTests";
 			sourceTree = "<group>";
@@ -619,6 +687,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F9A1E2252453E700448D15 /* TestingInjector.swift */,
+				E9D7AEDB25247ADA00B1AB74 /* Test Containers */,
 			);
 			path = Injection;
 			sourceTree = "<group>";
@@ -724,6 +793,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D7AEFE2524856A00B1AB74 /* stats-mocked.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +833,7 @@
 				E9E51E212522F18900F222AB /* AboutPresenter.swift in Sources */,
 				E9EB45FB252228AC003A11A2 /* SummaryStackView.swift in Sources */,
 				E95A168C2523AA82003010F0 /* NetworkService.swift in Sources */,
+				E961E0C425248AA3003FEF0D /* main.swift in Sources */,
 				E914C3BD251CDD01004A578C /* ChartsTableView.swift in Sources */,
 				E9B9A0D0251CAE910092ABC5 /* LaunchCoordinator.swift in Sources */,
 				E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */,
@@ -803,9 +874,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F9A1D52524535000448D15 /* RadarCOVID_STATSTests.swift in Sources */,
+				E9F9A1D52524535000448D15 /* ChartsTests.swift in Sources */,
+				E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */,
+				E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */,
+				E9D7AEE525247B4E00B1AB74 /* ChartsRouterTestable.swift in Sources */,
 				E9F9A1E3252453E700448D15 /* TestingInjector.swift in Sources */,
-				E9F9A1EB2524545800448D15 /* main.swift in Sources */,
+				E9D7AF022524877C00B1AB74 /* ChartsExpectation.swift in Sources */,
+				E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */,
+				E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,7 +1081,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W762WV5CVG;
-				INFOPLIST_FILE = "RadarCOVID STATSTests/Info.plist";
+				INFOPLIST_FILE = "RadarCOVID STATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1025,7 +1101,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W762WV5CVG;
-				INFOPLIST_FILE = "RadarCOVID STATSTests/Info.plist";
+				INFOPLIST_FILE = "RadarCOVID STATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

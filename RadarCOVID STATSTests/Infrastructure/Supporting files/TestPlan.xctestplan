@@ -12,7 +12,13 @@
 
   },
   "testTargets" : [
-
+    {
+      "target" : {
+        "containerPath" : "container:RadarCOVIDStats.xcodeproj",
+        "identifier" : "E9F9A1D12524535000448D15",
+        "name" : "RadarCOVID STATSTests"
+      }
+    }
   ],
   "version" : 1
 }

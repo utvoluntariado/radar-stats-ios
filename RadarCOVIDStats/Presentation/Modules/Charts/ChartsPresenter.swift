@@ -19,7 +19,7 @@ protocol ChartsPresenter {
     func presentInfo(for chartType: ChartType)
 }
 
-final class ChartsPresenterDefault: ChartsPresenter {
+class ChartsPresenterDefault: ChartsPresenter {
     var view: ChartsView!
     var router: ChartsRouter!
 
@@ -35,12 +35,16 @@ final class ChartsPresenterDefault: ChartsPresenter {
         statsInteractor.run().done { stats in
             self.view.hideLoading { self.view.update(using: stats) }
         }.catch { error in
-            self.view.hideLoading { self.view.show(error: error) }
+            self.show(error: error)
         }
     }
 
     func presentInfo(for chartType: ChartType) {
         router.navigate(to: .info(chartType: chartType))
+    }
+
+    internal func show(error: Error) {
+        view.hideLoading { self.view.show(error: error) }
     }
 }
 
