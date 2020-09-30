@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/pvieito/Documents/Developer/RadarCOVID/RadarCOVID-STATS-iOS/RadarSTATS.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
