@@ -15,6 +15,7 @@ protocol ChartsTableViewActionDelegate: class {
 final class ChartsTableView: UITableView {
     weak var actionDelegate: ChartsTableViewActionDelegate?
 
+    private var alreadyAnimatedChartCellsIndexPaths = [IndexPath]()
     private var modelset: Stats?
 
     override func awakeFromNib() {
@@ -40,6 +41,13 @@ extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
         cell.bind(modelset: modelset, for: ChartType(rawValue: indexPath.row) ?? .unknown)
         cell.delegate = self
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if !alreadyAnimatedChartCellsIndexPaths.contains(indexPath), let chartCell = cell as? ChartsTableViewCell {
+            alreadyAnimatedChartCellsIndexPaths.append(indexPath)
+            chartCell.animateChart()
+        }
     }
 }
 

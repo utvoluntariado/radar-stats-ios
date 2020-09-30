@@ -153,6 +153,17 @@ final class ChartsTableViewCell: UITableViewCell {
                              with: color)
     }
 
+    func animateChart() {
+        let chartView = chartWrapperView.subviews.compactMap({ $0 as? ChartViewBase }).first
+        chartView?.animate(yAxisDuration: 1.0, easingOption: .easeInOutSine)
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
+        chartTitleLabel.text = nil
+    }
+
     @IBAction func didTapInfoButton(_ sender: UIButton) {
         delegate?.didTapInfoButton(on: chartType)
     }

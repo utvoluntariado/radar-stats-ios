@@ -77,7 +77,6 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
     }
 
     private func applyStandardFormat(on chartView: ChartViewBase) {
-        chartView.animate(yAxisDuration: 0.8, easingOption: .easeInOutSine)
         chartView.legend.enabled = false
         chartView.notifyDataSetChanged()
 
