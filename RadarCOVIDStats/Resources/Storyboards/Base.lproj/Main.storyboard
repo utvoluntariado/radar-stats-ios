@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -336,7 +337,7 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-L6-naK">
-                                <rect key="frame" x="16" y="52" width="382" height="202"/>
+                                <rect key="frame" x="16" y="52" width="382" height="336"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ag8-DP-2Le">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
@@ -344,6 +345,26 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="statsHeader" translatesAutoresizingMaskIntoConstraints="NO" id="Nh7-6q-tKi">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <color key="tintColor" name="imageButtonTint"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Nh7-6q-tKi" secondAttribute="height" multiplier="1:1" id="BdL-it-LaC"/>
+                                                    <constraint firstAttribute="width" secondItem="Nh7-6q-tKi" secondAttribute="height" multiplier="1:1" id="GWw-Af-ssd"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="BdL-it-LaC"/>
+                                                        <exclude reference="GWw-Af-ssd"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="GWw-Af-ssd"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="BdL-it-LaC"/>
+                                                    </mask>
+                                                </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="RadarSTATS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-kc-PhD">
                                                 <rect key="frame" x="68" y="0.0" width="314" height="60"/>
@@ -371,29 +392,29 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6D-1K-a2J">
-                                        <rect key="frame" x="0.0" y="122" width="382" height="80"/>
+                                        <rect key="frame" x="0.0" y="122" width="382" height="214"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s28-UH-CDa">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="214"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="R0c-2r-DN1"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-hj-ymG" customClass="SummaryStackView" customModule="RadarCOVID_STATS" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="0.0" width="322" height="80"/>
+                                                <rect key="frame" x="30" y="0.0" width="322" height="214"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-yH-QtR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Diagnósticos compartidos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-ac-uXw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-VN-vke">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="17"/>
+                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
@@ -401,16 +422,16 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Re-Wv-7sE">
-                                                        <rect key="frame" x="0.0" y="21" width="322" height="17"/>
+                                                        <rect key="frame" x="0.0" y="54.5" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Ratio de uso" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-NG-0c7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSl-9m-QQZ">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="17"/>
+                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
@@ -418,16 +439,16 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JRd-uq-5sb">
-                                                        <rect key="frame" x="0.0" y="42" width="322" height="17"/>
+                                                        <rect key="frame" x="0.0" y="109" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TEKs subidos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xm-wX-pzx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B03-Qv-Vso">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="17"/>
+                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
@@ -435,16 +456,16 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WTo-bt-nMa">
-                                                        <rect key="frame" x="0.0" y="63" width="322" height="17"/>
+                                                        <rect key="frame" x="0.0" y="163.5" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TEKs por diagnóstico compartido" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AII-50-qe8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-zP-YUp">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="17"/>
+                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
@@ -468,7 +489,7 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                                 </connections>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-uN-y30">
-                                                <rect key="frame" x="352" y="0.0" width="30" height="80"/>
+                                                <rect key="frame" x="352" y="0.0" width="30" height="214"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="NlY-wT-Wp0"/>
@@ -477,9 +498,10 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Zd-Nt-gqk" customClass="ChartsTableView" customModule="RadarCOVID_STATS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="262" width="414" height="551"/>
+                                <rect key="frame" x="0.0" y="396" width="414" height="417"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarCOVID_STATS" customModuleProvider="target">
@@ -558,14 +580,92 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                         </subviews>
                         <color key="backgroundColor" name="viewBackground"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Z2q-L6-naK" secondAttribute="bottom" id="8as-e5-Nto"/>
                             <constraint firstItem="Z2q-L6-naK" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" constant="8" id="9Jd-wH-EeJ"/>
                             <constraint firstAttribute="trailing" secondItem="Z2q-L6-naK" secondAttribute="trailing" constant="16" id="BfI-xS-atM"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="Z2q-L6-naK" secondAttribute="trailing" constant="8" id="D2z-vW-mrr"/>
                             <constraint firstItem="Z2q-L6-naK" firstAttribute="leading" secondItem="WrG-ed-rpo" secondAttribute="leading" constant="16" id="EPn-vt-bmB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Zd-Nt-gqk" secondAttribute="trailing" id="GXS-7B-Rbj"/>
+                            <constraint firstItem="Z2q-L6-naK" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" id="Kzv-NZ-osJ">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstAttribute="bottomMargin" secondItem="Z2q-L6-naK" secondAttribute="bottom" id="LOX-NT-4UY"/>
+                            <constraint firstItem="Z2q-L6-naK" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" id="Oga-mL-SF2">
+                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="trailing" secondItem="WrG-ed-rpo" secondAttribute="trailing" id="OrF-yg-NKx"/>
+                            <constraint firstItem="AhX-9y-mpw" firstAttribute="top" secondItem="9Zd-Nt-gqk" secondAttribute="bottom" id="QrB-2B-f9y"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="trailing" secondItem="WrG-ed-rpo" secondAttribute="trailingMargin" id="V19-r6-uGH"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" constant="8" id="bc3-sw-i2e"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="Z2q-L6-naK" secondAttribute="bottom" constant="8" id="eCd-tD-IXQ"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="Z2q-L6-naK" secondAttribute="trailing" constant="8" id="gpd-m5-9e6"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="width" secondItem="WrG-ed-rpo" secondAttribute="width" multiplier="0.5" id="l5s-ek-eiH"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="bottom" secondItem="AhX-9y-mpw" secondAttribute="top" id="n7S-wb-f1Y"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" constant="8" id="pZj-46-4R2"/>
+                            <constraint firstItem="AhX-9y-mpw" firstAttribute="top" secondItem="9Zd-Nt-gqk" secondAttribute="bottom" id="q1n-qa-mua"/>
+                            <constraint firstItem="Z2q-L6-naK" firstAttribute="leading" secondItem="WrG-ed-rpo" secondAttribute="leadingMargin" id="qDZ-us-iYL"/>
+                            <constraint firstItem="9Zd-Nt-gqk" firstAttribute="width" secondItem="WrG-ed-rpo" secondAttribute="width" multiplier="0.5" id="yLA-zV-I12"/>
+                            <constraint firstItem="Z2q-L6-naK" firstAttribute="leading" secondItem="WrG-ed-rpo" secondAttribute="leadingMargin" id="zUU-0b-SYP"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="WrG-ed-rpo" secondAttribute="leading" id="zgH-ad-Zam"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8as-e5-Nto"/>
+                                <exclude reference="Kzv-NZ-osJ"/>
+                                <exclude reference="LOX-NT-4UY"/>
+                                <exclude reference="Oga-mL-SF2"/>
+                                <exclude reference="qDZ-us-iYL"/>
+                                <exclude reference="zUU-0b-SYP"/>
+                                <exclude reference="D2z-vW-mrr"/>
+                                <exclude reference="GXS-7B-Rbj"/>
+                                <exclude reference="V19-r6-uGH"/>
+                                <exclude reference="bc3-sw-i2e"/>
+                                <exclude reference="gpd-m5-9e6"/>
+                                <exclude reference="l5s-ek-eiH"/>
+                                <exclude reference="pZj-46-4R2"/>
+                                <exclude reference="yLA-zV-I12"/>
+                                <exclude reference="QrB-2B-f9y"/>
+                                <exclude reference="q1n-qa-mua"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="9Jd-wH-EeJ"/>
+                                <exclude reference="BfI-xS-atM"/>
+                                <exclude reference="EPn-vt-bmB"/>
+                                <exclude reference="LOX-NT-4UY"/>
+                                <include reference="Oga-mL-SF2"/>
+                                <include reference="qDZ-us-iYL"/>
+                                <include reference="D2z-vW-mrr"/>
+                                <exclude reference="OrF-yg-NKx"/>
+                                <include reference="V19-r6-uGH"/>
+                                <exclude reference="eCd-tD-IXQ"/>
+                                <exclude reference="n7S-wb-f1Y"/>
+                                <include reference="pZj-46-4R2"/>
+                                <include reference="yLA-zV-I12"/>
+                                <exclude reference="zgH-ad-Zam"/>
+                                <include reference="q1n-qa-mua"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="8as-e5-Nto"/>
+                                <exclude reference="9Jd-wH-EeJ"/>
+                                <exclude reference="BfI-xS-atM"/>
+                                <exclude reference="EPn-vt-bmB"/>
+                                <include reference="Kzv-NZ-osJ"/>
+                                <include reference="zUU-0b-SYP"/>
+                                <include reference="GXS-7B-Rbj"/>
+                                <exclude reference="OrF-yg-NKx"/>
+                                <include reference="bc3-sw-i2e"/>
+                                <exclude reference="eCd-tD-IXQ"/>
+                                <include reference="gpd-m5-9e6"/>
+                                <include reference="l5s-ek-eiH"/>
+                                <exclude reference="n7S-wb-f1Y"/>
+                                <exclude reference="zgH-ad-Zam"/>
+                                <include reference="QrB-2B-f9y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Estadísticas" image="chart.pie.fill" catalog="system" id="dIj-6h-etg"/>
                     <connections>
@@ -577,7 +677,7 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXY-a2-M7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="-445"/>
+            <point key="canvasLocation" x="198.09782608695653" y="-446.37681159420293"/>
         </scene>
         <!--Chart Info View Controller-->
         <scene sceneID="V90-tv-bQF">
@@ -588,7 +688,7 @@ Todos los datos que usa RadarCOVID STATS para hacer los cálculos provienen de A
                         <viewControllerLayoutGuide type="bottom" id="5cR-yb-iPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Djz-Yn-fym">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puN-Ar-S9p">
