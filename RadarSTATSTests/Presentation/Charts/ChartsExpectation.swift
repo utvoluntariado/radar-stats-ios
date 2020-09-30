@@ -10,4 +10,5 @@ import Foundation
 
 struct ChartsExpectation {
     static let anErrorIsShownWhenGatherStatsFails = "An error is shown when GatherStats fails for any reason"
+    static let statsArePassedToViewWhenGatherStatsSucceed = "Stats are passed to view when when GatherStats succeed"
 }

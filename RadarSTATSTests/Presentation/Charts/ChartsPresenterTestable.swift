@@ -9,10 +9,15 @@
 import Foundation
 import XCTest
 
-@testable import RadarCOVID_STATS
+@testable import RadarSTATS
 
 final class ChartsPresenterTestable: ChartsPresenterDefault {
     var expectation: XCTestExpectation?
+
+    override func updateView(using stats: Stats) {
+        guard let expectation = expectation, expectation.description == ChartsExpectation.statsArePassedToViewWhenGatherStatsSucceed else { return }
+        expectation.fulfill()
+    }
 
     override func show(error: Error) {
         guard let expectation = expectation, expectation.description == ChartsExpectation.anErrorIsShownWhenGatherStatsFails else { return }

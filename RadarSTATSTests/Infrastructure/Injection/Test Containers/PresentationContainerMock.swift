@@ -8,14 +8,14 @@
 
 import Swinject
 
-@testable import RadarCOVID_STATS
+@testable import RadarSTATS
 
 class PresentationContainerMock {
     @discardableResult
     init(container: Container) { prepareInjections(container: container) }
 
     internal func prepareInjections(container: Container) {
-        container.register(ChartsRouter.self) { _ in ChartsRouterTestable() }.inObjectScope(.container)
+        container.register(ChartsRouter.self) { _ in ChartsRouterDefault() }.inObjectScope(.container)
         container.register(ChartsPresenter.self) { _ in ChartsPresenterTestable() }.inObjectScope(.container)
     }
 }

@@ -8,7 +8,7 @@
 
 import Swinject
 
-@testable import RadarCOVID_STATS
+@testable import RadarSTATS
 
 class DataContainerMock {
     @discardableResult

@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-@testable import RadarCOVID_STATS
+@testable import RadarSTATS
 
 class StatsRepositoryMock: StatsRepositoryDefault {
     var shouldFail = false
@@ -23,7 +23,9 @@ class StatsRepositoryMock: StatsRepositoryDefault {
                     let bundle = Bundle(for: type(of: self))
                     let jsonPath = bundle.path(forResource: "stats-mocked", ofType: "json")
                     let jsonData = try String(contentsOfFile: jsonPath!).data(using: .utf8)!
-                    let content = try JSONDecoder().decode(Stats.self, from: jsonData)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = API.GitHub.stats.responseDecodingStrategy ?? .useDefaultKeys
+                    let content = try decoder.decode(Stats.self, from: jsonData)
                     seal.fulfill(content)
                 } catch {
                     seal.reject(error)

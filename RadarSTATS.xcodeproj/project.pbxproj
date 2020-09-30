@@ -68,7 +68,6 @@
 		E9CBA712251B8B3300A7A2EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA711251B8B3300A7A2EC /* Module.swift */; };
 		E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */; };
 		E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */; };
-		E9D7AEE525247B4E00B1AB74 /* ChartsRouterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */; };
 		E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */; };
 		E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */; };
 		E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEF8252484B400B1AB74 /* DataContainerMock.swift */; };
@@ -159,7 +158,6 @@
 		E9CBA711251B8B3300A7A2EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainerMock.swift; sourceTree = "<group>"; };
-		E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouterTestable.swift; sourceTree = "<group>"; };
 		E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenterTestable.swift; sourceTree = "<group>"; };
 		E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsRepositoryMock.swift; sourceTree = "<group>"; };
 		E9D7AEF8252484B400B1AB74 /* DataContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainerMock.swift; sourceTree = "<group>"; };
@@ -599,7 +597,6 @@
 			isa = PBXGroup;
 			children = (
 				E9D7AF012524877C00B1AB74 /* ChartsExpectation.swift */,
-				E9D7AEE425247B4E00B1AB74 /* ChartsRouterTestable.swift */,
 				E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */,
 			);
 			path = Charts;
@@ -877,7 +874,6 @@
 				E9F9A1D52524535000448D15 /* ChartsTests.swift in Sources */,
 				E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */,
 				E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */,
-				E9D7AEE525247B4E00B1AB74 /* ChartsRouterTestable.swift in Sources */,
 				E9F9A1E3252453E700448D15 /* TestingInjector.swift in Sources */,
 				E9D7AF022524877C00B1AB74 /* ChartsExpectation.swift in Sources */,
 				E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */,

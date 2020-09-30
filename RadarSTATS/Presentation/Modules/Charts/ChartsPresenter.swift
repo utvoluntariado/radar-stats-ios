@@ -33,7 +33,7 @@ class ChartsPresenterDefault: ChartsPresenter {
     func gatherStats() {
         view.showLoading()
         statsInteractor.run().done { stats in
-            self.view.hideLoading { self.view.update(using: stats) }
+            self.updateView(using: stats)
         }.catch { error in
             self.show(error: error)
         }
@@ -41,6 +41,10 @@ class ChartsPresenterDefault: ChartsPresenter {
 
     func presentInfo(for chartType: ChartType) {
         router.navigate(to: .info(chartType: chartType))
+    }
+
+    internal func updateView(using stats: Stats) {
+        view.hideLoading { self.view.update(using: stats) }
     }
 
     internal func show(error: Error) {

@@ -33,4 +33,16 @@ class ChartsTests: XCTestCase {
             }
         }
     }
+
+    func test_statsArePassedToViewWhenGatherStatsSucceed() throws {
+        measure {
+            presenter.expectation = expectation(description: ChartsExpectation.statsArePassedToViewWhenGatherStatsSucceed)
+            (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = false
+            presenter.gatherStats()
+
+            waitForExpectations(timeout: 3) { (error) in
+                XCTAssertNil(error, error!.localizedDescription)
+            }
+        }
+    }
 }
