@@ -14,7 +14,7 @@ class CoordinatorsContainer {
 
     internal func prepareInjections(container: Container) {
         container.register(LaunchCoordinator.self) { resolver in
-            var coordinator = LaunchCoordinatorDefault()
+            let coordinator = LaunchCoordinatorDefault()
             coordinator.networkService = resolver.resolve(NetworkService.self)
             return coordinator
         }.inObjectScope(.container)
