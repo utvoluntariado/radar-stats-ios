@@ -12,6 +12,7 @@ import Swinject
 final class Injector {
     static let shared = Injector()
     internal var currentContainer = Container()
+    private let defaultContainer = Container()
 
     init() {
         CoordinatorsContainer(container: currentContainer)
@@ -20,6 +21,14 @@ final class Injector {
         NetworkContainer(container: currentContainer)
         DataContainer(container: currentContainer)
         PresentationContainer(container: currentContainer)
+    }
+
+    func use(container: Container) {
+        currentContainer = container
+    }
+
+    func resetContainer() {
+        currentContainer = defaultContainer
     }
 }
 
