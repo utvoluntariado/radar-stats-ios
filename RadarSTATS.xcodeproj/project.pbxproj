@@ -160,7 +160,7 @@
 		E9B9A0FB251CC0060092ABC5 /* BusinessContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessContainer.swift; sourceTree = "<group>"; };
 		E9B9A0FE251CC04F0092ABC5 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		E9B9A101251CC07F0092ABC5 /* NetworkContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContainer.swift; sourceTree = "<group>"; };
-		E9CBA6EA251B88BA00A7A2EC /* RadarSTATS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadarSTATS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CBA6EA251B88BA00A7A2EC /* Radar STATS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radar STATS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CBA6ED251B88BA00A7A2EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CBA6F1251B88BA00A7A2EC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E9CBA6F4251B88BA00A7A2EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 		E9CBA6EB251B88BA00A7A2EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9CBA6EA251B88BA00A7A2EC /* RadarSTATS.app */,
+				E9CBA6EA251B88BA00A7A2EC /* Radar STATS.app */,
 				E9F9A1D22524535000448D15 /* RadarSTATSTests.xctest */,
 			);
 			name = Products;
@@ -729,9 +729,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9CBA6E9251B88BA00A7A2EC /* RadarSTATS */ = {
+		E9CBA6E9251B88BA00A7A2EC /* Radar STATS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarSTATS" */;
+			buildConfigurationList = E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "Radar STATS" */;
 			buildPhases = (
 				E9CBA6E6251B88BA00A7A2EC /* Sources */,
 				E9CBA6E7251B88BA00A7A2EC /* Frameworks */,
@@ -741,14 +741,14 @@
 			);
 			dependencies = (
 			);
-			name = RadarSTATS;
+			name = "Radar STATS";
 			packageProductDependencies = (
 				E9B9A0B6251B900A0092ABC5 /* Swinject */,
 				E9B9A0EF251CBDC60092ABC5 /* PromiseKit */,
 				E914C3AA251CD9B3004A578C /* Charts */,
 			);
 			productName = RadarCOVIDStats;
-			productReference = E9CBA6EA251B88BA00A7A2EC /* RadarSTATS.app */;
+			productReference = E9CBA6EA251B88BA00A7A2EC /* Radar STATS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E9F9A1D12524535000448D15 /* RadarSTATSTests */ = {
@@ -805,7 +805,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9CBA6E9251B88BA00A7A2EC /* RadarSTATS */,
+				E9CBA6E9251B88BA00A7A2EC /* Radar STATS */,
 				E9F9A1D12524535000448D15 /* RadarSTATSTests */,
 			);
 		};
@@ -930,7 +930,7 @@
 /* Begin PBXTargetDependency section */
 		E9F9A1D82524535000448D15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E9CBA6E9251B88BA00A7A2EC /* RadarSTATS */;
+			target = E9CBA6E9251B88BA00A7A2EC /* Radar STATS */;
 			targetProxy = E9F9A1D72524535000448D15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1078,7 +1078,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RadarSTATS/Infrastructure/Supporting files/RadarSTATS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W762WV5CVG;
+				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = "RadarSTATS/Infrastructure/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1101,7 +1101,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RadarSTATS/Infrastructure/Supporting files/RadarSTATS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W762WV5CVG;
+				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = "RadarSTATS/Infrastructure/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1122,7 +1122,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W762WV5CVG;
+				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = "RadarSTATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1142,7 +1142,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W762WV5CVG;
+				DEVELOPMENT_TEAM = T7MC635YG5;
 				INFOPLIST_FILE = "RadarSTATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1169,7 +1169,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "RadarSTATS" */ = {
+		E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "Radar STATS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9CBA6FF251B88BD00A7A2EC /* Debug */,

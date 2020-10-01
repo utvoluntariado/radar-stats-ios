@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Acerca de-->
         <scene sceneID="loh-ZB-xxK">
             <objects>
-                <viewController storyboardIdentifier="About" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6sl-We-CKW" customClass="AboutViewController" customModule="RadarSTATS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="About" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6sl-We-CKW" customClass="AboutViewController" customModule="Radar_STATS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iDR-mo-zof"/>
                         <viewControllerLayoutGuide type="bottom" id="eLK-Ys-acR"/>
@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="RadarSTATS" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="Radar_STATS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAuthorsCell" id="kpz-v6-bnc" customClass="AboutAuthorsTableViewCell" customModule="RadarSTATS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAuthorsCell" id="kpz-v6-bnc" customClass="AboutAuthorsTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kpz-v6-bnc" id="L8t-7R-tH9">
@@ -43,7 +43,7 @@
                                                                 <constraint firstAttribute="height" priority="999" constant="70" id="sbb-ec-TiJ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="RadarSTATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Radar STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
                                                             <rect key="frame" x="0.0" y="78" width="374" height="69"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
@@ -102,7 +102,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="RadarSTATS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="307" width="414" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWj-2I-lY4" id="xtb-MR-JPX">
@@ -112,7 +112,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
                                                     <rect key="frame" x="20" y="27" width="374" height="225"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">RadarSTATS y RadarCOVID STATS son proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
+                                                    <string key="text">Radar STATS y RadarCOVID STATS son proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
 Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes públicas como Narrativa API o Radar COVID.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -131,7 +131,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="RadarSTATS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="586" width="414" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ4-1L-gxX" id="sE3-RE-H6B">
@@ -187,7 +187,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="RadarSTATS – iOS" image="gitHub">
+                                                                    <state key="normal" title="Radar STATS – iOS" image="gitHub">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -215,7 +215,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" rowHeight="276" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="RadarSTATS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" rowHeight="276" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="865" width="414" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3C-RT-um1" id="wFV-gf-cdn">
@@ -327,7 +327,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
         <!--Estadísticas-->
         <scene sceneID="I60-zF-djj">
             <objects>
-                <viewController storyboardIdentifier="Charts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvw-hk-qWt" customClass="ChartsViewController" customModule="RadarSTATS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Charts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uvw-hk-qWt" customClass="ChartsViewController" customModule="Radar_STATS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WWt-fA-uSA"/>
                         <viewControllerLayoutGuide type="bottom" id="AhX-9y-mpw"/>
@@ -368,7 +368,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="RadarSTATS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-kc-PhD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Radar STATS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tba-kc-PhD">
                                                 <rect key="frame" x="58" y="0.0" width="324" height="50"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                                 <color key="textColor" name="fontForeground"/>
@@ -403,7 +403,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                     <constraint firstAttribute="width" constant="30" id="R0c-2r-DN1"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-hj-ymG" customClass="SummaryStackView" customModule="RadarSTATS" customModuleProvider="target">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-hj-ymG" customClass="SummaryStackView" customModule="Radar_STATS" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="0.0" width="322" height="214"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-yH-QtR">
@@ -502,11 +502,11 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Zd-Nt-gqk" customClass="ChartsTableView" customModule="RadarSTATS" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Zd-Nt-gqk" customClass="ChartsTableView" customModule="Radar_STATS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="386" width="414" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="RadarSTATS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="328.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
@@ -533,7 +533,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snB-dL-axl" customClass="InsettedSymbolButton" customModule="RadarSTATS" customModuleProvider="target">
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snB-dL-axl" customClass="InsettedSymbolButton" customModule="Radar_STATS" customModuleProvider="target">
                                                                     <rect key="frame" x="325" y="0.0" width="49" height="48"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" priority="999" constant="50" id="uXe-KI-8aD"/>
@@ -684,7 +684,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
         <!--Chart Info View Controller-->
         <scene sceneID="V90-tv-bQF">
             <objects>
-                <viewController storyboardIdentifier="ChartInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2pC-cx-VWB" customClass="ChartInfoViewController" customModule="RadarSTATS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChartInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2pC-cx-VWB" customClass="ChartInfoViewController" customModule="Radar_STATS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFe-Oy-8ai"/>
                         <viewControllerLayoutGuide type="bottom" id="5cR-yb-iPe"/>
@@ -752,7 +752,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
         <!--Main View Controller-->
         <scene sceneID="CPp-0L-ptc">
             <objects>
-                <tabBarController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZx-G1-uSb" customClass="MainViewController" customModule="RadarSTATS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZx-G1-uSb" customClass="MainViewController" customModule="Radar_STATS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ctC-rS-cRc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -776,10 +776,10 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
         </designable>
     </designables>
     <resources>
-        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
-        <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="chart.pie.fill" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.bubble.fill" catalog="system" width="32" height="32"/>
         <image name="gitHub" width="32" height="32"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle.fill" catalog="system" width="32" height="32"/>
         <image name="statsHeader" width="550" height="550"/>
         <namedColor name="fontForeground">
             <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

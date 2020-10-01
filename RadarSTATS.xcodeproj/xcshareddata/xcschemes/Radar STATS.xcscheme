@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9CBA6E9251B88BA00A7A2EC"
-               BuildableName = "RadarSTATS.app"
-               BlueprintName = "RadarSTATS"
+               BuildableName = "Radar STATS.app"
+               BlueprintName = "Radar STATS"
                ReferencedContainer = "container:RadarSTATS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9CBA6E9251B88BA00A7A2EC"
-            BuildableName = "RadarSTATS.app"
-            BlueprintName = "RadarSTATS"
+            BuildableName = "Radar STATS.app"
+            BlueprintName = "Radar STATS"
             ReferencedContainer = "container:RadarSTATS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9CBA6E9251B88BA00A7A2EC"
-            BuildableName = "RadarSTATS.app"
-            BlueprintName = "RadarSTATS"
+            BuildableName = "Radar STATS.app"
+            BlueprintName = "Radar STATS"
             ReferencedContainer = "container:RadarSTATS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
