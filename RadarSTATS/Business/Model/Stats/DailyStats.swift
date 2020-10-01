@@ -17,3 +17,22 @@ struct DailyStats: Codable {
     let teksPerSharedDiagnosis: Double
     let sharedDiagnosesPerCovidCase: Double
 }
+
+extension DailyStats {
+    func preparedUsageRatio() -> Double {
+        let number = NSNumber(value: sharedDiagnosesPerCovidCase)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        numberFormatter.maximumFractionDigits = 2
+        let stringNumber = numberFormatter.string(from: number) ?? "NaN"
+        return (numberFormatter.number(from: stringNumber) ?? NSNumber(0)).doubleValue * 100
+    }
+
+    func formattedTeksPerSharedDiagnosis() -> String {
+        let number = NSNumber(value: teksPerSharedDiagnosis)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter.string(from: number) ?? "NaN"
+    }
+}
