@@ -20,5 +20,7 @@ class DataContainer {
             repository.networkService = resolver.resolve(NetworkService.self)
             return repository
         }
+
+        container.register(LocalizationRepository.self) { _ in LocalizationRepositoryDefault() }.inObjectScope(.container)
     }
 }

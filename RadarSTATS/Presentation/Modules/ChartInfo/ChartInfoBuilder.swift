@@ -24,6 +24,7 @@ final class ChartInfoBuilder {
         var presenter = <~ChartInfoPresenter.self
         presenter.router = router
         presenter.view = view
+        presenter.localizationInteractor = <~LocalizationInteractor.self
         presenter.chartType = chartType
 
         view.presenter = presenter

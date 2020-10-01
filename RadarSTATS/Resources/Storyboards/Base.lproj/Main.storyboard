@@ -712,18 +712,42 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                     <action selector="didTapUnderstoodButton:" destination="2pC-cx-VWB" eventType="touchUpInside" id="isF-D1-JpI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="Vd0-3s-KjN">
+                                <rect key="frame" x="20" y="72" width="374" height="662"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="fontForeground"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chart title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68I-hh-boV">
+                                <rect key="frame" x="20" y="20" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" name="fontForeground"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="viewBackground"/>
                         <constraints>
+                            <constraint firstItem="Vd0-3s-KjN" firstAttribute="top" secondItem="68I-hh-boV" secondAttribute="bottom" constant="16" id="F3w-OL-ZFS"/>
+                            <constraint firstItem="puN-Ar-S9p" firstAttribute="top" secondItem="Vd0-3s-KjN" secondAttribute="bottom" constant="8" symbolic="YES" id="FlQ-Vo-bHx"/>
                             <constraint firstItem="5cR-yb-iPe" firstAttribute="top" secondItem="puN-Ar-S9p" secondAttribute="bottom" constant="16" id="M8p-Yj-DEd"/>
                             <constraint firstItem="puN-Ar-S9p" firstAttribute="leading" secondItem="Djz-Yn-fym" secondAttribute="leading" constant="16" id="OQT-f7-8bp"/>
+                            <constraint firstItem="68I-hh-boV" firstAttribute="trailing" secondItem="Djz-Yn-fym" secondAttribute="trailingMargin" id="c4Q-uW-GH3"/>
+                            <constraint firstItem="Vd0-3s-KjN" firstAttribute="leading" secondItem="Djz-Yn-fym" secondAttribute="leadingMargin" id="gdd-A1-USA"/>
+                            <constraint firstItem="68I-hh-boV" firstAttribute="top" secondItem="yFe-Oy-8ai" secondAttribute="bottom" constant="20" id="h38-KX-6oR"/>
+                            <constraint firstItem="Vd0-3s-KjN" firstAttribute="trailing" secondItem="Djz-Yn-fym" secondAttribute="trailingMargin" id="km1-0X-58q"/>
+                            <constraint firstItem="68I-hh-boV" firstAttribute="leading" secondItem="Djz-Yn-fym" secondAttribute="leadingMargin" id="sQP-Ew-BKV"/>
                             <constraint firstAttribute="trailing" secondItem="puN-Ar-S9p" secondAttribute="trailing" constant="16" id="xrc-xi-Ff9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Vd0-3s-KjN" id="hgj-S8-I5J"/>
+                        <outlet property="titleLabel" destination="68I-hh-boV" id="cmC-va-Le0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNu-uB-Bww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-445"/>
+            <point key="canvasLocation" x="937.68115942028987" y="-445.3125"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="CPp-0L-ptc">

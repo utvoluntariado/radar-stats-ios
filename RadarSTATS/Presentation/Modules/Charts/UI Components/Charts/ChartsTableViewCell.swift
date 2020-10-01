@@ -29,6 +29,7 @@ final class ChartsTableViewCell: UITableViewCell {
     weak var delegate: ChartsTableViewCellDelegate?
 
     private var modelset: Stats!
+    private var localization: LocalizationItem!
     private var chartType: ChartType!
     private let factory = <~ChartsFactory.self
     private var sortedDailyResults: [DailyStats] {
@@ -38,8 +39,9 @@ final class ChartsTableViewCell: UITableViewCell {
     @IBOutlet private weak var chartTitleLabel: UILabel!
     @IBOutlet private weak var chartWrapperView: UIView!
 
-    func bind(modelset: Stats, for chartType: ChartType) {
+    func bind(modelset: Stats, localization: LocalizationItem, for chartType: ChartType) {
         self.modelset = modelset
+        self.localization = localization
         self.chartType = chartType
 
         switch chartType {
@@ -54,7 +56,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawUsageRatioChart() {
-        chartTitleLabel.text = "Ratio de uso (Estimado)"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -66,7 +68,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawCovidCasesChart() {
-        chartTitleLabel.text = "Casos COVID-19 (Estimados)"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [ChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -78,7 +80,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawSharedDiagnosesChart() {
-        chartTitleLabel.text = "Diagnósticos compartidos (Estimados)"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -91,7 +93,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawGenerationDateSharedTEKsChart() {
-        chartTitleLabel.text = "TEKs compartidos por fecha de creación"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -104,7 +106,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawUploadDateSharedTEKsChart() {
-        chartTitleLabel.text = "TEKs compartidos por fecha de subida"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
@@ -117,7 +119,7 @@ final class ChartsTableViewCell: UITableViewCell {
     }
 
     private func drawUploadedTEKsPerSharedDiagnosisChart() {
-        chartTitleLabel.text = "TEKs compartidos por cada caso COVID"
+        chartTitleLabel.text = localization.content.title
 
         var dataEntries: [BarChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {

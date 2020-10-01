@@ -12,6 +12,7 @@ protocol ChartsPresenter {
     var view: ChartsView! { get set }
     var router: ChartsRouter! { get set }
     var statsInteractor: StatsInteractor! { get set }
+    var localizationInteractor: LocalizationInteractor! { get set }
     var networkService: NetworkService! { get set }
 
     func viewDidLoad()
@@ -24,10 +25,20 @@ class ChartsPresenterDefault: ChartsPresenter {
     var router: ChartsRouter!
 
     var statsInteractor: StatsInteractor!
+    var localizationInteractor: LocalizationInteractor!
     var networkService: NetworkService!
+
+    private var localization: Localization!
 
     func viewDidLoad() {
         networkService.delegate += self
+
+        localizationInteractor.run().done { localization in
+            self.localization = localization
+            self.updateTable(using: localization)
+        }.catch { error in
+            self.show(error: error)
+        }
     }
 
     func gatherStats() {
@@ -41,6 +52,10 @@ class ChartsPresenterDefault: ChartsPresenter {
 
     func presentInfo(for chartType: ChartType) {
         router.navigate(to: .info(chartType: chartType))
+    }
+
+    internal func updateTable(using localization: Localization) {
+        view.update(using: localization)
     }
 
     internal func updateView(using stats: Stats) {

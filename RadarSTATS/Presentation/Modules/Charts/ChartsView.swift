@@ -11,6 +11,7 @@ import UIKit
 protocol ChartsView: Loadable, Noticeable {
     var presenter: ChartsPresenter! { get set }
 
+    func update(using localization: Localization)
     func update(using stats: Stats)
 }
 
@@ -32,6 +33,10 @@ class ChartsViewController: UIViewController, ChartsView {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.gatherStats()
+    }
+
+    func update(using localization: Localization) {
+        chartsTable.update(localization: localization.charts)
     }
 
     func update(using stats: Stats) {

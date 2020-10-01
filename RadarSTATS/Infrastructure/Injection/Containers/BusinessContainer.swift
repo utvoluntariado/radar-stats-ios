@@ -17,6 +17,12 @@ class BusinessContainer {
             let interactor = StatsInteractorDefault()
             interactor.repository = resolver.resolve(StatsRepository.self)
             return interactor
-        }
+        }.inObjectScope(.container)
+
+        container.register(LocalizationInteractor.self) { resolver in
+            let interactor = LocalizationInteractorDefault()
+            interactor.repository = resolver.resolve(LocalizationRepository.self)
+            return interactor
+        }.inObjectScope(.container)
     }
 }

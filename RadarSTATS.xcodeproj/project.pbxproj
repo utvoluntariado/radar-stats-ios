@@ -37,10 +37,15 @@
 		E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16982523B0AC003010F0 /* NoticeView.swift */; };
 		E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A169E2523B686003010F0 /* MulticastDelegate.swift */; };
 		E961E0C425248AA3003FEF0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1EA2524545800448D15 /* main.swift */; };
+		E98AE6A025261BBA00856D08 /* LocalizationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE69F25261BBA00856D08 /* LocalizationItem.swift */; };
+		E98AE6A625261EF200856D08 /* LocalizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */; };
+		E98AE6AA252623EC00856D08 /* LocalizationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A9252623EC00856D08 /* LocalizationContent.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
 		E9B57442252385BD007B0012 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B57441252385BD007B0012 /* LoadingView.swift */; };
+		E9B86C1E2526170300EE9642 /* LocalizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B86C1D2526170300EE9642 /* LocalizationRepository.swift */; };
+		E9B86C262526175000EE9642 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B86C252526175000EE9642 /* Localization.swift */; };
 		E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = E9B9A0B6251B900A0092ABC5 /* Swinject */; };
 		E9B9A0BB251B90790092ABC5 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0BA251B90790092ABC5 /* Injector.swift */; };
 		E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */; };
@@ -67,6 +72,8 @@
 		E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9CBA6F8251B88BD00A7A2EC /* LaunchScreen.storyboard */; };
 		E9CBA712251B8B3300A7A2EC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA711251B8B3300A7A2EC /* Module.swift */; };
 		E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */; };
+		E9D7AA042524A6C500987932 /* localization.json in Resources */ = {isa = PBXBuildFile; fileRef = E9D7AA032524A6C500987932 /* localization.json */; };
+		E9D7AA0B2524A90000987932 /* BasicDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AA0A2524A90000987932 /* BasicDefinition.swift */; };
 		E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */; };
 		E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */; };
 		E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */; };
@@ -127,10 +134,15 @@
 		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
 		E95A16982523B0AC003010F0 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		E95A169E2523B686003010F0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		E98AE69F25261BBA00856D08 /* LocalizationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationItem.swift; sourceTree = "<group>"; };
+		E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationInteractor.swift; sourceTree = "<group>"; };
+		E98AE6A9252623EC00856D08 /* LocalizationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationContent.swift; sourceTree = "<group>"; };
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B5743825237211007B0012 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		E9B5743D25237F72007B0012 /* SystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCoordinator.swift; sourceTree = "<group>"; };
 		E9B57441252385BD007B0012 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E9B86C1D2526170300EE9642 /* LocalizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRepository.swift; sourceTree = "<group>"; };
+		E9B86C252526175000EE9642 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		E9B9A0BA251B90790092ABC5 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		E9B9A0C8251B92C90092ABC5 /* PresentationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainer.swift; sourceTree = "<group>"; };
 		E9B9A0CF251CAE910092ABC5 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
@@ -157,6 +169,8 @@
 		E9CBA6FB251B88BD00A7A2EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CBA711251B8B3300A7A2EC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		E9CBA715251B8B6700A7A2EC /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		E9D7AA032524A6C500987932 /* localization.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = localization.json; sourceTree = "<group>"; };
+		E9D7AA0A2524A90000987932 /* BasicDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDefinition.swift; sourceTree = "<group>"; };
 		E9D7AEDC25247AF600B1AB74 /* PresentationContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationContainerMock.swift; sourceTree = "<group>"; };
 		E9D7AEEA25247B5800B1AB74 /* ChartsPresenterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsPresenterTestable.swift; sourceTree = "<group>"; };
 		E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsRepositoryMock.swift; sourceTree = "<group>"; };
@@ -409,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B9A0F3251CBDEB0092ABC5 /* StatsRepository.swift */,
+				E9B86C1D2526170300EE9642 /* LocalizationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -416,6 +431,7 @@
 		E9B9A0F6251CBE400092ABC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9D7AA102524A91A00987932 /* Localization */,
 				E914C39A251CD2CB004A578C /* Stats */,
 			);
 			path = Model;
@@ -425,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B9A0EB251CBCA70092ABC5 /* StatsInteractor.swift */,
+				E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -504,6 +521,7 @@
 		E9CBA707251B88DE00A7A2EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9D7AA092524A6D200987932 /* Static */,
 				E9CBA70B251B893900A7A2EC /* Storyboards */,
 				E93CB8572520668700AE249C /* Assets */,
 			);
@@ -574,6 +592,25 @@
 				E9CBA711251B8B3300A7A2EC /* Module.swift */,
 			);
 			path = Patterns;
+			sourceTree = "<group>";
+		};
+		E9D7AA092524A6D200987932 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				E9D7AA032524A6C500987932 /* localization.json */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		E9D7AA102524A91A00987932 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E9B86C252526175000EE9642 /* Localization.swift */,
+				E98AE69F25261BBA00856D08 /* LocalizationItem.swift */,
+				E98AE6A9252623EC00856D08 /* LocalizationContent.swift */,
+				E9D7AA0A2524A90000987932 /* BasicDefinition.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		E9D7AEDB25247ADA00B1AB74 /* Test Containers */ = {
@@ -782,6 +819,7 @@
 				E9CBA6FA251B88BD00A7A2EC /* LaunchScreen.storyboard in Resources */,
 				E914C40625205ADD004A578C /* Colors.xcassets in Resources */,
 				E9CBA6F7251B88BD00A7A2EC /* Assets.xcassets in Resources */,
+				E9D7AA042524A6C500987932 /* localization.json in Resources */,
 				E9CBA6F5251B88BA00A7A2EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +839,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B86C262526175000EE9642 /* Localization.swift in Sources */,
 				E9B9A0EC251CBCA70092ABC5 /* StatsInteractor.swift in Sources */,
 				E914C3CA251CE497004A578C /* StorageService.swift in Sources */,
 				E9E51E362523026700F222AB /* AboutThirdPartiesTableViewCell.swift in Sources */,
@@ -808,6 +847,7 @@
 				E9E51E29252301B900F222AB /* AboutTableView.swift in Sources */,
 				E914C3B0251CDB2B004A578C /* ChartsBuilder.swift in Sources */,
 				E9B9A0DA251CB1790092ABC5 /* API.swift in Sources */,
+				E98AE6A625261EF200856D08 /* LocalizationInteractor.swift in Sources */,
 				E9E51E332523025700F222AB /* AboutDataTableViewCell.swift in Sources */,
 				E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */,
 				E9CBA6F2251B88BA00A7A2EC /* MainView.swift in Sources */,
@@ -824,6 +864,7 @@
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,
 				E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */,
 				E9B5743925237211007B0012 /* Loadable.swift in Sources */,
+				E98AE6A025261BBA00856D08 /* LocalizationItem.swift in Sources */,
 				E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */,
 				E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */,
 				E914C402251FA7C2004A578C /* ChartsFactory.swift in Sources */,
@@ -841,6 +882,7 @@
 				E9CBA6EE251B88BA00A7A2EC /* AppDelegate.swift in Sources */,
 				E9B9A0E7251CB6F50092ABC5 /* HTTPClientError.swift in Sources */,
 				E914C3A0251CD2F4004A578C /* TodayStats.swift in Sources */,
+				E9D7AA0B2524A90000987932 /* BasicDefinition.swift in Sources */,
 				E914C3FC251FA6E6004A578C /* ChartAxisDateFormatter.swift in Sources */,
 				E914C3B7251CDB3B004A578C /* ChartsView.swift in Sources */,
 				E9E51E302523024400F222AB /* AboutAppTableViewCell.swift in Sources */,
@@ -854,7 +896,9 @@
 				E9B9A0E3251CB6F50092ABC5 /* HTTPEndpoint.swift in Sources */,
 				E9B9A0FF251CC04F0092ABC5 /* DataContainer.swift in Sources */,
 				E9CBA716251B8B6700A7A2EC /* MainBuilder.swift in Sources */,
+				E98AE6AA252623EC00856D08 /* LocalizationContent.swift in Sources */,
 				E914C3C0251CDD0B004A578C /* ChartsTableViewCell.swift in Sources */,
+				E9B86C1E2526170300EE9642 /* LocalizationRepository.swift in Sources */,
 				E9B9A0FC251CC0060092ABC5 /* BusinessContainer.swift in Sources */,
 				E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */,
 				E9E51E242522F19100F222AB /* AboutView.swift in Sources */,

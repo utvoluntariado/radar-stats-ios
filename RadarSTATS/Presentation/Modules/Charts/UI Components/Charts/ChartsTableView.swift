@@ -17,11 +17,16 @@ final class ChartsTableView: UITableView {
 
     private var alreadyAnimatedChartCellsIndexPaths = [IndexPath]()
     private var modelset: Stats?
+    private var localization = [LocalizationItem]()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         delegate = self
         dataSource = self
+    }
+
+    func update(localization: [LocalizationItem]) {
+        self.localization = localization
     }
 
     func update(modelset: Stats) {
@@ -38,7 +43,7 @@ extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let modelset = modelset else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: ChartsTableViewCell.reuseIndentifier, for: indexPath) as! ChartsTableViewCell
-        cell.bind(modelset: modelset, for: ChartType(rawValue: indexPath.row) ?? .unknown)
+        cell.bind(modelset: modelset, localization: localization[indexPath.row], for: ChartType(rawValue: indexPath.row) ?? .unknown)
         cell.delegate = self
         return cell
     }
