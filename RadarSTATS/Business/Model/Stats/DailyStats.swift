@@ -28,6 +28,15 @@ extension DailyStats {
         return (numberFormatter.number(from: stringNumber) ?? NSNumber(0)).doubleValue * 100
     }
 
+    func preparedTeksPerSharedDiagnosis() -> Double {
+        let number = NSNumber(value: teksPerSharedDiagnosis)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        let stringNumber = numberFormatter.string(from: number) ?? "NaN"
+        return (numberFormatter.number(from: stringNumber) ?? NSNumber(0)).doubleValue
+    }
+
     func formattedTeksPerSharedDiagnosis() -> String {
         let number = NSNumber(value: teksPerSharedDiagnosis)
         let numberFormatter = NumberFormatter()

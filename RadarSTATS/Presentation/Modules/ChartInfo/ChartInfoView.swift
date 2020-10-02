@@ -22,7 +22,7 @@ class ChartInfoViewController: UIViewController, ChartInfoView {
 
     var descriptionSectionTitleFont: UIFont { UIFont.systemFont(ofSize: 25, weight: .semibold) }
     var descriptionSectionBodyFont: UIFont { UIFont.systemFont(ofSize: 20, weight: .medium) }
-    var descriptionFontForegroundColor: UIColor { #colorLiteral(red: 0.9330000281, green: 0.9330000281, blue: 0.9330000281, alpha: 1) }
+    var descriptionFontForegroundColor: UIColor { UIColor(named: "fontForeground")! }
 
     @IBOutlet private weak var descriptionTextView: UITextView!
     @IBOutlet private weak var titleLabel: UILabel!
