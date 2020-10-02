@@ -16,10 +16,18 @@ final class ChartInfoPresenterTestable: ChartInfoPresenterDefault {
 
     private var localization: Localization!
 
-    func descriptionGenerator() {
-        var description = buildDescription(for: chartType, using: localization)
+    func descriptionGenerator() -> String {
+        do {
+            let jsonPath = Bundle.main.path(forResource: "localization", ofType: "json")
+            let jsonData = try String(contentsOfFile: jsonPath!).data(using: .utf8)!
+            localization = try JSONDecoder().decode(Localization.self, from: jsonData)
+            let description = buildDescription(for: chartType, using: localization)
+            return description.string
+        } catch {
+            return ""
+        }
     }
-
+    
     override func updateView(using localization: Localization) {
         self.localization = localization
         guard let expectation = expectation, expectation.description == ChartInfoExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed else { return }

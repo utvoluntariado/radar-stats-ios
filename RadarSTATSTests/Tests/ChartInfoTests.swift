@@ -46,5 +46,31 @@ class ChartInfoTests: XCTestCase {
             }
         }
     }
-}
 
+    func test_glossaryIsPresentOnSharedTEKsByGenerationDateChartDescription() throws {
+        measure {
+            presenter = (ChartInfoBuilder.build(chartType: .generationDateSharedTEKs).presenter as! ChartInfoPresenterTestable)
+            let description = presenter.descriptionGenerator()
+
+            XCTAssert(description.contains("Glosario"), "Glossary not found on .generationDateSharedTEKs chart description")
+        }
+    }
+
+    func test_glossaryIsPresentOnSharedTEKsByUploadDateChartDescription() throws {
+        measure {
+            presenter = (ChartInfoBuilder.build(chartType: .uploadDateSharedTEKs).presenter as! ChartInfoPresenterTestable)
+            let description = presenter.descriptionGenerator()
+
+            XCTAssert(description.contains("Glosario"), "Glossary not found on .uploadDateSharedTEKs chart description")
+        }
+    }
+
+    func test_glossaryIsPresentOnUploadedTEKsBySharedDiagnosisChartDescription() throws {
+        measure {
+            presenter = (ChartInfoBuilder.build(chartType: .uploadedTEKsPerSharedDiagnosis).presenter as! ChartInfoPresenterTestable)
+            let description = presenter.descriptionGenerator()
+
+            XCTAssert(description.contains("Glosario"), "Glossary not found on .uploadedTEKsPerSharedDiagnosis chart description")
+        }
+    }
+}
