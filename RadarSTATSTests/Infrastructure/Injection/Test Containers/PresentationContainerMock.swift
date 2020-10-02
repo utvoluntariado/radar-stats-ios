@@ -17,6 +17,9 @@ class PresentationContainerMock {
     internal func prepareInjections(container: Container) {
         container.register(ChartsRouter.self) { _ in ChartsRouterDefault() }.inObjectScope(.container)
         container.register(ChartsPresenter.self) { _ in ChartsPresenterTestable() }.inObjectScope(.container)
+
+        container.register(ChartInfoRouter.self) { _ in ChartInfoRouterDefault() }.inObjectScope(.container)
+        container.register(ChartInfoPresenter.self) { _ in ChartInfoPresenterTestable() }.inObjectScope(.container)
     }
 }
 

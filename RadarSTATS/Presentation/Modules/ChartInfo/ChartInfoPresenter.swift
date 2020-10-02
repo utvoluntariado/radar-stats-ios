@@ -15,18 +15,18 @@ protocol ChartInfoPresenter {
     var localizationInteractor: LocalizationInteractor! { get set }
     var chartType: ChartType! { get set }
 
-    func viewDidLoad()
+    func gatherLocalization()
     func dismiss()
 }
 
-final class ChartInfoPresenterDefault: ChartInfoPresenter {
+class ChartInfoPresenterDefault: ChartInfoPresenter {
     var router: ChartInfoRouter!
     var view: ChartInfoView!
 
     var localizationInteractor: LocalizationInteractor!
     var chartType: ChartType!
 
-    func viewDidLoad() {
+    func gatherLocalization() {
         localizationInteractor.run().done { localization in
             self.updateView(using: localization)
         }.catch { error in

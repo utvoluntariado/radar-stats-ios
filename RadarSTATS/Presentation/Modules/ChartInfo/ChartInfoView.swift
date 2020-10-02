@@ -22,7 +22,7 @@ class ChartInfoViewController: UIViewController, ChartInfoView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+        presenter.gatherLocalization()
     }
 
     func update(title: String, description: String) {

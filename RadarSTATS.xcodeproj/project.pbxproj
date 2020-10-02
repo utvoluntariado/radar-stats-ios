@@ -32,6 +32,9 @@
 		E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */; };
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
 		E949E72C2526E32200C256F7 /* LocalizationRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949E72B2526E32200C256F7 /* LocalizationRepositoryMock.swift */; };
+		E949E7372526EA2F00C256F7 /* ChartInfoExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949E7362526EA2F00C256F7 /* ChartInfoExpectation.swift */; };
+		E949E73B2526EA3D00C256F7 /* ChartInfoPresenterTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949E73A2526EA3D00C256F7 /* ChartInfoPresenterTestable.swift */; };
+		E949E7422526EB2B00C256F7 /* ChartInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949E7412526EB2B00C256F7 /* ChartInfoTests.swift */; };
 		E95A168C2523AA82003010F0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168B2523AA82003010F0 /* NetworkService.swift */; };
 		E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168E2523AEBF003010F0 /* NetworkError.swift */; };
 		E95A16962523B044003010F0 /* Noticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16952523B044003010F0 /* Noticeable.swift */; };
@@ -131,6 +134,9 @@
 		E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettedSymbolButton.swift; sourceTree = "<group>"; };
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
 		E949E72B2526E32200C256F7 /* LocalizationRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRepositoryMock.swift; sourceTree = "<group>"; };
+		E949E7362526EA2F00C256F7 /* ChartInfoExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoExpectation.swift; sourceTree = "<group>"; };
+		E949E73A2526EA3D00C256F7 /* ChartInfoPresenterTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenterTestable.swift; sourceTree = "<group>"; };
+		E949E7412526EB2B00C256F7 /* ChartInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoTests.swift; sourceTree = "<group>"; };
 		E95A168B2523AA82003010F0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E95A168E2523AEBF003010F0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
@@ -340,6 +346,24 @@
 				E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */,
 			);
 			path = "Value Formatters";
+			sourceTree = "<group>";
+		};
+		E949E7352526EA0D00C256F7 /* ChartInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E949E7362526EA2F00C256F7 /* ChartInfoExpectation.swift */,
+				E949E73A2526EA3D00C256F7 /* ChartInfoPresenterTestable.swift */,
+			);
+			path = ChartInfo;
+			sourceTree = "<group>";
+		};
+		E949E7402526EB1300C256F7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E9F9A1D42524535000448D15 /* ChartsTests.swift */,
+				E949E7412526EB2B00C256F7 /* ChartInfoTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		E95A16942523B038003010F0 /* Noticeable */ = {
@@ -628,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D7AEE325247B3400B1AB74 /* Charts */,
+				E949E7352526EA0D00C256F7 /* ChartInfo */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -697,7 +722,7 @@
 				E9D7AEF02524831100B1AB74 /* Data */,
 				E9D7AEE225247B2C00B1AB74 /* Presentation */,
 				E9D7AEFC2524855E00B1AB74 /* Resources */,
-				E9F9A1D42524535000448D15 /* ChartsTests.swift */,
+				E949E7402526EB1300C256F7 /* Tests */,
 			);
 			path = RadarSTATSTests;
 			sourceTree = "<group>";
@@ -918,6 +943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E949E73B2526EA3D00C256F7 /* ChartInfoPresenterTestable.swift in Sources */,
 				E9F9A1D52524535000448D15 /* ChartsTests.swift in Sources */,
 				E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */,
 				E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */,
@@ -925,6 +951,8 @@
 				E949E72C2526E32200C256F7 /* LocalizationRepositoryMock.swift in Sources */,
 				E9D7AF022524877C00B1AB74 /* ChartsExpectation.swift in Sources */,
 				E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */,
+				E949E7422526EB2B00C256F7 /* ChartInfoTests.swift in Sources */,
+				E949E7372526EA2F00C256F7 /* ChartInfoExpectation.swift in Sources */,
 				E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
