@@ -17,7 +17,7 @@ final class AboutDataTableViewCell: UITableViewCell {
     }
 
     @IBAction func didTapRadarCovidStatsiOSButton(_ sender: UIButton) {
-        guard let radarCovidStatsiOSURL = URL(string: "https://github.com/Radar-STATS/ios-radar-stats") else { return }
+        guard let radarCovidStatsiOSURL = URL(string: "https://github.com/Radar-STATS/Radar-STATS-iOS") else { return }
         UIApplication.shared.open(radarCovidStatsiOSURL)
     }
 }
