@@ -15,13 +15,11 @@ final class ChartValueNumberFormatter: IValueFormatter {
     init(percent: Bool = false) {
         numberFormatter.usesGroupingSeparator = true
         numberFormatter.groupingSeparator = Locale.current.groupingSeparator
+        numberFormatter.numberStyle = percent ? .percent : .decimal
         
         if percent {
-            numberFormatter.numberStyle = .percent
             numberFormatter.maximumFractionDigits = 2
-        }
-        else {
-            numberFormatter.numberStyle = .decimal
+        } else {
             numberFormatter.allowsFloats = false
         }
     }
