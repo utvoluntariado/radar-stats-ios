@@ -36,16 +36,33 @@ class ChartInfoPresenterDefault: ChartInfoPresenter {
 
     internal func updateView(using localization: Localization) {
         let chartTitle = localization.charts[chartType.rawValue].content.title ?? ""
+        let description = buildDescription(for: chartType, using: localization)
+        view.update(title: chartTitle, description: description)
+    }
 
-        var description: String
+    internal func buildDescription(for chartType: ChartType, using localization: Localization) -> NSAttributedString {
+        let description = NSMutableAttributedString()
+
+        let sectionTitleAttributes = [NSAttributedString.Key.font: view.descriptionSectionTitleFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
+        let sectionBodyAttributes = [NSAttributedString.Key.font: view.descriptionSectionBodyFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
+
+        let chartDescriptionTitle = NSAttributedString(string: "Descripción: \n\n", attributes: sectionTitleAttributes)
+        let chartDescrition = NSAttributedString(string: "\(localization.charts[chartType.rawValue].content.description)\n\n\n", attributes: sectionBodyAttributes)
+        description.append(chartDescriptionTitle)
+        description.append(chartDescrition)
+
         switch chartType {
         case .generationDateSharedTEKs, .uploadDateSharedTEKs, .uploadedTEKsPerSharedDiagnosis:
-            description = "\(localization.charts[chartType.rawValue].content.description) \n\n *Definiciones: \n\(localization.definitions.tek.content.description)"
+            let basicDefinitionsTitle = NSAttributedString(string: "Glosario: \n\n", attributes: sectionTitleAttributes)
+            let basicDefinitions = NSAttributedString(string: localization.definitions.tek.content.description, attributes: sectionBodyAttributes)
+
+            description.append(basicDefinitionsTitle)
+            description.append(basicDefinitions)
         default:
-            description = localization.charts[chartType.rawValue].content.description
+            break
         }
 
-        view.update(title: chartTitle, description: description)
+        return description
     }
 
     internal func show(error: Error) {

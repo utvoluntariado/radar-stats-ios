@@ -14,7 +14,14 @@ import XCTest
 final class ChartInfoPresenterTestable: ChartInfoPresenterDefault {
     var expectation: XCTestExpectation?
 
+    private var localization: Localization!
+
+    func descriptionGenerator() {
+        var description = buildDescription(for: chartType, using: localization)
+    }
+
     override func updateView(using localization: Localization) {
+        self.localization = localization
         guard let expectation = expectation, expectation.description == ChartInfoExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed else { return }
         expectation.fulfill()
     }
