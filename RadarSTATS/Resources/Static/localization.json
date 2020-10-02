@@ -2,7 +2,14 @@
     "definitions": {
         "tek": {
             "es": {
-                "description": "TEK (Clave de exposición temporal): un identificador aleatorio generado diariamente en el dispositivo, que utilizan las aplicaciones de notificación de exposición como RadarCOVID para detectar exposiciones y compartir diagnósticos positivos."
+                "title": "TEK (Clave de exposición temporal): ",
+                "description": "un identificador aleatorio generado diariamente en el dispositivo, que utilizan las aplicaciones de notificación de exposición como RadarCOVID para detectar exposiciones y compartir diagnósticos positivos.\nDe cada TEK, derivan los 144 (24 x 6) identificadores móviles de proximidad (RPI) que se intercambian los terminales por Bluetooth de baja Energía (BLE) y que cambian cada 10 minutos.\n\n"
+            }
+        },
+        "sharedPositives": {
+            "es": {
+                "title": "Comunicaciones positivas: ",
+                "description": "número de usuarios que han comunicado su diagnóstico positivo, introduciendo el código de 12 caracteres que ha facilitado la CCAA en la que se realizó la prueba.\n\n"
             }
         }
     },
@@ -24,8 +31,8 @@
         {
             "id": 2,
             "es": {
-                "title": "Diagnósticos compartidos (Estimados)",
-                "description": "Estimación del número de diagnósticos compartidos a través de la aplicación RadarCOVID.\n\nLa estimación se infiere de la cantidad de TEK cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos que se compartieron a través de la aplicación, el número real puede ser menor."
+                "title": "Comunicaciones positivas (Estimadas)",
+                "description": "Estimación del número de diagnósticos positivos comunicados a través de la aplicación RadarCOVID.\n\nLa estimación se infiere de la cantidad de TEKs cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos positivos que se compartieron a través de la aplicación, el número real puede ser menor."
             }
         },
         {
@@ -45,15 +52,15 @@
         {
             "id": 5,
             "es": {
-                "title": "TEK subidos por diagnóstico compartido",
+                "title": "TEKs compartidos por diagnóstico compartido",
                 "description": "Estimación del número medio de TEKs cargados con cada diagnóstico compartido.\nIdealmente, este número debería ser de alrededor de 14 TEKs cargados por diagnóstico compartido."
             }
         },
         {
             "id": 6,
             "es": {
-                "title": "TEKs compartidos subidos en la fecha de generación",
-                "description": "TEK subidos al servidor RadarCOVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
+                "title": "TEKs compartidos en la fecha de generación",
+                "description": "TEKs cargados al servidor RadarCOVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
             }
         },
     ]

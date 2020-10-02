@@ -43,21 +43,42 @@ class ChartInfoPresenterDefault: ChartInfoPresenter {
     internal func buildDescription(for chartType: ChartType, using localization: Localization) -> NSAttributedString {
         let description = NSMutableAttributedString()
 
-        let sectionTitleAttributes = [NSAttributedString.Key.font: view.descriptionSectionTitleFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
+        let sectionHeaderAttributes = [NSAttributedString.Key.font: view.descriptionSectionHeaderFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
+        let sectionBodyTitleAttributes = [NSAttributedString.Key.font: view.descriptionSectionBodyTitleFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor, NSAttributedString.Key.underlineStyle: view.descriptionSectionBodyTitleUnderlineStyle, NSAttributedString.Key.underlineColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
         let sectionBodyAttributes = [NSAttributedString.Key.font: view.descriptionSectionBodyFont, NSAttributedString.Key.foregroundColor: view.descriptionFontForegroundColor] as [NSAttributedString.Key : Any]
 
-        let chartDescriptionTitle = NSAttributedString(string: "Descripción: \n", attributes: sectionTitleAttributes)
+        let chartDescriptionTitle = NSAttributedString(string: "Descripción: \n", attributes: sectionHeaderAttributes)
         let chartDescrition = NSAttributedString(string: "\(localization.charts[chartType.rawValue].content.description)\n\n\n", attributes: sectionBodyAttributes)
         description.append(chartDescriptionTitle)
         description.append(chartDescrition)
 
-        switch chartType {
-        case .generationDateSharedTEKs, .uploadDateSharedTEKs, .uploadedTEKsPerSharedDiagnosis:
-            let basicDefinitionsTitle = NSAttributedString(string: "Glosario: \n", attributes: sectionTitleAttributes)
-            let basicDefinitions = NSAttributedString(string: localization.definitions.tek.content.description, attributes: sectionBodyAttributes)
+        func addGlossaryTitle() {
+            let glossaryTitle = NSAttributedString(string: "Glosario: \n", attributes: sectionHeaderAttributes)
+            description.append(glossaryTitle)
+        }
 
-            description.append(basicDefinitionsTitle)
-            description.append(basicDefinitions)
+        func addTEKDefinition() {
+            let definitionTitle = NSAttributedString(string: localization.definitions.tek.content.title ?? "", attributes: sectionBodyTitleAttributes)
+            let definitionDescription = NSAttributedString(string: localization.definitions.tek.content.description, attributes: sectionBodyAttributes)
+            description.append(definitionTitle)
+            description.append(definitionDescription)
+        }
+
+        func addSharedDiagnosisDefinition() {
+            let definitionTitle = NSAttributedString(string: localization.definitions.sharedPositives.content.title ?? "", attributes: sectionBodyTitleAttributes)
+            let definitionDescription = NSAttributedString(string: localization.definitions.sharedPositives.content.description, attributes: sectionBodyAttributes)
+            description.append(definitionTitle)
+            description.append(definitionDescription)
+        }
+
+        switch chartType {
+        case .generationDateSharedTEKs, .uploadDateSharedTEKs:
+            addGlossaryTitle()
+            addTEKDefinition()
+        case .uploadedTEKsPerSharedDiagnosis, .sharedDiagnoses:
+            addGlossaryTitle()
+            addTEKDefinition()
+            addSharedDiagnosisDefinition()
         default:
             break
         }

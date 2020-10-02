@@ -10,4 +10,5 @@ import Foundation
 
 struct BasicDefinition: Codable {
     var tek: LocalizationItem
+    var sharedPositives: LocalizationItem
 }

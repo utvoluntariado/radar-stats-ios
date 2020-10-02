@@ -73,4 +73,22 @@ class ChartInfoTests: XCTestCase {
             XCTAssert(description.contains("Glosario"), "Glossary not found on .uploadedTEKsPerSharedDiagnosis chart description")
         }
     }
+
+    func test_glossaryIsNotPresentOnCovidCasesChartDescription() throws {
+        measure {
+            presenter = (ChartInfoBuilder.build(chartType: .covidCases).presenter as! ChartInfoPresenterTestable)
+            let description = presenter.descriptionGenerator()
+
+            XCTAssert(!description.contains("Glosario"), "Glossary found on .covidCases chart description")
+        }
+    }
+
+    func test_glossaryIsNotPresentOnCovidUsageRatioDescription() throws {
+        measure {
+            presenter = (ChartInfoBuilder.build(chartType: .usageRatio).presenter as! ChartInfoPresenterTestable)
+            let description = presenter.descriptionGenerator()
+
+            XCTAssert(!description.contains("Glosario"), "Glossary found on .usageRatio chart description")
+        }
+    }
 }

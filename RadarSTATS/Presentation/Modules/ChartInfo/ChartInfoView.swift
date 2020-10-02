@@ -10,7 +10,9 @@ import UIKit
 
 protocol ChartInfoView: Noticeable {
     var presenter: ChartInfoPresenter! { get set }
-    var descriptionSectionTitleFont: UIFont { get }
+    var descriptionSectionHeaderFont: UIFont { get }
+    var descriptionSectionBodyTitleFont: UIFont { get }
+    var descriptionSectionBodyTitleUnderlineStyle: Int { get }
     var descriptionSectionBodyFont: UIFont { get }
     var descriptionFontForegroundColor: UIColor { get }
 
@@ -20,8 +22,10 @@ protocol ChartInfoView: Noticeable {
 class ChartInfoViewController: UIViewController, ChartInfoView {
     var presenter: ChartInfoPresenter!
 
-    var descriptionSectionTitleFont: UIFont { UIFont.systemFont(ofSize: 25, weight: .semibold) }
-    var descriptionSectionBodyFont: UIFont { UIFont.systemFont(ofSize: 20, weight: .medium) }
+    var descriptionSectionHeaderFont: UIFont { UIFont.systemFont(ofSize: 25, weight: .semibold) }
+    var descriptionSectionBodyTitleFont: UIFont { UIFont.systemFont(ofSize: 20, weight: .medium) }
+    var descriptionSectionBodyTitleUnderlineStyle: Int { return NSUnderlineStyle.single.rawValue }
+    var descriptionSectionBodyFont: UIFont { UIFont.systemFont(ofSize: 20, weight: .regular) }
     var descriptionFontForegroundColor: UIColor { UIColor(named: "fontForeground")! }
 
     @IBOutlet private weak var descriptionTextView: UITextView!
