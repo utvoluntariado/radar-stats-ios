@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -157,18 +157,18 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="403.5" width="414" height="269.5"/>
+                                        <rect key="frame" x="0.0" y="403.5" width="414" height="248"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWj-2I-lY4" id="xtb-MR-JPX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
-                                                    <rect key="frame" x="20" y="27" width="374" height="215.5"/>
+                                                    <rect key="frame" x="20" y="27" width="374" height="194"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Radar STATS y RadarCOVID STATS son proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
+                                                    <string key="text">Radar STATS es un conjunto de proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
-Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes públicas como Narrativa API o Radar COVID.</string>
+Todos los datos que calcula Radar STATS se obtienen a partir de fuentes públicas como Narrativa API o Radar COVID.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="fontForeground"/>
                                                     <nil key="highlightedColor"/>
@@ -186,7 +186,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="673" width="414" height="197.5"/>
+                                        <rect key="frame" x="0.0" y="651.5" width="414" height="197.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ4-1L-gxX" id="sE3-RE-H6B">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="197.5"/>
@@ -214,7 +214,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="RadarCOVID STATS" image="github">
+                                                                    <state key="normal" title="Radar STATS" image="github">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -276,7 +276,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="870.5" width="414" height="226"/>
+                                        <rect key="frame" x="0.0" y="849" width="414" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3C-RT-um1" id="wFV-gf-cdn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
@@ -854,11 +854,11 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
     <resources>
         <image name="appIconAbout" width="150" height="150"/>
         <image name="appIconCharts" width="50" height="50"/>
-        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
-        <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="chart.pie.fill" catalog="system" width="32" height="32"/>
+        <image name="exclamationmark.bubble.fill" catalog="system" width="32" height="32"/>
         <image name="github" width="32" height="32"/>
         <image name="githubOnlyIcon" width="50" height="50"/>
-        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle.fill" catalog="system" width="32" height="32"/>
         <image name="twitter" width="50" height="50"/>
         <namedColor name="fontForeground">
             <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -39,14 +39,14 @@
             "id": 3,
             "es": {
                 "title": "TEKs compartidos por fecha de generación",
-                "description": "TEKs cargados en el servidor RadarCOVID en la fecha en que se generaron en el dispositivo."
+                "description": "TEKs cargados en el servidor Radar COVID en la fecha en que se generaron en el dispositivo."
             }
         },
         {
             "id": 4,
             "es": {
                 "title": "TEKs compartidos por fecha de carga",
-                "description": "TEKs cargados en el servidor RadarCOVID en la fecha en que se cargaron utilizando el código único enviado por las autoridades sanitarias."
+                "description": "TEKs cargados en el servidor Radar COVID en la fecha en que se cargaron utilizando el código único enviado por las autoridades sanitarias."
             }
         },
         {
@@ -60,7 +60,7 @@
             "id": 6,
             "es": {
                 "title": "TEKs compartidos en la fecha de generación",
-                "description": "TEKs cargados al servidor RadarCOVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
+                "description": "TEKs cargados al servidor Radar COVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
             }
         },
     ]
