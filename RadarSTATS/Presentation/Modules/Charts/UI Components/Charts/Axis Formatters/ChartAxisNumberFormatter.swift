@@ -12,11 +12,18 @@ import Charts
 final class ChartAxisNumberFormatter: IAxisValueFormatter {
     private let numberFormatter = NumberFormatter()
 
-    init() {
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = false
+    init(percent: Bool = false) {
         numberFormatter.usesGroupingSeparator = true
         numberFormatter.groupingSeparator = Locale.current.groupingSeparator
+        
+        if percent {
+            numberFormatter.numberStyle = .percent
+            numberFormatter.maximumFractionDigits = 2
+        }
+        else {
+            numberFormatter.numberStyle = .decimal
+            numberFormatter.allowsFloats = false
+        }
     }
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {

@@ -25,7 +25,7 @@ extension DailyStats {
         numberFormatter.numberStyle = .percent
         numberFormatter.maximumFractionDigits = 2
         let stringNumber = numberFormatter.string(from: number) ?? "NaN"
-        return (numberFormatter.number(from: stringNumber) ?? NSNumber(0)).doubleValue * 100
+        return (numberFormatter.number(from: stringNumber) ?? NSNumber(0)).doubleValue
     }
 
     func preparedTeksPerSharedDiagnosis() -> Double {

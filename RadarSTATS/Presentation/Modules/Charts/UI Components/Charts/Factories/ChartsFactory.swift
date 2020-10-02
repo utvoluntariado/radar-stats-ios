@@ -13,7 +13,7 @@ protocol ChartsFactory {
     var graphicFormatter: ChartGraphicFormatter! { get set }
 
     func drawLineChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: LineChartView, with color: UIColor)
-    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor)
+    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, percent: Bool)
 }
 
 final class ChartsFactoryDefault: ChartsFactory {
@@ -42,9 +42,9 @@ final class ChartsFactoryDefault: ChartsFactory {
         chartView.setScaleEnabled(false)
     }
 
-    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor) {
+    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, percent: Bool = false) {
         let chartDataSet = BarChartDataSet(entries: entries)
-        chartDataSet.valueFormatter = ChartValueNumberFormatter()
+        chartDataSet.valueFormatter = ChartValueNumberFormatter(percent: percent)
         
         let chartData = BarChartData(dataSet: chartDataSet)
         chartView.data = chartData
@@ -57,7 +57,7 @@ final class ChartsFactoryDefault: ChartsFactory {
 
         let yAxis = chartView.leftAxis
         graphicFormatter.apply(format: .standard, to: yAxis)
-        yAxis.valueFormatter = ChartAxisNumberFormatter()
+        yAxis.valueFormatter = ChartAxisNumberFormatter(percent: percent)
 
         graphicFormatter.apply(format: .standard, to: chartView)
         chartView.setScaleEnabled(false)

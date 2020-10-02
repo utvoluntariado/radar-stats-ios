@@ -64,7 +64,7 @@ final class ChartsTableViewCell: UITableViewCell {
             dataEntries.append(dataEntry)
         }
 
-        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.2039215686, green: 0.5960784314, blue: 0.8588235294, alpha: 1))
+        drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.2039215686, green: 0.5960784314, blue: 0.8588235294, alpha: 1), percent: true)
     }
 
     private func drawCovidCasesChart() {
@@ -150,7 +150,7 @@ final class ChartsTableViewCell: UITableViewCell {
                               with: color)
     }
 
-    private func drawBarChart(using entries: [BarChartDataEntry], color: UIColor) {
+    private func drawBarChart(using entries: [BarChartDataEntry], color: UIColor, percent: Bool = false) {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let barChartView = BarChartView()
@@ -166,7 +166,8 @@ final class ChartsTableViewCell: UITableViewCell {
         factory.drawBarChart(using: entries,
                              xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                              on: barChartView,
-                             with: color)
+                             with: color,
+                             percent: percent)
     }
 
     func animateChart() {
