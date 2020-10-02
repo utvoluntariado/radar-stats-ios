@@ -31,6 +31,7 @@
 		E91F56B42521004A005CD2CE /* ChartsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91F56B32521004A005CD2CE /* ChartsRouter.swift */; };
 		E92F4237252108C100B7E8C8 /* InsettedSymbolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */; };
 		E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */; };
+		E949E72C2526E32200C256F7 /* LocalizationRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E949E72B2526E32200C256F7 /* LocalizationRepositoryMock.swift */; };
 		E95A168C2523AA82003010F0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168B2523AA82003010F0 /* NetworkService.swift */; };
 		E95A168F2523AEBF003010F0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A168E2523AEBF003010F0 /* NetworkError.swift */; };
 		E95A16962523B044003010F0 /* Noticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16952523B044003010F0 /* Noticeable.swift */; };
@@ -129,6 +130,7 @@
 		E91F56B32521004A005CD2CE /* ChartsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRouter.swift; sourceTree = "<group>"; };
 		E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettedSymbolButton.swift; sourceTree = "<group>"; };
 		E93CB85A25206AF300AE249C /* ChartValueNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueNumberFormatter.swift; sourceTree = "<group>"; };
+		E949E72B2526E32200C256F7 /* LocalizationRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRepositoryMock.swift; sourceTree = "<group>"; };
 		E95A168B2523AA82003010F0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E95A168E2523AEBF003010F0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 			isa = PBXGroup;
 			children = (
 				E9D7AEF22524833300B1AB74 /* StatsRepositoryMock.swift */,
+				E949E72B2526E32200C256F7 /* LocalizationRepositoryMock.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -919,6 +922,7 @@
 				E9D7AEF9252484B400B1AB74 /* DataContainerMock.swift in Sources */,
 				E9D7AEEB25247B5800B1AB74 /* ChartsPresenterTestable.swift in Sources */,
 				E9F9A1E3252453E700448D15 /* TestingInjector.swift in Sources */,
+				E949E72C2526E32200C256F7 /* LocalizationRepositoryMock.swift in Sources */,
 				E9D7AF022524877C00B1AB74 /* ChartsExpectation.swift in Sources */,
 				E9D7AEF32524833300B1AB74 /* StatsRepositoryMock.swift in Sources */,
 				E9D7AEDD25247AF600B1AB74 /* PresentationContainerMock.swift in Sources */,
@@ -1122,7 +1126,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7MC635YG5;
+				DEVELOPMENT_TEAM = W762WV5CVG;
 				INFOPLIST_FILE = "RadarSTATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1133,7 +1137,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadarSTATS.app/RadarSTATS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radar STATS.app/Radar STATS";
 			};
 			name = Debug;
 		};
@@ -1142,7 +1146,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T7MC635YG5;
+				DEVELOPMENT_TEAM = W762WV5CVG;
 				INFOPLIST_FILE = "RadarSTATSTests/Infrastructure/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1153,7 +1157,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadarSTATS.app/RadarSTATS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radar STATS.app/Radar STATS";
 			};
 			name = Release;
 		};

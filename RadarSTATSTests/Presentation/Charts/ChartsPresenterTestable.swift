@@ -9,10 +9,15 @@
 import Foundation
 import XCTest
 
-@testable import RadarSTATS
+@testable import Radar_STATS
 
 final class ChartsPresenterTestable: ChartsPresenterDefault {
     var expectation: XCTestExpectation?
+
+    override func updateTable(using localization: Localization) {
+        guard let expectation = expectation, expectation.description == ChartsExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed else { return }
+        expectation.fulfill()
+    }
 
     override func updateView(using stats: Stats) {
         guard let expectation = expectation, expectation.description == ChartsExpectation.statsArePassedToViewWhenGatherStatsSucceed else { return }
@@ -20,7 +25,10 @@ final class ChartsPresenterTestable: ChartsPresenterDefault {
     }
 
     override func show(error: Error) {
-        guard let expectation = expectation, expectation.description == ChartsExpectation.anErrorIsShownWhenGatherStatsFails else { return }
-        expectation.fulfill()
+        guard let expectation = expectation else { return }
+        if expectation.description == ChartsExpectation.anErrorIsShownWhenGatherStatsFails ||
+            expectation.description == ChartsExpectation.anErrorIsShownWhenGatherLocalizationFails {
+            expectation.fulfill()
+        }
     }
 }

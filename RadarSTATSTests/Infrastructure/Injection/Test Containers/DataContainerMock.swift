@@ -8,7 +8,7 @@
 
 import Swinject
 
-@testable import RadarSTATS
+@testable import Radar_STATS
 
 class DataContainerMock {
     @discardableResult
@@ -16,6 +16,7 @@ class DataContainerMock {
 
     internal func prepareInjections(container: Container) {
         container.register(StatsRepository.self) { _ in StatsRepositoryMock() }.inObjectScope(.container)
+        container.register(LocalizationRepository.self) { _ in LocalizationRepositoryMock() }.inObjectScope(.container)
     }
 }
 

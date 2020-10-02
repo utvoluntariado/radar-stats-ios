@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import RadarSTATS
+@testable import Radar_STATS
 
 class ChartsTests: XCTestCase {
     var presenter: ChartsPresenterTestable!
@@ -39,6 +39,30 @@ class ChartsTests: XCTestCase {
             presenter.expectation = expectation(description: ChartsExpectation.statsArePassedToViewWhenGatherStatsSucceed)
             (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = false
             presenter.gatherStats()
+
+            waitForExpectations(timeout: 3) { (error) in
+                XCTAssertNil(error, error!.localizedDescription)
+            }
+        }
+    }
+
+    func test_anErrorIsShownWhenGatherLocalizationFails() throws {
+        measure {
+            presenter.expectation = expectation(description: ChartsExpectation.anErrorIsShownWhenGatherLocalizationFails)
+            (presenter.localizationInteractor.repository as! LocalizationRepositoryMock).shouldFail = true
+            presenter.gatherLocalization()
+
+            waitForExpectations(timeout: 3) { (error) in
+                XCTAssertNil(error, error!.localizedDescription)
+            }
+        }
+    }
+
+    func test_localizationIsPassedToViewWhenGatherLocalizationSucceed() throws {
+        measure {
+            presenter.expectation = expectation(description: ChartsExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed)
+            (presenter.localizationInteractor.repository as! LocalizationRepositoryMock).shouldFail = false
+            presenter.gatherLocalization()
 
             waitForExpectations(timeout: 3) { (error) in
                 XCTAssertNil(error, error!.localizedDescription)

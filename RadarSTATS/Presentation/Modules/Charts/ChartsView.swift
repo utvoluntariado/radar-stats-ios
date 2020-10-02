@@ -27,6 +27,7 @@ class ChartsViewController: UIViewController, ChartsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        presenter.gatherLocalization()
         chartsTable.actionDelegate = self
     }
 

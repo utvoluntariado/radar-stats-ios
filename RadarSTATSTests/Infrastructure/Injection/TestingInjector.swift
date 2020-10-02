@@ -9,7 +9,7 @@
 import Foundation
 import Swinject
 
-@testable import RadarSTATS
+@testable import Radar_STATS
 
 final class TestingInjector {
     static func prepareMockInjections() {

@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-@testable import RadarSTATS
+@testable import Radar_STATS
 
 class StatsRepositoryMock: StatsRepositoryDefault {
     var shouldFail = false

@@ -16,6 +16,7 @@ protocol ChartsPresenter {
     var networkService: NetworkService! { get set }
 
     func viewDidLoad()
+    func gatherLocalization()
     func gatherStats()
     func presentInfo(for chartType: ChartType)
 }
@@ -32,7 +33,9 @@ class ChartsPresenterDefault: ChartsPresenter {
 
     func viewDidLoad() {
         networkService.delegate += self
+    }
 
+    func gatherLocalization() {
         localizationInteractor.run().done { localization in
             self.localization = localization
             self.updateTable(using: localization)
