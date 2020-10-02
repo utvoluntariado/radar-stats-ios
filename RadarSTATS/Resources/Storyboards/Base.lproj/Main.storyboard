@@ -21,71 +21,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="279" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="Radar_STATS" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="Radar_STATS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAuthorsCell" id="kpz-v6-bnc" customClass="AboutAuthorsTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="279"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="375.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kpz-v6-bnc" id="L8t-7R-tH9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="375.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-yX-J79">
-                                                    <rect key="frame" x="20" y="11" width="374" height="257"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="353.5"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="statsHeader" translatesAutoresizingMaskIntoConstraints="NO" id="MJN-W5-WdE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="appIconAbout" translatesAutoresizingMaskIntoConstraints="NO" id="MJN-W5-WdE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" priority="999" constant="70" id="sbb-ec-TiJ"/>
+                                                                <constraint firstAttribute="height" priority="999" constant="150" id="mv8-2q-mRk"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Radar STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
-                                                            <rect key="frame" x="0.0" y="78" width="374" height="69"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Radar STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
+                                                            <rect key="frame" x="0.0" y="158" width="374" height="36.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                             <color key="textColor" name="fontForeground"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ry2-Db-SAW">
-                                                            <rect key="frame" x="0.0" y="155" width="374" height="47"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ry2-Db-SAW">
+                                                            <rect key="frame" x="0.0" y="202.5" width="374" height="71.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Aplicación" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8o-hE-l2l">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" ambiguous="YES" text="Aplicación" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8o-hE-l2l">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jorge Juan Ramos Garnero" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-zw-Yq2">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="374" height="21.5"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                                    <color key="textColor" name="fontForeground"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OjL-FC-nVu">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="374" height="50"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jorge J. Ramos Garnero" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-zw-Yq2">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="258" height="50"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                            <color key="textColor" name="fontForeground"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viG-5z-aeH">
+                                                                            <rect key="frame" x="266" y="0.0" width="50" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" priority="999" constant="50" id="Lkc-Fc-pM3"/>
+                                                                                <constraint firstAttribute="width" priority="999" constant="50" id="MkX-Zp-86X"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="twitter"/>
+                                                                            <connections>
+                                                                                <action selector="didTapJJRGTwitterButton:" destination="kpz-v6-bnc" eventType="touchUpInside" id="iqg-YO-cjl"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efR-P2-ia8">
+                                                                            <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" priority="999" constant="50" id="Gii-lx-fPb"/>
+                                                                                <constraint firstAttribute="width" priority="999" constant="50" id="pyM-dF-TFI"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="githubOnlyIcon"/>
+                                                                            <connections>
+                                                                                <action selector="didTapJJRGGitHubButton:" destination="kpz-v6-bnc" eventType="touchUpInside" id="PZD-VR-Ag0"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-2t-5hl">
-                                                            <rect key="frame" x="0.0" y="210" width="374" height="47"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-2t-5hl">
+                                                            <rect key="frame" x="0.0" y="282" width="374" height="71.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Datos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1el-Qn-nOa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" ambiguous="YES" text="Datos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1el-Qn-nOa">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro José Pereira Vieito" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzw-Rl-x0D">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="374" height="21.5"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                                    <color key="textColor" name="fontForeground"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-ZS-7CP">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="374" height="50"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro José Pereira Vieito" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-GH-Q1G">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="258" height="50"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                            <color key="textColor" name="fontForeground"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vm-ld-Str">
+                                                                            <rect key="frame" x="266" y="0.0" width="50" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" priority="999" constant="50" id="8ZB-S7-WTz"/>
+                                                                                <constraint firstAttribute="width" priority="999" constant="50" id="bnh-OH-PUj"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="twitter"/>
+                                                                            <connections>
+                                                                                <action selector="didTapPJPVTwitterButton:" destination="kpz-v6-bnc" eventType="touchUpInside" id="7vu-Qc-1Fo"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZw-tM-sCf">
+                                                                            <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" priority="999" constant="50" id="aos-3x-F7m"/>
+                                                                                <constraint firstAttribute="height" priority="999" constant="50" id="pA4-V7-fSU"/>
+                                                                            </constraints>
+                                                                            <state key="normal" image="githubOnlyIcon"/>
+                                                                            <connections>
+                                                                                <action selector="didTapPJPVGitHubButton:" destination="kpz-v6-bnc" eventType="touchUpInside" id="TDD-IC-u8O"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
@@ -103,14 +157,14 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="307" width="414" height="279"/>
+                                        <rect key="frame" x="0.0" y="403.5" width="414" height="269.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWj-2I-lY4" id="xtb-MR-JPX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
-                                                    <rect key="frame" x="20" y="27" width="374" height="225"/>
+                                                    <rect key="frame" x="20" y="27" width="374" height="215.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Radar STATS y RadarCOVID STATS son proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
@@ -132,32 +186,35 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="586" width="414" height="279"/>
+                                        <rect key="frame" x="0.0" y="673" width="414" height="197.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ4-1L-gxX" id="sE3-RE-H6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="197.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-wH-in8">
-                                                    <rect key="frame" x="20" y="11" width="374" height="257"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-wH-in8">
+                                                    <rect key="frame" x="20" y="11" width="374" height="175.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="du7-1e-pJ4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="124.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="du7-1e-pJ4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Fuente de datos:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-LY-RSW">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="62.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDk-Ht-BIt">
-                                                                    <rect key="frame" x="0.0" y="62.5" width="374" height="62"/>
+                                                                    <rect key="frame" x="0.0" y="30" width="374" height="50"/>
                                                                     <color key="backgroundColor" name="textAndImageButtonBackground"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="6v3-xi-ZMr"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="RadarCOVID STATS" image="gitHub">
+                                                                    <state key="normal" title="RadarCOVID STATS" image="github">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -171,23 +228,26 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="86c-9D-Vbe">
-                                                            <rect key="frame" x="0.0" y="132.5" width="374" height="124.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="86c-9D-Vbe">
+                                                            <rect key="frame" x="0.0" y="96" width="374" height="79.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Código fuente de esta app:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-uh-6YL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="62.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUY-IT-uFj">
-                                                                    <rect key="frame" x="0.0" y="62.5" width="374" height="62"/>
+                                                                    <rect key="frame" x="0.0" y="29.5" width="374" height="50"/>
                                                                     <color key="backgroundColor" name="textAndImageButtonBackground"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="hVG-4O-Zdc"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                                    <state key="normal" title="Radar STATS – iOS" image="gitHub">
+                                                                    <state key="normal" title="Radar STATS – iOS" image="github">
                                                                         <color key="titleColor" name="textAndImageButtonForeground"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -215,30 +275,33 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" rowHeight="276" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="865" width="414" height="276"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="870.5" width="414" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3C-RT-um1" id="wFV-gf-cdn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oJg-3r-9du">
-                                                    <rect key="frame" x="20" y="11" width="374" height="246"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oJg-3r-9du">
+                                                    <rect key="frame" x="20" y="11" width="374" height="196"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dependencias de terceros:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-vd-YeW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Dependencias de terceros:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-vd-YeW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <color key="textColor" name="fontForeground"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e59-Xj-YYP">
-                                                            <rect key="frame" x="0.0" y="63.5" width="374" height="55.5"/>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e59-Xj-YYP">
+                                                            <rect key="frame" x="0.0" y="30" width="374" height="50"/>
                                                             <color key="backgroundColor" name="textAndImageButtonBackground"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="a3F-vL-o88"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <state key="normal" title="Swinject (Swinject)" image="gitHub">
+                                                            <state key="normal" title="Swinject (Swinject)" image="github">
                                                                 <color key="titleColor" name="textAndImageButtonForeground"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -250,13 +313,16 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                 <action selector="didTapSwinjectButton:" destination="D3C-RT-um1" eventType="touchUpInside" id="96F-uC-VGe"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-SZ-rqV">
-                                                            <rect key="frame" x="0.0" y="127" width="374" height="55.5"/>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-SZ-rqV">
+                                                            <rect key="frame" x="0.0" y="88" width="374" height="50"/>
                                                             <color key="backgroundColor" name="textAndImageButtonBackground"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="iNt-Vm-jtu"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <state key="normal" title="PromiseKit (mxcl)" image="gitHub">
+                                                            <state key="normal" title="PromiseKit (mxcl)" image="github">
                                                                 <color key="titleColor" name="textAndImageButtonForeground"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -268,13 +334,16 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                                 <action selector="didTapPromiseKitButton:" destination="D3C-RT-um1" eventType="touchUpInside" id="xqk-nG-Nhe"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-f3-ott">
-                                                            <rect key="frame" x="0.0" y="190.5" width="374" height="55.5"/>
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-f3-ott">
+                                                            <rect key="frame" x="0.0" y="146" width="374" height="50"/>
                                                             <color key="backgroundColor" name="textAndImageButtonBackground"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="J4f-G2-Zob"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                            <state key="normal" title="Charts (danielgindi)" image="gitHub">
+                                                            <state key="normal" title="Charts (danielgindi)" image="github">
                                                                 <color key="titleColor" name="textAndImageButtonForeground"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -342,7 +411,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                     <stackView opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ag8-DP-2Le">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="statsHeader" translatesAutoresizingMaskIntoConstraints="NO" id="Nh7-6q-tKi">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="appIconCharts" translatesAutoresizingMaskIntoConstraints="NO" id="Nh7-6q-tKi">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="tintColor" name="imageButtonTint"/>
                                                 <constraints>
@@ -690,7 +759,7 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                         <viewControllerLayoutGuide type="bottom" id="5cR-yb-iPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Djz-Yn-fym">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puN-Ar-S9p">
@@ -783,11 +852,14 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
         </designable>
     </designables>
     <resources>
+        <image name="appIconAbout" width="150" height="150"/>
+        <image name="appIconCharts" width="50" height="50"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
-        <image name="gitHub" width="32" height="32"/>
+        <image name="github" width="32" height="32"/>
+        <image name="githubOnlyIcon" width="50" height="50"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="statsHeader" width="550" height="550"/>
+        <image name="twitter" width="50" height="50"/>
         <namedColor name="fontForeground">
             <color red="0.17599999904632568" green="0.17599999904632568" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
