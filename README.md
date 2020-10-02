@@ -1,8 +1,8 @@
 # Radar STATS – iOS
-iOS app to visualize statistics provided by the [Radar STATS](https://github.com/Radar-STATS/Radar-STATS) project about Spain's “Radar COVID” app Exposure Notification service.
+iOS app to visualize statistics provided by the [Radar STATS](https://github.com/Radar-STATS/Radar-STATS) project about Spain's "Radar COVID" app Exposure Notification service.
 
 # About the project
-This project has been created with the premise of providing the population with simple and quick information about the performance of RadarCOVID, the Spanish application to contain the Exposure Notification service.
+This project has been created with the premise of providing the population with simple and quick information about the performance of Radar COVID, the Spanish application to contain the Exposure Notification service.
 
 ## Introductory Q&A
 ### Why not using SwiftUI?
@@ -21,7 +21,7 @@ Our motto is: if you don't know what it does, it is because it is not well writt
 # Project architecture
 The architecture of the Radar STATS project is based on many of the well-known standard architectures: VIPER, MVVM, MVC, etc. The best has been chosen from each of them, to create a strong and testable architecture, which allows rapid and agile scaled development.
 
-This architecture has been designed by Jorge J. Ramos and is in production on multiple iOS projects.
+This architecture has been designed by [Jorge J. Ramos](https://github.com/jorgej-ramos) and is in production on multiple iOS projects.
 As always, it is constantly evolving and suggestions are always welcome.
 
 With the premise of using the fewer third-party dependencies the better, this architecture only supports Swift Package Manager as a package manager. Other managers like CocoaPods or Carthage are not welcome on this occasion.
