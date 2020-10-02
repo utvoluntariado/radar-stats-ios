@@ -410,14 +410,14 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                         <rect key="frame" x="0.0" y="0.0" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Diagnósticos compartidos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-ac-uXw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mO-VN-vke">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <rect key="frame" x="307.5" y="0.0" width="14.5" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -427,14 +427,14 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                         <rect key="frame" x="0.0" y="54.5" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Ratio de uso" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-NG-0c7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSl-9m-QQZ">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <rect key="frame" x="307.5" y="0.0" width="14.5" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -444,14 +444,14 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                         <rect key="frame" x="0.0" y="109" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TEKs subidos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xm-wX-pzx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B03-Qv-Vso">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <rect key="frame" x="307.5" y="0.0" width="14.5" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -461,14 +461,14 @@ Todos los datos que calcula RadarCOVID STATS se obtienen a partir de fuentes pú
                                                         <rect key="frame" x="0.0" y="163.5" width="322" height="50.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TEKs por diagnóstico compartido" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AII-50-qe8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="50.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-zP-YUp">
-                                                                <rect key="frame" x="309.5" y="0.0" width="12.5" height="50.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <rect key="frame" x="307.5" y="0.0" width="14.5" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>

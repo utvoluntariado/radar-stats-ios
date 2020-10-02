@@ -11,7 +11,7 @@
             "id": 0,
             "es": {
                 "title": "Ratio de uso (Estimado)",
-                "description": "Estimación de la fracción de casos de COVID-19 que compartieron su diagnóstico a través de RadarCOVID. Idealmente, debería ser del 100% (es decir, todos los casos confirmados que comparten sus TEKs con Radar COVID)."
+                "description": "Estimación de la fracción de casos de COVID-19 que compartieron su diagnóstico a través de RadarCOVID.\n\nIdealmente, debería ser del 100% (es decir, todos los casos confirmados que comparten sus TEKs con Radar COVID)."
             }
         },
         {
@@ -25,7 +25,7 @@
             "id": 2,
             "es": {
                 "title": "Diagnósticos compartidos (Estimados)",
-                "description": "Estimación del número de diagnósticos compartidos a través de la aplicación RadarCOVID. La estimación se infiere de la cantidad de TEK cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior. Esta estimación representa el número máximo de diagnósticos que se compartieron a través de la aplicación, el número real puede ser menor."
+                "description": "Estimación del número de diagnósticos compartidos a través de la aplicación RadarCOVID.\n\nLa estimación se infiere de la cantidad de TEK cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos que se compartieron a través de la aplicación, el número real puede ser menor."
             }
         },
         {
@@ -46,14 +46,14 @@
             "id": 5,
             "es": {
                 "title": "TEK subidos por diagnóstico compartido",
-                "description": "Estimación del número medio de TEKs cargados con cada diagnóstico compartido. Idealmente, este número debería ser de alrededor de 14 TEKs cargados por diagnóstico compartido."
+                "description": "Estimación del número medio de TEKs cargados con cada diagnóstico compartido.\nIdealmente, este número debería ser de alrededor de 14 TEKs cargados por diagnóstico compartido."
             }
         },
         {
             "id": 6,
             "es": {
                 "title": "TEKs compartidos subidos en la fecha de generación",
-                "description": "TEK subidos al servidor RadarCOVID en la misma fecha en que se generaron en el dispositivo. Esta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
+                "description": "TEK subidos al servidor RadarCOVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
             }
         },
     ]
