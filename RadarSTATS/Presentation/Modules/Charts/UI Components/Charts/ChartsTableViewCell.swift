@@ -167,7 +167,7 @@ final class ChartsTableViewCell: UITableViewCell {
                              xAxisLabelData: sortedDailyResults.map { $0.sampleDate },
                              on: barChartView,
                              with: color,
-                             percent: percent)
+                             isPercent: percent)
     }
 
     func animateChart() {

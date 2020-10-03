@@ -59,6 +59,11 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             barChartDataSet.valueColors = [valueFontColor]
             barChartDataSet.valueFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
             barChartDataSet.highlightEnabled = false
+            if format == .variable {
+                barChartDataSet.barBorderWidth = 2
+                barChartDataSet.barBorderColor = color
+                barChartDataSet.colors = [UIColor.clear]
+            }
         }
     }
 

@@ -13,7 +13,7 @@ protocol ChartsFactory {
     var graphicFormatter: ChartGraphicFormatter! { get set }
 
     func drawLineChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: LineChartView, with color: UIColor)
-    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, percent: Bool)
+    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, isPercent: Bool)
 }
 
 final class ChartsFactoryDefault: ChartsFactory {
@@ -46,14 +46,18 @@ final class ChartsFactoryDefault: ChartsFactory {
         chartView.setScaleEnabled(false)
     }
 
-    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, percent: Bool = false) {
-        let chartDataSet = BarChartDataSet(entries: entries)
-        chartDataSet.valueFormatter = ChartValueNumberFormatter(percent: percent)
+    func drawBarChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: BarChartView, with color: UIColor, isPercent: Bool = false) {
+        let chartDataSet = BarChartDataSet(entries: entries.dropLast())
+        chartDataSet.valueFormatter = ChartValueNumberFormatter(percent: isPercent)
+
+        let lastValueChartDataSet = BarChartDataSet(entries: entries.suffix(1))
+        lastValueChartDataSet.valueFormatter = ChartValueNumberFormatter(percent: isPercent)
         
-        let chartData = BarChartData(dataSet: chartDataSet)
+        let chartData = BarChartData(dataSets: [chartDataSet, lastValueChartDataSet])
         chartView.data = chartData
 
         graphicFormatter.apply(format: .standard, to: chartDataSet, using: color)
+        graphicFormatter.apply(format: .variable, to: lastValueChartDataSet, using: color)
 
         let xAxis = chartView.xAxis
         graphicFormatter.apply(format: .standard, to: xAxis)
@@ -61,7 +65,7 @@ final class ChartsFactoryDefault: ChartsFactory {
 
         let yAxis = chartView.leftAxis
         graphicFormatter.apply(format: .standard, to: yAxis)
-        yAxis.valueFormatter = ChartAxisNumberFormatter(percent: percent)
+        yAxis.valueFormatter = ChartAxisNumberFormatter(percent: isPercent)
 
         graphicFormatter.apply(format: .standard, to: chartView)
         chartView.setScaleEnabled(false)
