@@ -41,6 +41,7 @@
 		E95A16992523B0AC003010F0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A16982523B0AC003010F0 /* NoticeView.swift */; };
 		E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A169E2523B686003010F0 /* MulticastDelegate.swift */; };
 		E961E0C425248AA3003FEF0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9A1EA2524545800448D15 /* main.swift */; };
+		E97CCBD92528605600102202 /* InsettedValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CCBD82528605600102202 /* InsettedValueLabel.swift */; };
 		E98AE6A025261BBA00856D08 /* LocalizationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE69F25261BBA00856D08 /* LocalizationItem.swift */; };
 		E98AE6A625261EF200856D08 /* LocalizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */; };
 		E98AE6AA252623EC00856D08 /* LocalizationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A9252623EC00856D08 /* LocalizationContent.swift */; };
@@ -142,6 +143,7 @@
 		E95A16952523B044003010F0 /* Noticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noticeable.swift; sourceTree = "<group>"; };
 		E95A16982523B0AC003010F0 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		E95A169E2523B686003010F0 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		E97CCBD82528605600102202 /* InsettedValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsettedValueLabel.swift; sourceTree = "<group>"; };
 		E98AE69F25261BBA00856D08 /* LocalizationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationItem.swift; sourceTree = "<group>"; };
 		E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationInteractor.swift; sourceTree = "<group>"; };
 		E98AE6A9252623EC00856D08 /* LocalizationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationContent.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				E92F4236252108C100B7E8C8 /* InsettedSymbolButton.swift */,
+				E97CCBD82528605600102202 /* InsettedValueLabel.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
 				E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */,
 				E914C3F8251FA6BA004A578C /* ChartAxisNumberFormatter.swift in Sources */,
+				E97CCBD92528605600102202 /* InsettedValueLabel.swift in Sources */,
 				E9B9A0F4251CBDEB0092ABC5 /* StatsRepository.swift in Sources */,
 				E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */,
 				E9B5743925237211007B0012 /* Loadable.swift in Sources */,
