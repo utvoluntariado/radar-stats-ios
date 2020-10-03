@@ -54,11 +54,11 @@ final class SummaryStackView: UIStackView {
     }
 
     private func updateTodayStats() {
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut) {
-            self.uploadedTEKsValueLabel.alpha = 0.0
-            self.sharedDiagnosesValueLabel.alpha = 0.0
-            self.diagnosisTEKsValueLabel.alpha = 0.0
-            self.usageRatioValueLabel.alpha = 0.0
+        UIView.animate(withDuration: 0.35, delay: 0.0, options: .curveEaseInOut) {
+            self.uploadedTEKsValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            self.diagnosisTEKsValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         } completion: { (completed) in
             if completed {
                 self.uploadedTEKsValueLabel.text = "\(self.stats.today.sharedTeksByUploadDate)"
@@ -67,10 +67,10 @@ final class SummaryStackView: UIStackView {
                 self.usageRatioValueLabel.text = "≤ \(self.stats.today.formattedUsageRatio())"
 
                 UIView.animate(withDuration: 0.25) {
-                    self.uploadedTEKsValueLabel.alpha = 1.0
-                    self.sharedDiagnosesValueLabel.alpha = 1.0
-                    self.diagnosisTEKsValueLabel.alpha = 1.0
-                    self.usageRatioValueLabel.alpha = 1.0
+                    self.uploadedTEKsValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.diagnosisTEKsValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 }
             }
         }
@@ -78,25 +78,30 @@ final class SummaryStackView: UIStackView {
 
     private func layoutTodayMode() {
         UIView.animate(withDuration: 0.35) {
-            self.uploadedTEKsStackView.isHidden = false
-            self.diagnosisTEKsStackView.isHidden = false
-            self.uploadedTEKsStackView.alpha = 1.0
-            self.diagnosisTEKsStackView.alpha = 1.0
+            self.uploadedTEKsStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.diagnosisTEKsStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        } completion: { (completed) in
+            if completed {
+                UIView.animate(withDuration: 0.25) {
+                    self.uploadedTEKsStackView.isHidden = false
+                    self.diagnosisTEKsStackView.isHidden = false
+                }
+            }
         }
     }
 
     private func updateWeekStats() {
         UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseInOut) {
-            self.sharedDiagnosesValueLabel.alpha = 0.0
-            self.usageRatioValueLabel.alpha = 0.0
+            self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         } completion: { (completed) in
             if completed {
                 self.sharedDiagnosesValueLabel.text = "≤ \(self.stats.last7Days.sharedDiagnoses)"
                 self.usageRatioValueLabel.text = "≤ \(self.stats.last7Days.formattedUsageRatio())"
 
                 UIView.animate(withDuration: 0.25) {
-                    self.sharedDiagnosesValueLabel.alpha = 1.0
-                    self.usageRatioValueLabel.alpha = 1.0
+                    self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 }
             }
         }
@@ -104,10 +109,15 @@ final class SummaryStackView: UIStackView {
 
     private func layoutWeekMode() {
         UIView.animate(withDuration: 0.35) {
-            self.uploadedTEKsStackView.isHidden = true
-            self.diagnosisTEKsStackView.isHidden = true
-            self.uploadedTEKsStackView.alpha = 0.0
-            self.diagnosisTEKsStackView.alpha = 0.0
+            self.uploadedTEKsStackView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+            self.diagnosisTEKsStackView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        } completion: { (completed) in
+            if completed {
+                UIView.animate(withDuration: 0.25) {
+                    self.uploadedTEKsStackView.isHidden = true
+                    self.diagnosisTEKsStackView.isHidden = true
+                }
+            }
         }
     }
 }
