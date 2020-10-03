@@ -24,11 +24,15 @@ class ChartsViewController: UIViewController, ChartsView {
     @IBOutlet private weak var summaryStackView: SummaryStackView!
     @IBOutlet private weak var chartsTable: ChartsTableView!
 
+    private let refreshControl = UIRefreshControl()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
         presenter.gatherLocalization()
         chartsTable.actionDelegate = self
+        chartsTable.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -46,6 +50,10 @@ class ChartsViewController: UIViewController, ChartsView {
         chartsTable.update(modelset: stats)
     }
 
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        presenter.gatherStats()
+    }
+
     @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
         guard let summaryMode = SummaryMode(rawValue: sender.selectedSegmentIndex) else { return }
         summaryStackView.layout(mode: summaryMode)
@@ -55,5 +63,9 @@ class ChartsViewController: UIViewController, ChartsView {
 extension ChartsViewController: ChartsTableViewActionDelegate {
     func showInformationAbout(chartType: ChartType) {
         presenter.presentInfo(for: chartType)
+    }
+
+    func tableViewDidCompleteRefreshing(_ tableView: ChartsTableView) {
+        refreshControl.endRefreshing()
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol ChartsTableViewActionDelegate: class {
     func showInformationAbout(chartType: ChartType)
+    func tableViewDidCompleteRefreshing(_ tableView: ChartsTableView)
 }
 
 final class ChartsTableView: UITableView {
@@ -32,6 +33,7 @@ final class ChartsTableView: UITableView {
     func update(modelset: Stats) {
         self.modelset = modelset
         reloadData()
+        actionDelegate?.tableViewDidCompleteRefreshing(self)
     }
 }
 
