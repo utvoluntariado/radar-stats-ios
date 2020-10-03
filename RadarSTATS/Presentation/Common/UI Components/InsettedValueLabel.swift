@@ -18,7 +18,8 @@ final class InsettedValueLabel: UILabel {
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
         let width = size.width < 75 ? 75 : size.width
-        return CGSize(width: width + leftInset + rightInset, height: size.height + topInset + bottomInset)
+        let height: CGFloat = 25.0
+        return CGSize(width: width + leftInset + rightInset, height: height + topInset + bottomInset)
     }
 
     override var bounds: CGRect {
