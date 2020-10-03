@@ -763,7 +763,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                         <viewControllerLayoutGuide type="bottom" id="5cR-yb-iPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Djz-Yn-fym">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puN-Ar-S9p">

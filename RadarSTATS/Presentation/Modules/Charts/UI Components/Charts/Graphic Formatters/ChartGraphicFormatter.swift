@@ -19,6 +19,7 @@ enum AxisFormat {
 
 enum DataSetFormat {
     case standard
+    case variable
 }
 
 protocol ChartGraphicFormatter {
@@ -40,6 +41,12 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             lineChartDataSet.colors = [color]
             lineChartDataSet.drawFilledEnabled = true
             lineChartDataSet.highlightEnabled = false
+            lineChartDataSet.mode = .cubicBezier
+            lineChartDataSet.cubicIntensity = 0.3
+            if format == .variable {
+                lineChartDataSet.lineCapType = .round
+                lineChartDataSet.lineDashLengths = [2, 6]
+            }
 
             let gradient = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors:[color.cgColor, color.withAlphaComponent(0.4).cgColor] as CFArray, locations: [1.0, 0.0])
             lineChartDataSet.fill = Fill.fillWithLinearGradient(gradient ?? noGradient, angle: 90.0)

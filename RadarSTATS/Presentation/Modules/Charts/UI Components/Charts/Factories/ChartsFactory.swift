@@ -20,12 +20,16 @@ final class ChartsFactoryDefault: ChartsFactory {
     var graphicFormatter: ChartGraphicFormatter!
 
     func drawLineChart(using entries: [ChartDataEntry], xAxisLabelData: [TimeInterval], on chartView: LineChartView, with color: UIColor) {
-        let chartDataSet = LineChartDataSet(entries: entries)
+        let chartDataSet = LineChartDataSet(entries: entries.dropLast())
         chartDataSet.valueFormatter = ChartValueNumberFormatter()
 
-        graphicFormatter.apply(format: .standard, to: chartDataSet, using: color)
+        let lastValueChartDataSet = LineChartDataSet(entries: entries.suffix(2))
+        lastValueChartDataSet.valueFormatter = ChartValueNumberFormatter()
 
-        let chartData = LineChartData(dataSet: chartDataSet)
+        graphicFormatter.apply(format: .standard, to: chartDataSet, using: color)
+        graphicFormatter.apply(format: .variable, to: lastValueChartDataSet, using: color)
+
+        let chartData = LineChartData(dataSets: [chartDataSet, lastValueChartDataSet])
         chartView.data = chartData
 
         let xAxis = chartView.xAxis
