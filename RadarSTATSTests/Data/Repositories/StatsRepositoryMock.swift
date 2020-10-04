@@ -14,8 +14,8 @@ import PromiseKit
 class StatsRepositoryMock: StatsRepositoryDefault {
     var shouldFail = false
 
-    override func stats() -> Promise<Stats> {
-        return Promise<Stats> { seal in
+    override func stats() -> Promise<(stats: Stats, shouldForceUpdate: Bool)> {
+        return Promise<(stats: Stats, shouldForceUpdate: Bool)> { seal in
             if shouldFail {
                 seal.reject(NetworkError.generic)
             } else {
@@ -26,7 +26,7 @@ class StatsRepositoryMock: StatsRepositoryDefault {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = API.GitHub.stats.responseDecodingStrategy ?? .useDefaultKeys
                     let content = try decoder.decode(Stats.self, from: jsonData)
-                    seal.fulfill(content)
+                    seal.fulfill((stats: content, shouldForceUpdate: false))
                 } catch {
                     seal.reject(error)
                 }

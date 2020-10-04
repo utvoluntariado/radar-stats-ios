@@ -26,7 +26,7 @@ class ChartsTests: XCTestCase {
         measure {
             presenter.expectation = expectation(description: ChartsExpectation.anErrorIsShownWhenGatherStatsFails)
             (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = true
-            presenter.gatherStats()
+            presenter.gatherStats(viewIsAlreadyShowingValues: true)
 
             waitForExpectations(timeout: 3) { (error) in
                 XCTAssertNil(error, error!.localizedDescription)
@@ -38,7 +38,19 @@ class ChartsTests: XCTestCase {
         measure {
             presenter.expectation = expectation(description: ChartsExpectation.statsArePassedToViewWhenGatherStatsSucceed)
             (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = false
-            presenter.gatherStats()
+            presenter.gatherStats(viewIsAlreadyShowingValues: false)
+
+            waitForExpectations(timeout: 3) { (error) in
+                XCTAssertNil(error, error!.localizedDescription)
+            }
+        }
+    }
+
+    func test_obtainStatsWhenGatherStatsSucceedButKeepAlreadyShownValues() throws {
+        measure {
+            presenter.expectation = expectation(description: ChartsExpectation.obtainStatsWhenGatherStatsSucceedButKeepAlreadyShownValues)
+            (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = false
+            presenter.gatherStats(viewIsAlreadyShowingValues: true)
 
             waitForExpectations(timeout: 3) { (error) in
                 XCTAssertNil(error, error!.localizedDescription)

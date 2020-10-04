@@ -50,7 +50,7 @@ class ChartsPresenterDefault: ChartsPresenter {
             if result.shouldForceUpdate || !viewIsAlreadyShowingValues {
                 self.updateView(using: result.stats)
             } else {
-                self.view.hideLoading { self.view.showCurrentData() }
+                self.showCurrentData()
             }
         }.catch { error in
             self.show(error: error)
@@ -59,6 +59,10 @@ class ChartsPresenterDefault: ChartsPresenter {
 
     func presentInfo(for chartType: ChartType) {
         router.navigate(to: .info(chartType: chartType))
+    }
+
+    internal func showCurrentData() {
+        self.view.hideLoading { self.view.showCurrentData() }
     }
 
     internal func updateTable(using localization: Localization) {

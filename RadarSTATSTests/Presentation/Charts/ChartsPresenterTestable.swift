@@ -14,6 +14,11 @@ import XCTest
 final class ChartsPresenterTestable: ChartsPresenterDefault {
     var expectation: XCTestExpectation?
 
+    override func showCurrentData() {
+        guard let expectation = expectation, expectation.description == ChartsExpectation.obtainStatsWhenGatherStatsSucceedButKeepAlreadyShownValues else { return }
+        expectation.fulfill()
+    }
+
     override func updateTable(using localization: Localization) {
         guard let expectation = expectation, expectation.description == ChartsExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed else { return }
         expectation.fulfill()
