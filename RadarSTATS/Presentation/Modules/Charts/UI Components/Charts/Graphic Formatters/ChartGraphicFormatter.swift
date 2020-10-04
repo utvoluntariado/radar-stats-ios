@@ -93,13 +93,46 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
         chartView.notifyDataSetChanged()
 
         if let barChartView = chartView as? BarChartView {
-            barChartView.setVisibleXRangeMaximum(6)
+            barChartView.setVisibleXRangeMaximum(estimatedVisibleXRangeForBarChartView())
             barChartView.rightAxis.enabled = false
             barChartView.moveViewToX(barChartView.xAxis.axisMaximum)
         } else if let lineChartView = chartView as? LineChartView {
-            lineChartView.setVisibleXRangeMaximum(5)
+            lineChartView.setVisibleXRangeMaximum(estimatedVisibleXRangeForLineChartView())
             lineChartView.rightAxis.enabled = false
             lineChartView.moveViewToX(lineChartView.xAxis.axisMaximum)
+        }
+    }
+
+    private func estimatedVisibleXRangeForBarChartView() -> Double {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight: return 5
+            default: return 6
+            }
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight: return 14
+            default: return 10
+            }
+        } else if #available(iOS 14.0, *), UIDevice.current.userInterfaceIdiom == .mac {
+            return 14
+        } else {
+            return 6
+        }
+    }
+
+    private func estimatedVisibleXRangeForLineChartView() -> Double {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return 5
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            switch UIDevice.current.orientation {
+            case .landscapeLeft, .landscapeRight: return 14
+            default: return 8
+            }
+        } else if #available(iOS 14.0, *), UIDevice.current.userInterfaceIdiom == .mac {
+            return 14
+        } else {
+            return 5
         }
     }
 }
