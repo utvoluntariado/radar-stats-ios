@@ -17,7 +17,7 @@ protocol ChartsPresenter {
 
     func viewDidLoad()
     func gatherLocalization()
-    func gatherStats()
+    func gatherStats(viewIsAlreadyShowingValues: Bool)
     func presentInfo(for chartType: ChartType)
 }
 
@@ -44,10 +44,14 @@ class ChartsPresenterDefault: ChartsPresenter {
         }
     }
 
-    func gatherStats() {
+    func gatherStats(viewIsAlreadyShowingValues: Bool) {
         view.showLoading()
-        statsInteractor.run().done { stats in
-            self.updateView(using: stats)
+        statsInteractor.run().done { result in
+            if result.shouldForceUpdate || !viewIsAlreadyShowingValues {
+                self.updateView(using: result.stats)
+            } else {
+                self.view.hideLoading { self.view.showCurrentData() }
+            }
         }.catch { error in
             self.show(error: error)
         }

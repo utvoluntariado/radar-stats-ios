@@ -12,13 +12,13 @@ import PromiseKit
 protocol StatsInteractor {
     var repository: StatsRepository! { get set }
 
-    func run() -> Promise<Stats>
+    func run() -> Promise<(stats: Stats, shouldForceUpdate: Bool)>
 }
 
 final class StatsInteractorDefault: StatsInteractor {
     var repository: StatsRepository!
 
-    func run() -> Promise<Stats> {
+    func run() -> Promise<(stats: Stats, shouldForceUpdate: Bool)> {
         return repository.stats()
     }
 }

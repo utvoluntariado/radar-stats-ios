@@ -13,6 +13,7 @@ protocol ChartsView: Loadable, Noticeable {
 
     func update(using localization: Localization)
     func update(using stats: Stats)
+    func showCurrentData()
 }
 
 class ChartsViewController: UIViewController, ChartsView {
@@ -42,7 +43,7 @@ class ChartsViewController: UIViewController, ChartsView {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.gatherStats()
+        presenter.gatherStats(viewIsAlreadyShowingValues: chartsTable.modelset != nil)
     }
 
     func update(using localization: Localization) {
@@ -53,6 +54,11 @@ class ChartsViewController: UIViewController, ChartsView {
         summarySegmented.setTitle("Hoy, \(stats.formattedExtrationDate(style: .medium))", forSegmentAt: 0)
         summaryStackView.update(using: stats)
         chartsTable.update(modelset: stats)
+        showCurrentData()
+    }
+
+    func showCurrentData() {
+        refreshControl.endRefreshing()
         UIView.animate(withDuration: 0.5) { self.chartsTable.alpha = 1.0 }
     }
 
@@ -61,7 +67,7 @@ class ChartsViewController: UIViewController, ChartsView {
             self.chartsTable.alpha = 0.0
         } completion: { (completed) in
             if completed {
-                self.presenter.gatherStats()
+                self.presenter.gatherStats(viewIsAlreadyShowingValues: self.chartsTable.modelset != nil)
             }
         }
     }

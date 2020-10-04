@@ -14,7 +14,7 @@ protocol StatsRepository {
     var storageService: StorageService! { get set }
     var networkService: NetworkService! { get set }
 
-    func stats() -> Promise<Stats>
+    func stats() -> Promise<(stats: Stats, shouldForceUpdate: Bool)>
 }
 
 class StatsRepositoryDefault: StatsRepository {
@@ -22,10 +22,10 @@ class StatsRepositoryDefault: StatsRepository {
     var storageService: StorageService!
     var networkService: NetworkService!
 
-    func stats() -> Promise<Stats> {
-        return Promise<Stats> { seal in
+    func stats() -> Promise<(stats: Stats, shouldForceUpdate: Bool)> {
+        return Promise<(stats: Stats, shouldForceUpdate: Bool)> { seal in
             if let storedStats = validLocallyStoredStats() {
-                seal.fulfill(storedStats.stats)
+                seal.fulfill((stats: storedStats.stats, shouldForceUpdate: false))
             } else if networkService.isReachable {
                 httpClient.configure(using: .github)
                 var request = HTTPRequest<Stats>(endpoint: API.GitHub.stats)
@@ -33,7 +33,7 @@ class StatsRepositoryDefault: StatsRepository {
                     switch result {
                     case .success(let result):
                         self.locallyStore(stats: result)
-                        seal.fulfill(result)
+                        seal.fulfill((stats: result, shouldForceUpdate: true))
 
                     case .failure(let error):
                         seal.reject(error)

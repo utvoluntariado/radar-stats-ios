@@ -17,7 +17,7 @@ final class ChartsTableView: UITableView {
     weak var actionDelegate: ChartsTableViewActionDelegate?
 
     private var alreadyAnimatedChartCellsIndexPaths = [IndexPath]()
-    private var modelset: Stats?
+    private(set) var modelset: Stats?
     private var localization = [LocalizationItem]()
 
     override func awakeFromNib() {
