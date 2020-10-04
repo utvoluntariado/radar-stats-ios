@@ -35,6 +35,11 @@ class ChartsViewController: UIViewController, ChartsView {
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        chartsTable.alpha = 0.0
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.gatherStats()
@@ -48,10 +53,17 @@ class ChartsViewController: UIViewController, ChartsView {
         summarySegmented.setTitle("Hoy, \(stats.formattedExtrationDate(style: .medium))", forSegmentAt: 0)
         summaryStackView.update(using: stats)
         chartsTable.update(modelset: stats)
+        UIView.animate(withDuration: 0.5) { self.chartsTable.alpha = 1.0 }
     }
 
     @objc func refresh(_ refreshControl: UIRefreshControl) {
-        presenter.gatherStats()
+        UIView.animate(withDuration: 0.5) {
+            self.chartsTable.alpha = 0.0
+        } completion: { (completed) in
+            if completed {
+                self.presenter.gatherStats()
+            }
+        }
     }
 
     @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
