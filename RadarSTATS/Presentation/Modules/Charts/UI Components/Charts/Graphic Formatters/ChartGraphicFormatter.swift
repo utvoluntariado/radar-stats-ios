@@ -106,13 +106,13 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
     private func estimatedVisibleXRangeForBarChartView() -> Double {
         if UIDevice.current.userInterfaceIdiom == .phone {
             switch UIDevice.current.orientation {
-            case .landscapeLeft, .landscapeRight: return 5
+            case .landscapeLeft, .landscapeRight: return 5 
             default: return 6
             }
         } else if UIDevice.current.userInterfaceIdiom == .pad {
             switch UIDevice.current.orientation {
-            case .landscapeLeft, .landscapeRight: return 14
-            default: return 10
+            case .landscapeLeft, .landscapeRight: return 10
+            default: return 6
             }
         } else if #available(iOS 14.0, *), UIDevice.current.userInterfaceIdiom == .mac {
             return 14
@@ -126,8 +126,8 @@ struct ChartGraphicFormatterDefault: ChartGraphicFormatter {
             return 5
         } else if UIDevice.current.userInterfaceIdiom == .pad {
             switch UIDevice.current.orientation {
-            case .landscapeLeft, .landscapeRight: return 14
-            default: return 8
+            case .landscapeLeft, .landscapeRight: return 8
+            default: return 6
             }
         } else if #available(iOS 14.0, *), UIDevice.current.userInterfaceIdiom == .mac {
             return 14
