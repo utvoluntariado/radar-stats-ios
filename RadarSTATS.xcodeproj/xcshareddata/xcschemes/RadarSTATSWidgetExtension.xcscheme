@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA5084C7252BB64E00945D59"
-               BuildableName = "RadarSTATSWidgetExtensionExtension.appex"
-               BlueprintName = "RadarSTATSWidgetExtensionExtension"
+               BuildableName = "RadarSTATSWidgetExtension.appex"
+               BlueprintName = "RadarSTATSWidgetExtension"
                ReferencedContainer = "container:RadarSTATS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

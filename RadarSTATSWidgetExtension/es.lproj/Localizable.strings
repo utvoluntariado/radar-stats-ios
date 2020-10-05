@@ -5,9 +5,9 @@
   Created by Pedro José Pereira Vieito on 5/10/20.
 */
 
-"UPLOADED_TEKS" = "TEKs subidos";
-"SHARED_DIAGNOSES" = "Diagnósticos compartidos";
+"SHARED_DIAGNOSES" = "Comunicaciones positivas";
 "USAGE_RATIO" = "Ratio de uso";
+"UPLOADED_TEKS" = "TEKs compartidos";
 
 "METRICS_SUMMARY_WIDGET_NAME" = "Resumen de métricas";
 "METRICS_SUMMARY_WIDGET_DESCRIPTION" = "Resumen de métricas de “Radar COVID”.";

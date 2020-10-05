@@ -1,5 +1,5 @@
 "gpCwrM" = "Obtener métricas";
-"tVvJ9c" = "Obtener métricas de Radar STATS";
+"tVvJ9c" = "Obtener métricas de uso de “Radar COVID”";
 
 "RPuFvC" = "Periodo";
 "UeMpD0" = "Métricas";
@@ -7,8 +7,8 @@
 "7vEm0H" = "Error";
 
 "rz9sMO" = "Casos de COVID-19 (Estimación)";
-"uFl32R" = "TEKs subidos";
-"Z7lMY0" = "Diagnósticos compartidos (Estimación)";
+"uFl32R" = "TEKs compartidos";
+"Z7lMY0" = "Comunicaciones positivas (Estimación)";
 "Gmhaa9" = "Fecha de extracción";
 
 "b7ONq4" = "Periodo";
