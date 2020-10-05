@@ -44,6 +44,7 @@ extension IntentMetricsSummary {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
         dateFormatter.doesRelativeDateFormatting = true
+        dateFormatter.formattingContext = .beginningOfSentence
         return dateFormatter
     }
     
