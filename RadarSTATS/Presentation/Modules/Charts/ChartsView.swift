@@ -46,6 +46,13 @@ class ChartsViewController: UIViewController, ChartsView {
         presenter.gatherStats(viewIsAlreadyShowingValues: chartsTable.modelset != nil)
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { _ in
+            self.redrawSummaryStackView()
+        }, completion: nil)
+    }
+
     func update(using localization: Localization) {
         chartsTable.update(localization: localization.charts)
     }
@@ -73,7 +80,11 @@ class ChartsViewController: UIViewController, ChartsView {
     }
 
     @IBAction func didChangeSummarySegmented(_ sender: UISegmentedControl) {
-        guard let summaryMode = SummaryMode(rawValue: sender.selectedSegmentIndex) else { return }
+        redrawSummaryStackView()
+    }
+
+    private func redrawSummaryStackView() {
+        guard let summaryMode = SummaryMode(rawValue: summarySegmented.selectedSegmentIndex) else { return }
         summaryStackView.layout(mode: summaryMode)
     }
 }

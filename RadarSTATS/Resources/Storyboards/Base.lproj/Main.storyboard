@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wZx-G1-uSb">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -22,19 +22,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="Radar_STATS" customModuleProvider="target">
-                                <rect key="frame" x="224" y="0.0" width="448" height="344"/>
+                                <rect key="frame" x="224" y="0.0" width="448" height="343.99999999999994"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAuthorsCell" id="kpz-v6-bnc" customClass="AboutAuthorsTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="448" height="375.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="448" height="375.66665649414062"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kpz-v6-bnc" id="L8t-7R-tH9">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="375.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="375.66665649414062"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-yX-J79">
-                                                    <rect key="frame" x="20" y="11" width="408" height="353.5"/>
+                                                    <rect key="frame" x="20" y="11" width="408" height="353.66666666666669"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="appIconAbout" translatesAutoresizingMaskIntoConstraints="NO" id="MJN-W5-WdE">
                                                             <rect key="frame" x="0.0" y="0.0" width="408" height="150"/>
@@ -44,24 +44,24 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Radar STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-hL-NFj">
-                                                            <rect key="frame" x="0.0" y="158" width="408" height="36.5"/>
+                                                            <rect key="frame" x="0.0" y="158" width="408" height="36.333333333333343"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                             <color key="textColor" name="fontForeground"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="750" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ry2-Db-SAW">
-                                                            <rect key="frame" x="0.0" y="202.5" width="408" height="71.5"/>
+                                                            <rect key="frame" x="0.0" y="202.33333333333334" width="408" height="71.666666666666657"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Aplicación" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8o-hE-l2l">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.666666666666668"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OjL-FC-nVu">
-                                                                    <rect key="frame" x="0.0" y="21.5" width="408" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="21.666666666666657" width="408" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jorge J. Ramos Garnero" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-zw-Yq2">
                                                                             <rect key="frame" x="0.0" y="0.0" width="292" height="50"/>
@@ -97,17 +97,17 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="750" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-2t-5hl">
-                                                            <rect key="frame" x="0.0" y="282" width="408" height="71.5"/>
+                                                            <rect key="frame" x="0.0" y="282" width="408" height="71.666666666666686"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Datos" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1el-Qn-nOa">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.666666666666668"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-ZS-7CP">
-                                                                    <rect key="frame" x="0.0" y="21.5" width="408" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="21.666666666666686" width="408" height="50"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedro José Pereira Vieito" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-GH-Q1G">
                                                                             <rect key="frame" x="0.0" y="0.0" width="292" height="50"/>
@@ -157,14 +157,14 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="403.5" width="448" height="248"/>
+                                        <rect key="frame" x="0.0" y="403.66665649414062" width="448" height="247.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWj-2I-lY4" id="xtb-MR-JPX">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="248"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="247.66667175292969"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
-                                                    <rect key="frame" x="20" y="27" width="408" height="194"/>
+                                                    <rect key="frame" x="20" y="27" width="408" height="193.66666666666666"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Radar STATS es un conjunto de proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
 
@@ -186,14 +186,14 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="651.5" width="448" height="197.5"/>
+                                        <rect key="frame" x="0.0" y="651.33332824707031" width="448" height="197.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ4-1L-gxX" id="sE3-RE-H6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="197.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="197.66667175292969"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-wH-in8">
-                                                    <rect key="frame" x="20" y="11" width="408" height="175.5"/>
+                                                    <rect key="frame" x="20" y="11" width="408" height="175.66666666666666"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="du7-1e-pJ4">
                                                             <rect key="frame" x="0.0" y="0.0" width="408" height="80"/>
@@ -229,17 +229,17 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="86c-9D-Vbe">
-                                                            <rect key="frame" x="0.0" y="96" width="408" height="79.5"/>
+                                                            <rect key="frame" x="0.0" y="96" width="408" height="79.666666666666686"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Código fuente de esta app:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-uh-6YL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="21.666666666666668"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUY-IT-uFj">
-                                                                    <rect key="frame" x="0.0" y="29.5" width="408" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="29.666666666666657" width="408" height="50"/>
                                                                     <color key="backgroundColor" name="textAndImageButtonBackground"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="hVG-4O-Zdc"/>
@@ -470,8 +470,8 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-L6-naK">
-                                <rect key="frame" x="68" y="8" width="312" height="256.5"/>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-L6-naK">
+                                <rect key="frame" x="68" y="8" width="312" height="256.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ag8-DP-2Le">
                                         <rect key="frame" x="0.0" y="0.0" width="312" height="50"/>
@@ -482,8 +482,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Nh7-6q-tKi" secondAttribute="height" multiplier="1:1" id="BdL-it-LaC"/>
                                                     <constraint firstAttribute="width" secondItem="Nh7-6q-tKi" secondAttribute="height" multiplier="1:1" id="GWw-Af-ssd"/>
-                                                    <constraint firstAttribute="height" constant="50" id="RCe-iE-eQe"/>
-                                                    <constraint firstAttribute="width" constant="50" id="VVy-Ki-HFs"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="50" id="RCe-iE-eQe"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -528,10 +527,10 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6D-1K-a2J">
-                                        <rect key="frame" x="0.0" y="112" width="312" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="111.99999999999999" width="312" height="144.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s28-UH-CDa">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="144.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="R0c-2r-DN1">
@@ -540,8 +539,8 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                     </constraint>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-hj-ymG" customClass="SummaryStackView" customModule="Radar_STATS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="282" height="144.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-hj-ymG" customClass="SummaryStackView" customModule="Radar_STATS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="282" height="144.66666666666666"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-yH-QtR">
                                                         <rect key="frame" x="0.0" y="0.0" width="282" height="33"/>
@@ -598,16 +597,16 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WTo-bt-nMa">
-                                                        <rect key="frame" x="0.0" y="111" width="282" height="33.5"/>
+                                                        <rect key="frame" x="0.0" y="111" width="282" height="33.666666666666657"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TEKs por comunicación positiva" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AII-50-qe8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="33.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="33.666666666666664"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <color key="textColor" name="fontForeground"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="···" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-zP-YUp" customClass="InsettedValueLabel" customModule="Radar_STATS" customModuleProvider="target">
-                                                                <rect key="frame" x="199" y="0.0" width="83" height="33.5"/>
+                                                                <rect key="frame" x="199" y="0.0" width="83" height="33.666666666666664"/>
                                                                 <color key="backgroundColor" name="insettedValueLabelBackground"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                                 <color key="textColor" name="insettedValueLabelForeground"/>
@@ -632,7 +631,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                 </connections>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-uN-y30">
-                                                <rect key="frame" x="282" y="0.0" width="30" height="144.5"/>
+                                                <rect key="frame" x="282" y="0.0" width="30" height="144.66666666666666"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="NlY-wT-Wp0">
@@ -664,34 +663,34 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChartCell" id="QB5-kQ-1fW" customClass="ChartsTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="448" height="328.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="448" height="328"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QB5-kQ-1fW" id="6Uw-ig-X1u">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="328.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="328"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Kv-bt-lS9">
-                                                    <rect key="frame" x="20" y="11" width="408" height="306.5"/>
+                                                    <rect key="frame" x="20" y="11" width="408" height="306"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFi-1X-E9C">
-                                                            <rect key="frame" x="0.0" y="0.0" width="408" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="408" height="47.666666666666664"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4o-e9-p6Y">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="48"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="47.666666666666664"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="44" id="2Rt-Bi-lby"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN8-29-NeI">
-                                                                    <rect key="frame" x="44" y="0.0" width="315" height="48"/>
+                                                                    <rect key="frame" x="44" y="0.0" width="315.66666666666669" height="47.666666666666664"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <color key="textColor" name="fontForeground"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snB-dL-axl" customClass="InsettedSymbolButton" customModule="Radar_STATS" customModuleProvider="target">
-                                                                    <rect key="frame" x="359" y="0.0" width="49" height="48"/>
+                                                                    <rect key="frame" x="359.66666666666669" y="0.0" width="48.333333333333314" height="47.666666666666664"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" priority="999" constant="50" id="uXe-KI-8aD"/>
                                                                     </constraints>
@@ -706,7 +705,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                             </subviews>
                                                         </stackView>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-61-x4L">
-                                                            <rect key="frame" x="0.0" y="56" width="408" height="250.5"/>
+                                                            <rect key="frame" x="0.0" y="55.666666666666671" width="408" height="250.33333333333331"/>
                                                             <color key="backgroundColor" name="viewWrapperBackground"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" priority="999" constant="250" id="6vt-1k-djO"/>
@@ -775,6 +774,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                             <constraint firstItem="AhX-9y-mpw" firstAttribute="top" secondItem="Z2q-L6-naK" secondAttribute="bottom" id="ZTS-Ml-nWZ"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="Z2q-L6-naK" secondAttribute="bottom" constant="16" id="a48-ew-5X2"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="leading" secondItem="Z2q-L6-naK" secondAttribute="trailing" constant="8" id="anZ-ek-nbc"/>
+                            <constraint firstItem="AhX-9y-mpw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z2q-L6-naK" secondAttribute="bottom" id="bZo-P3-jBc"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" constant="8" id="bc3-sw-i2e"/>
                             <constraint firstItem="Z2q-L6-naK" firstAttribute="top" secondItem="WWt-fA-uSA" secondAttribute="bottom" constant="8" id="boy-zh-JeV"/>
                             <constraint firstItem="9Zd-Nt-gqk" firstAttribute="width" secondItem="WrG-ed-rpo" secondAttribute="width" multiplier="0.5" id="cAG-xp-5fB"/>
@@ -812,6 +812,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="XGw-5c-fKA"/>
                                 <exclude reference="Xvi-yy-Jz8"/>
                                 <exclude reference="ZTS-Ml-nWZ"/>
+                                <exclude reference="bZo-P3-jBc"/>
                                 <exclude reference="0q5-61-piI"/>
                                 <exclude reference="2Eq-fz-lZe"/>
                                 <exclude reference="FhH-tg-Kuo"/>
@@ -838,6 +839,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <include reference="grb-QT-Tk7"/>
                                 <include reference="Kwv-Pk-WUh"/>
                                 <exclude reference="Xvi-yy-Jz8"/>
+                                <exclude reference="bZo-P3-jBc"/>
                                 <include reference="ePJ-wY-rR7"/>
                             </mask>
                         </variation>
@@ -1033,7 +1035,6 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="y5g-Nf-y62"/>
                                 <exclude reference="3Vi-Pm-ZtW"/>
                                 <exclude reference="5V8-up-4Jb"/>
                                 <exclude reference="IaZ-79-2oH"/>
@@ -1041,6 +1042,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="mJ0-lf-qss"/>
                                 <exclude reference="pD8-op-lHG"/>
                                 <exclude reference="s7O-7O-dTu"/>
+                                <exclude reference="y5g-Nf-y62"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -1059,8 +1061,6 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="M8p-Yj-DEd"/>
-                                <include reference="y5g-Nf-y62"/>
                                 <exclude reference="3Vi-Pm-ZtW"/>
                                 <exclude reference="FlQ-Vo-bHx"/>
                                 <exclude reference="NdT-M6-FNI"/>
@@ -1069,6 +1069,8 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <include reference="pD8-op-lHG"/>
                                 <include reference="s7O-7O-dTu"/>
                                 <exclude reference="xrc-xi-Ff9"/>
+                                <exclude reference="M8p-Yj-DEd"/>
+                                <include reference="y5g-Nf-y62"/>
                             </mask>
                         </variation>
                     </view>
@@ -1113,7 +1115,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
             <size key="intrinsicContentSize" width="83" height="33"/>
         </designable>
         <designable name="snB-dL-axl">
-            <size key="intrinsicContentSize" width="49" height="48"/>
+            <size key="intrinsicContentSize" width="48.333333333333336" height="47.666666666666664"/>
         </designable>
         <designable name="ySo-zP-YUp">
             <size key="intrinsicContentSize" width="83" height="33"/>

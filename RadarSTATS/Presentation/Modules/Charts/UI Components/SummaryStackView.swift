@@ -66,12 +66,12 @@ final class SummaryStackView: UIStackView {
                 self.diagnosisTEKsValueLabel.text = "≥ \(self.stats.today.formattedTeksPerSharedDiagnosis())"
                 self.usageRatioValueLabel.text = "≤ \(self.stats.today.formattedUsageRatio())"
 
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .curveEaseInOut, animations: {
                     self.uploadedTEKsValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     self.diagnosisTEKsValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                }
+                }, completion: nil)
             }
         }
     }
@@ -81,7 +81,7 @@ final class SummaryStackView: UIStackView {
             self.uploadedTEKsStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             self.diagnosisTEKsStackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         } completion: { (completed) in
-            if completed {
+            if completed && UIDevice.current.orientation == .portrait {
                 UIView.animate(withDuration: 0.25) {
                     self.uploadedTEKsStackView.isHidden = false
                     self.diagnosisTEKsStackView.isHidden = false
@@ -99,10 +99,10 @@ final class SummaryStackView: UIStackView {
                 self.sharedDiagnosesValueLabel.text = "≤ \(self.stats.last7Days.sharedDiagnoses)"
                 self.usageRatioValueLabel.text = "≤ \(self.stats.last7Days.formattedUsageRatio())"
 
-                UIView.animate(withDuration: 0.25) {
+                UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 2, options: .curveEaseInOut, animations: {
                     self.sharedDiagnosesValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     self.usageRatioValueLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                }
+                }, completion: nil)
             }
         }
     }
@@ -112,10 +112,15 @@ final class SummaryStackView: UIStackView {
             self.uploadedTEKsStackView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
             self.diagnosisTEKsStackView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
         } completion: { (completed) in
-            if completed {
+            if completed && UIDevice.current.orientation == .portrait {
                 UIView.animate(withDuration: 0.25) {
                     self.uploadedTEKsStackView.isHidden = true
                     self.diagnosisTEKsStackView.isHidden = true
+                }
+            } else if completed && UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight   {
+                UIView.animate(withDuration: 0.25) {
+                    self.uploadedTEKsStackView.isHidden = false
+                    self.diagnosisTEKsStackView.isHidden = false
                 }
             }
         }
