@@ -7,12 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA01E5AB252BB91300E47785 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA5084AF252BB58A00945D59 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		AA01E5B0252BB91600E47785 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA5084AF252BB58A00945D59 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		AA01E5B5252BB91600E47785 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA5084AF252BB58A00945D59 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		AA5084A5252BB50900945D59 /* RadarSTATSIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; };
 		AA5084A6252BB50900945D59 /* RadarSTATSIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AA5084B5252BB58B00945D59 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AA5084AF252BB58A00945D59 /* Intents.intentdefinition */; };
 		AA5084B6252BB58B00945D59 /* GetMetricsSummaryIntent+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B0252BB58A00945D59 /* GetMetricsSummaryIntent+Additions.swift */; };
 		AA5084B7252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */; };
 		AA5084B8252BB58B00945D59 /* IntentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B2252BB58B00945D59 /* IntentType.swift */; };
@@ -31,6 +27,10 @@
 		AA508526252BB73F00945D59 /* RadarSTATSIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; };
 		AAA3034A252BCC5900B969A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAA3034C252BCC5900B969A0 /* Localizable.strings */; };
 		AAA30361252BCEF300B969A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAA3035A252BCD4100B969A0 /* Localizable.strings */; };
+		AAA30366252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		AAA30367252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; };
+		AAA30368252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		AAA30369252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		E914C39C251CD2DB004A578C /* LastHourStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C39B251CD2DB004A578C /* LastHourStats.swift */; };
 		E914C3A0251CD2F4004A578C /* TodayStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C39F251CD2F4004A578C /* TodayStats.swift */; };
 		E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3A2251CD321004A578C /* LastWeekStats.swift */; };
@@ -197,7 +197,6 @@
 /* Begin PBXFileReference section */
 		AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RadarSTATSIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5084A1252BB50900945D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA5084AF252BB58A00945D59 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		AA5084B0252BB58A00945D59 /* GetMetricsSummaryIntent+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GetMetricsSummaryIntent+Additions.swift"; sourceTree = "<group>"; };
 		AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetricsSummaryIntentHandler.swift; sourceTree = "<group>"; };
 		AA5084B2252BB58B00945D59 /* IntentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentType.swift; sourceTree = "<group>"; };
@@ -219,6 +218,8 @@
 		AAA30351252BCC6C00B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAA3035B252BCD4100B969A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAA3035C252BCD4100B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAA3036A252BD10100B969A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		AAA30395252BD24000B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Intents.strings; sourceTree = "<group>"; };
 		AAE0F35A251D27680077BC5F /* RadarSTATS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RadarSTATS.entitlements; sourceTree = "<group>"; };
 		E914C39B251CD2DB004A578C /* LastHourStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastHourStats.swift; sourceTree = "<group>"; };
 		E914C39F251CD2F4004A578C /* TodayStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStats.swift; sourceTree = "<group>"; };
@@ -365,7 +366,7 @@
 		AA50849F252BB50900945D59 /* RadarSTATSIntents */ = {
 			isa = PBXGroup;
 			children = (
-				AA5084AF252BB58A00945D59 /* Intents.intentdefinition */,
+				AAA3036B252BD10100B969A0 /* Intents.intentdefinition */,
 				AA5084B2252BB58B00945D59 /* IntentType.swift */,
 				AA5084B3252BB58B00945D59 /* IntentHandlerProvider.swift */,
 				AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */,
@@ -1173,7 +1174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA5084B5252BB58B00945D59 /* Intents.intentdefinition in Sources */,
+				AAA30367252BD10100B969A0 /* Intents.intentdefinition in Sources */,
 				AA5084B9252BB58B00945D59 /* IntentHandlerProvider.swift in Sources */,
 				AA5084B6252BB58B00945D59 /* GetMetricsSummaryIntent+Additions.swift in Sources */,
 				AA5084B7252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift in Sources */,
@@ -1186,7 +1187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA01E5B0252BB91600E47785 /* Intents.intentdefinition in Sources */,
+				AAA30368252BD10100B969A0 /* Intents.intentdefinition in Sources */,
 				AA5084EF252BB67B00945D59 /* MetricsSummaryWidget.swift in Sources */,
 				AA5084EC252BB67B00945D59 /* WidgetExtension.swift in Sources */,
 			);
@@ -1196,7 +1197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA01E5B5252BB91600E47785 /* Intents.intentdefinition in Sources */,
+				AAA30369252BD10100B969A0 /* Intents.intentdefinition in Sources */,
 				AA50851C252BB72100945D59 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1208,7 +1209,7 @@
 				E9B86C262526175000EE9642 /* Localization.swift in Sources */,
 				E9B9A0EC251CBCA70092ABC5 /* StatsInteractor.swift in Sources */,
 				E914C3CA251CE497004A578C /* StorageService.swift in Sources */,
-				AA01E5AB252BB91300E47785 /* Intents.intentdefinition in Sources */,
+				AAA30366252BD10100B969A0 /* Intents.intentdefinition in Sources */,
 				E9E51E362523026700F222AB /* AboutThirdPartiesTableViewCell.swift in Sources */,
 				E9B9A0F9251CBE530092ABC5 /* Stats.swift in Sources */,
 				E9E51E29252301B900F222AB /* AboutTableView.swift in Sources */,
@@ -1349,6 +1350,15 @@
 				AAA3035C252BCD4100B969A0 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AAA3036B252BD10100B969A0 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAA3036A252BD10100B969A0 /* en */,
+				AAA30395252BD24000B969A0 /* es */,
+			);
+			name = Intents.intentdefinition;
 			sourceTree = "<group>";
 		};
 		E9CBA6F3251B88BA00A7A2EC /* Main.storyboard */ = {

@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>INEnumDisplayName</key>
-			<string>Metrics Period</string>
+			<string>Period</string>
 			<key>INEnumDisplayNameID</key>
 			<string>RPuFvC</string>
 			<key>INEnumGeneratesHeader</key>
@@ -19,7 +19,7 @@
 			<array>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>unknown</string>
+					<string>Unknown</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>uNuaI9</string>
 					<key>INEnumValueName</key>
@@ -66,7 +66,7 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Get “Radar COVID” Metrics Summary</string>
+			<string>Get Radar STATS Metrics Summary</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -93,7 +93,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Metrics Period</string>
+					<string>Period</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>b7ONq4</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -334,65 +334,11 @@
 				</dict>
 				<dict>
 					<key>INTypePropertyDisplayName</key>
-					<string>Start Sample Date</string>
-					<key>INTypePropertyDisplayNameID</key>
-					<string>BScfY5</string>
-					<key>INTypePropertyDisplayPriority</key>
-					<integer>8</integer>
-					<key>INTypePropertyMetadata</key>
-					<dict>
-						<key>INTypePropertyMetadataDateStyle</key>
-						<string>Full</string>
-						<key>INTypePropertyMetadataFormat</key>
-						<string>Style</string>
-						<key>INTypePropertyMetadataTemplateID</key>
-						<string>2NjHqx</string>
-						<key>INTypePropertyMetadataTimeStyle</key>
-						<string>Full</string>
-						<key>INTypePropertyMetadataType</key>
-						<string>Date</string>
-					</dict>
-					<key>INTypePropertyName</key>
-					<string>startSampleDate</string>
-					<key>INTypePropertyTag</key>
-					<integer>108</integer>
-					<key>INTypePropertyType</key>
-					<string>DateComponents</string>
-				</dict>
-				<dict>
-					<key>INTypePropertyDisplayName</key>
-					<string>End Sample Date</string>
-					<key>INTypePropertyDisplayNameID</key>
-					<string>aH9IJg</string>
-					<key>INTypePropertyDisplayPriority</key>
-					<integer>9</integer>
-					<key>INTypePropertyMetadata</key>
-					<dict>
-						<key>INTypePropertyMetadataDateStyle</key>
-						<string>Full</string>
-						<key>INTypePropertyMetadataFormat</key>
-						<string>Style</string>
-						<key>INTypePropertyMetadataTemplateID</key>
-						<string>J3CR69</string>
-						<key>INTypePropertyMetadataTimeStyle</key>
-						<string>Full</string>
-						<key>INTypePropertyMetadataType</key>
-						<string>Date</string>
-					</dict>
-					<key>INTypePropertyName</key>
-					<string>endSampleDate</string>
-					<key>INTypePropertyTag</key>
-					<integer>109</integer>
-					<key>INTypePropertyType</key>
-					<string>DateComponents</string>
-				</dict>
-				<dict>
-					<key>INTypePropertyDisplayName</key>
 					<string>Extraction Timestamp</string>
 					<key>INTypePropertyDisplayNameID</key>
 					<string>Gmhaa9</string>
 					<key>INTypePropertyDisplayPriority</key>
-					<integer>10</integer>
+					<integer>8</integer>
 					<key>INTypePropertyMetadata</key>
 					<dict>
 						<key>INTypePropertyMetadataDateStyle</key>
