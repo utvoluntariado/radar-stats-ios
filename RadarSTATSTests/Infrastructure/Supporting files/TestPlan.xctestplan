@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "02736C03-D68C-4B87-91FC-7263F173E44B",
+      "name" : "Basic",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:RadarSTATS.xcodeproj",
+        "identifier" : "E9F9A1D12524535000448D15",
+        "name" : "RadarSTATSTests"
+      }
+    }
+  ],
+  "version" : 1
+}
