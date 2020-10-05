@@ -1,5 +1,24 @@
+![ios-version](https://img.shields.io/badge/iOS-13.0%20and%20up-blue)
+![coverage-shield](https://img.shields.io/badge/coverage-15%2C8%25-yellow)
+
 # Radar STATS – iOS
 iOS app to visualize statistics provided by the [Radar STATS](https://github.com/Radar-STATS/Radar-STATS) project about Spain's `Radar COVID` app Exposure Notification service.
+
+##### Table of Contents
+- [About this project](#about-this-project)
+  * [Introductory Q&A](#introductory-q-a)
+    + [Why not using SwiftUI?](#why-not-using-swiftui-)
+    + [UI Test?](#ui-test-)
+    + [No comments?](#no-comments-)
+- [Project architecture](#project-architecture)
+  * [Infrastructure](#infrastructure)
+  * [Business](#business)
+  * [Network](#network)
+  * [Data](#data)
+  * [Presentation](#presentation)
+  * [Resources](#resources)
+- [What we already have on the radar](#what-we-already-have-on-the-radar)
+- [Special thanks](#special-thanks)
 
 # About this project
 This project has been created with the premise of providing the population with simple and quick information about the performance of `Radar COVID`, the Spanish application to contain the Exposure Notification service.
@@ -77,7 +96,7 @@ La carpeta Resources contiene todos los recursos gráficos y/o externos al códi
 - [ ] macOS app (Catalyst is already active, however)
 - [ ] UI Tests
 
-These are the most important tasks that we have pending for the version beyond the MVP. We will work on them. However you can see the progress directly on [the project board](https://github.com/Radar-STATS/Radar-STATS-iOS/projects/1).
+These are the most important tasks that we have pending for the version beyond the MVP. We will work on them. However you can see the progress directly on [the project new features board](https://github.com/Radar-STATS/Radar-STATS-iOS/projects/1).
 
 # Special thanks
 To all those who participate in the test groups, contributing ideas that have greatly improved the app.
