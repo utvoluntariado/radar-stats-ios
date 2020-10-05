@@ -53,8 +53,8 @@ struct MetricsSummaryWidgetEntryView : View {
     var body: some View {
         let metrics = [
             (Text("UPLOADED_TEKS"), Text(entry.metricsSummary.displayUploadedTEKs)),
-            (Text("SHARED_DIAGNOSES"), Text("≤\(entry.metricsSummary.displayUploadedTEKs)")),
-            (Text("USAGE_RATIO"), Text("≤\(entry.metricsSummary.displayUsageRatio)")),
+            (Text("SHARED_DIAGNOSES"), Text("≤ \(entry.metricsSummary.displayUploadedTEKs)")),
+            (Text("USAGE_RATIO"), Text("≤ \(entry.metricsSummary.displayUsageRatio)")),
         ]
         
         return GeometryReader { geometry in
