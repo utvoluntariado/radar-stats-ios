@@ -68,14 +68,14 @@ Likewise, the presentation layer contains common elements, transversal to all th
 La carpeta Resources contiene todos los recursos gráficos y/o externos al código como por ejemplo: assets de imágenes, assets de color, storyboards, fuentes y otros.
 
 # What we already have on the radar
-[ ] Translate to co-official languages
-[ ] Write a better localization system
-[ ] Export reports as PDF or some oher imprimable format
-[ ] Full landscape mode for individual charts
-[ ] Add a Q&A section, with basic documentation on the use and display of the information
-[ ] Better iPad interface
-[ ] macOS app (Catalyst is already active, however)
-[ ] UI Tests
+- [ ] Translate to co-official languages
+- [ ] Write a better localization system
+- [ ] Export reports as PDF or some oher imprimable format
+- [ ] Full landscape mode for individual charts
+- [ ] Add a Q&A section, with basic documentation on the use and display of the information
+- [ ] Better iPad interface
+- [ ] macOS app (Catalyst is already active, however)
+- [ ] UI Tests
 
 These are the most important tasks that we have pending for the version beyond the MVP. We will work on them. However you can see the progress directly on [the project board](https://github.com/Radar-STATS/Radar-STATS-iOS/projects/1).
 
