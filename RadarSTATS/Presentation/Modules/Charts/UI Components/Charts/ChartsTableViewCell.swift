@@ -135,6 +135,7 @@ final class ChartsTableViewCell: UITableViewCell {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let lineChartView = LineChartView()
+        lineChartView.accessibilityLabel = "Gráfico de línea: \(localization.content.title ?? "")"
         lineChartView.translatesAutoresizingMaskIntoConstraints = false
         chartWrapperView.addSubview(lineChartView)
         lineChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
@@ -154,6 +155,7 @@ final class ChartsTableViewCell: UITableViewCell {
         chartWrapperView.subviews.forEach { $0.removeFromSuperview() }
 
         let barChartView = BarChartView()
+        barChartView.accessibilityLabel = "Gráfico de barras: \(localization.content.title ?? "")"
         barChartView.translatesAutoresizingMaskIntoConstraints = false
         chartWrapperView.addSubview(barChartView)
         barChartView.leadingAnchor.constraint(equalTo: chartWrapperView.leadingAnchor, constant: 8).isActive = true
