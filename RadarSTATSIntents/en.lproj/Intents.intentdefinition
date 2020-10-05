@@ -66,7 +66,7 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Get Radar STATS Metrics Summary</string>
+			<string>Get “Radar COVID” Metrics Summary.</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
