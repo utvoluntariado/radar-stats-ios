@@ -35,9 +35,9 @@ extension GetMetricsSummaryIntent {
     public var displayMetricsPeriod: String {
         switch self.metricsPeriod {
         case .last7Days, .unknown:
-            return "Last 7 Days"
+            return IntentHandlerProvider.localizedString("INTENTS_METRICS_PERIOD_LAST_7_DAYS")
         case .today:
-            return "Today"
+            return IntentHandlerProvider.localizedString("INTENTS_METRICS_PERIOD_TODAY")
         }
     }
 }

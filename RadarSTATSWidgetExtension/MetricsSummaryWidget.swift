@@ -51,7 +51,13 @@ struct MetricsSummaryWidgetEntryView : View {
     var entry: MetricsSummaryWidgetProvider.Entry
     
     var body: some View {
-        GeometryReader { geometry in
+        let metrics = [
+            (Text("UPLOADED_TEKS"), Text(entry.metricsSummary.displayUploadedTEKs)),
+            (Text("SHARED_DIAGNOSES"), Text("≤\(entry.metricsSummary.displayUploadedTEKs)")),
+            (Text("USAGE_RATIO"), Text("≤\(entry.metricsSummary.displayUsageRatio)")),
+        ]
+        
+        return GeometryReader { geometry in
             ZStack {
                 LinearGradient(
                     gradient: Gradient(
@@ -61,28 +67,41 @@ struct MetricsSummaryWidgetEntryView : View {
                     startPoint: .top, endPoint: .bottom)
                     .opacity(0.8)
                 VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
-                        Text("Radar STATS | \(entry.configuration.displayMetricsPeriod)")
-                            .font(.title3).bold()
-                        if let extractionDate = entry.metricsSummary.extractionDate {
-                            Text(extractionDate, formatter: entry.metricsSummary.displayExtensionDateFormatter)
-                                .font(.footnote)
-                                .bold()
-                        }
-                    }
-                    HStack(alignment: .bottom) {
+                    HStack(alignment: .top) {
                         VStack(alignment: .leading) {
-                            Text("Uploaded TEKs: \(entry.metricsSummary.displayUploadedTEKs)")
-                            Text("Shared Diagnoses: ≤\(entry.metricsSummary.displaySharedDiagnoses)")
-                            Text("Usage Ratio: ≤\(entry.metricsSummary.displayUsageRatio)")
+                            Text("Radar STATS | \(entry.configuration.displayMetricsPeriod)")
+                                .font(.title3).bold()
+                            if let extractionDate = entry.metricsSummary.extractionDate {
+                                Text(extractionDate, formatter: entry.metricsSummary.displayExtensionDateFormatter)
+                                    .font(.system(size: 12))
+                                    .bold()
+                            }
                         }
-                        .font(.callout)
                         Spacer()
                         Image("AppIconDisplay")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: geometry.size.width * 0.15, height: nil)
+                            .frame(width: geometry.size.width * 0.1)
                             .clipShape(ContainerRelativeShape(), style: FillStyle())
+                    }
+                    HStack(alignment: .bottom) {
+                        VStack(alignment: .leading, spacing: 3) {
+                            ForEach(0..<metrics.count) { i in
+                                HStack() {
+                                    metrics[i].0
+                                        .font(.system(size: 15))
+                                    Spacer()
+                                    ZStack {
+                                        Capsule()
+                                            .foregroundColor(Color(.systemBackground))
+                                        metrics[i].1
+                                            .font(.system(size: 12))
+                                            .bold()
+                                    }
+                                    .frame(width: geometry.size.width * 0.25)
+                                }
+                            }
+                        }
                     }
                 }
                 .padding()
@@ -100,8 +119,8 @@ struct MetricsSummaryWidget: Widget {
             provider: MetricsSummaryWidgetProvider()) { entry in
             MetricsSummaryWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Metrics Summary")
-        .description("“Radar COVID” metrics summary.")
+        .configurationDisplayName("METRICS_SUMMARY_WIDGET_NAME")
+        .description("METRICS_SUMMARY_WIDGET_DESCRIPTION")
         .supportedFamilies([.systemMedium])
     }
 }

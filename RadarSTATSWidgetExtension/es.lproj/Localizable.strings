@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  RadarSTATS
+
+  Created by Pedro José Pereira Vieito on 5/10/20.
+*/
+
+"UPLOADED_TEKS" = "TEKs subidos";
+"SHARED_DIAGNOSES" = "Diágnosticos compartidos";
+"USAGE_RATIO" = "Ratio de uso";
+
+"METRICS_SUMMARY_WIDGET_NAME" = "Resumen de métricas";
+"METRICS_SUMMARY_WIDGET_DESCRIPTION" = "Resumen de métricas de “Radar COVID”.";

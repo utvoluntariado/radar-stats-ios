@@ -9,8 +9,9 @@ import Foundation
 import Intents
 
 extension IntentMetricsSummary {
-    private static let displayName = "Metrics Summary"
-    
+    private static let displayName =
+        IntentHandlerProvider.localizedString("INTENTS_METRICS_SUMMARY_DISPLAY_NAME")
+
     public static func createEmptySummary() -> IntentMetricsSummary {
         return IntentMetricsSummary(identifier: nil, display: Self.displayName)
     }
@@ -27,7 +28,8 @@ extension IntentMetricsSummary {
 }
 
 extension IntentMetricsSummary {
-    private static let unknownDisplayString = "Unknown"
+    private static let unknownDisplayString =
+        IntentHandlerProvider.localizedString("INTENTS_UNKNOWN_DISPLAY_STRING")
     
     public var extractionDate: Date? {
         guard let extractionTimestamp = self.extractionTimestamp,
