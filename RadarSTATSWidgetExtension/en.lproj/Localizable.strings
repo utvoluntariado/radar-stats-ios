@@ -10,4 +10,4 @@
 "USAGE_RATIO" = "Usage Ratio";
 
 "METRICS_SUMMARY_WIDGET_NAME" = "Metrics Summary";
-"METRICS_SUMMARY_WIDGET_DESCRIPTION" = "“Radar COVID” metrics summary.";
+"METRICS_SUMMARY_WIDGET_DESCRIPTION" = "Shows “Radar COVID” metrics summary.";
