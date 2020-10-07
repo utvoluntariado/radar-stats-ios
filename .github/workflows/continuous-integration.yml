@@ -22,12 +22,3 @@ jobs:
           sudo xcode-select -s /Applications/Xcode_12.app
           export DEVICE=`instruments -s -devices | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
           xcodebuild test -scheme "$SCHEME" CODE_SIGN_IDENTITY="-" -destination "platform=$PLATFORM,name=$DEVICE"
-      - name: Deploy
-        if: ${{ github.event_name == 'push' }}
-        env:
-          TARGET_BRANCH: "master"
-        run: |
-          git checkout $TARGET_BRANCH
-          git pull origin $TARGET_BRANCH
-          git merge ${GITHUB_REF##*/}
-          git push origin $TARGET_BRANCH
