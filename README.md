@@ -2,13 +2,14 @@
 ![coverage-shield](https://img.shields.io/badge/coverage-15%2C8%25-yellow)
 
 > # IMPORTANT
-> Since we are having problems getting the app to be authorized for download from the AppStore, we leave this public link in TestFlight from which you can download it in beta mode.
 >
-> It is the same application that is awaiting review by Apple, but until the authorization is obtained, it will not be accessible from the AppStore.
+> Since we are having problems getting the app authorized for download from the App Store, we leave this public link in TestFlight from which you can download it in beta mode.
 >
-> [Click here to download from TestFight](https://testflight.apple.com/join/QelyuSYZ)
+> It is the same application that is awaiting review by Apple, but until the authorization is obtained, it will not be accessible from the App Store.
 >
-> This link will be disabled once the application is available in the AppStore.
+> [Click here to download Radar STATS from TestFlight](https://testflight.apple.com/join/QelyuSYZ)
+>
+> This link will be disabled once the application is available on the App Store.
 
 # Radar STATS – iOS
 iOS app to visualize statistics provided by the [Radar STATS](https://github.com/Radar-STATS/Radar-STATS) project about Spain's `Radar COVID` app Exposure Notification service.
