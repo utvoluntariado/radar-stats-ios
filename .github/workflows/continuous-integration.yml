@@ -23,6 +23,6 @@ jobs:
           xcodebuild test -scheme "$scheme" CODE_SIGN_IDENTITY="-" -destination "platform=$platform,name=$device"
       - name: Deploy
         uses: devmasx/merge-branch@v1.3.0
-        if: ${{ github.event_name == "push" }}
+        if: ${{ github.event_name == 'push' }}
         with:
           target_branch: master
