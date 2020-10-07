@@ -16,12 +16,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
         env:
-          scheme: ${{ 'Radar STATS' }}
-          platform: ${{ 'iOS Simulator' }}
+          scheme: "Radar STATS"
+          platform: "iOS Simulator"
         run: |
           export device=`instruments -s -devices | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
           xcodebuild test -scheme "$scheme" CODE_SIGN_IDENTITY="-" -destination "platform=$platform,name=$device"
       - name: Deploy
         uses: devmasx/merge-branch@v1.3.0
+        if: ${{ github.event_name == "push" }}
         with:
           target_branch: master
