@@ -1,5 +1,5 @@
-[![continuous-integration](https://github.com/Radar-STATS/Radar-STATS-iOS/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/Radar-STATS/Radar-STATS-iOS/actions)
 ![ios-version](https://img.shields.io/badge/iOS-13.0%20and%20up-blue)
+[![continuous-integration](https://github.com/Radar-STATS/Radar-STATS-iOS/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/Radar-STATS/Radar-STATS-iOS/actions)
 ![coverage-shield](https://img.shields.io/badge/coverage-15%2C8%25-yellow)
 
 > # IMPORTANT
