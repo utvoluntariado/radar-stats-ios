@@ -11,7 +11,7 @@ import Charts
 
 enum ChartType: Int {
     case usageRatio
-    case covidCases
+    case cases
     case sharedDiagnoses
     case generationDateSharedTEKs
     case uploadDateSharedTEKs
@@ -46,7 +46,7 @@ final class ChartsTableViewCell: UITableViewCell {
 
         switch chartType {
         case .usageRatio: drawUsageRatioChart()
-        case .covidCases: drawCovidCasesChart()
+        case .cases: drawCasesChart()
         case .sharedDiagnoses: drawSharedDiagnosesChart()
         case .generationDateSharedTEKs: drawGenerationDateSharedTEKsChart()
         case .uploadDateSharedTEKs: drawUploadDateSharedTEKsChart()
@@ -67,12 +67,12 @@ final class ChartsTableViewCell: UITableViewCell {
         drawBarChart(using: dataEntries, color: #colorLiteral(red: 0.2039215686, green: 0.5960784314, blue: 0.8588235294, alpha: 1), percent: true)
     }
 
-    private func drawCovidCasesChart() {
+    private func drawCasesChart() {
         chartTitleLabel.text = localization.content.title
 
         var dataEntries: [ChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.covidCases))
+            let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.cases))
             dataEntries.append(dataEntry)
         }
         

@@ -23,7 +23,7 @@ class ChartInfoTests: XCTestCase {
 
     func test_anErrorIsShownWhenGatherLocalizationFails() throws {
         measure {
-            presenter = (ChartInfoBuilder.build(chartType: .covidCases).presenter as! ChartInfoPresenterTestable)
+            presenter = (ChartInfoBuilder.build(chartType: .cases).presenter as! ChartInfoPresenterTestable)
             presenter.expectation = expectation(description: ChartInfoExpectation.anErrorIsShownWhenGatherLocalizationFails)
             (presenter.localizationInteractor.repository as! LocalizationRepositoryMock).shouldFail = true
             presenter.gatherLocalization()
@@ -36,7 +36,7 @@ class ChartInfoTests: XCTestCase {
 
     func test_localizationIsPassedToViewWhenGatherLocalizationSucceed() throws {
         measure {
-            presenter = (ChartInfoBuilder.build(chartType: .covidCases).presenter as! ChartInfoPresenterTestable)
+            presenter = (ChartInfoBuilder.build(chartType: .cases).presenter as! ChartInfoPresenterTestable)
             presenter.expectation = expectation(description: ChartInfoExpectation.localizationIsPassedToViewWhenGatherLocalizationSucceed)
             (presenter.localizationInteractor.repository as! LocalizationRepositoryMock).shouldFail = false
             presenter.gatherLocalization()
@@ -74,16 +74,16 @@ class ChartInfoTests: XCTestCase {
         }
     }
 
-    func test_glossaryIsNotPresentOnCovidCasesChartDescription() throws {
+    func test_glossaryIsNotPresentOnCasesChartDescription() throws {
         measure {
-            presenter = (ChartInfoBuilder.build(chartType: .covidCases).presenter as! ChartInfoPresenterTestable)
+            presenter = (ChartInfoBuilder.build(chartType: .cases).presenter as! ChartInfoPresenterTestable)
             let description = presenter.descriptionGenerator()
 
-            XCTAssert(!description.contains("Glosario"), "Glossary found on .covidCases chart description")
+            XCTAssert(!description.contains("Glosario"), "Glossary found on .cases chart description")
         }
     }
 
-    func test_glossaryIsNotPresentOnCovidUsageRatioDescription() throws {
+    func test_glossaryIsNotPresentOnUsageRatioDescription() throws {
         measure {
             presenter = (ChartInfoBuilder.build(chartType: .usageRatio).presenter as! ChartInfoPresenterTestable)
             let description = presenter.descriptionGenerator()

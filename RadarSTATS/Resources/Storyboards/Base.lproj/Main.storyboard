@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-hV-aPb" customClass="AboutTableView" customModule="Radar_STATS" customModuleProvider="target">
-                                <rect key="frame" x="224" y="0.0" width="448" height="343.99999999999994"/>
+                                <rect key="frame" x="224" y="0.0" width="448" height="344"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -157,18 +157,18 @@
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutAppCell" id="tWj-2I-lY4" customClass="AboutAppTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="403.66665649414062" width="448" height="247.66667175292969"/>
+                                        <rect key="frame" x="0.0" y="403.66665649414062" width="448" height="269.33334350585938"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tWj-2I-lY4" id="xtb-MR-JPX">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="247.66667175292969"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="269.33334350585938"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-aY-Y2Y">
-                                                    <rect key="frame" x="20" y="27" width="408" height="193.66666666666666"/>
+                                                    <rect key="frame" x="20" y="27.000000000000014" width="408" height="215.33333333333337"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Radar STATS es un conjunto de proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de traceo de contactos Radar COVID.
+                                                    <string key="text">Radar STATS es un conjunto de proyectos de código abierto cuya finalidad es poner a disposición de las personas interesadas, métricas estimadas de uso y desempeño de la app de rastreo de contactos de España.
 
-Todos los datos que calcula Radar STATS se obtienen a partir de fuentes públicas como Narrativa API o Radar COVID.</string>
+Todos los datos que calcula Radar STATS se obtienen a partir de fuentes públicas como Narrativa API o los propios datos públicos de la app de rastreo de contactos de España.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="fontForeground"/>
                                                     <nil key="highlightedColor"/>
@@ -186,7 +186,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutDataCell" id="HJ4-1L-gxX" customClass="AboutDataTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="651.33332824707031" width="448" height="197.66667175292969"/>
+                                        <rect key="frame" x="0.0" y="673" width="448" height="197.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ4-1L-gxX" id="sE3-RE-H6B">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="197.66667175292969"/>
@@ -223,7 +223,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
-                                                                        <action selector="didTapRadarCovidStatsDataButton:" destination="HJ4-1L-gxX" eventType="touchUpInside" id="5XK-HF-pYA"/>
+                                                                        <action selector="didTapRadarStatsDataButton:" destination="HJ4-1L-gxX" eventType="touchUpInside" id="5XK-HF-pYA"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -256,7 +256,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
-                                                                        <action selector="didTapRadarCovidStatsiOSButton:" destination="HJ4-1L-gxX" eventType="touchUpInside" id="ybI-Ur-pOF"/>
+                                                                        <action selector="didTapRadarStatsiOSButton:" destination="HJ4-1L-gxX" eventType="touchUpInside" id="ybI-Ur-pOF"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -276,7 +276,7 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutThirdPartiesCell" id="D3C-RT-um1" customClass="AboutThirdPartiesTableViewCell" customModule="Radar_STATS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="849" width="448" height="226"/>
+                                        <rect key="frame" x="0.0" y="870.66667175292969" width="448" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D3C-RT-um1" id="wFV-gf-cdn">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="226"/>
@@ -805,14 +805,6 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="ePR-3I-aXX"/>
                                 <exclude reference="fjA-jH-ZgH"/>
                                 <exclude reference="grb-QT-Tk7"/>
-                                <exclude reference="Kwv-Pk-WUh"/>
-                                <exclude reference="QVY-3I-Zyd"/>
-                                <exclude reference="QrB-2B-f9y"/>
-                                <exclude reference="Qv2-cu-aZI"/>
-                                <exclude reference="XGw-5c-fKA"/>
-                                <exclude reference="Xvi-yy-Jz8"/>
-                                <exclude reference="ZTS-Ml-nWZ"/>
-                                <exclude reference="bZo-P3-jBc"/>
                                 <exclude reference="0q5-61-piI"/>
                                 <exclude reference="2Eq-fz-lZe"/>
                                 <exclude reference="FhH-tg-Kuo"/>
@@ -831,24 +823,32 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="kgb-U8-mf6"/>
                                 <exclude reference="l5s-ek-eiH"/>
                                 <exclude reference="sJh-Zg-aaV"/>
+                                <exclude reference="Kwv-Pk-WUh"/>
+                                <exclude reference="QVY-3I-Zyd"/>
+                                <exclude reference="QrB-2B-f9y"/>
+                                <exclude reference="Qv2-cu-aZI"/>
+                                <exclude reference="XGw-5c-fKA"/>
+                                <exclude reference="Xvi-yy-Jz8"/>
+                                <exclude reference="ZTS-Ml-nWZ"/>
+                                <exclude reference="bZo-P3-jBc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="Gnp-tj-60S"/>
                                 <include reference="grb-QT-Tk7"/>
+                                <include reference="ePJ-wY-rR7"/>
                                 <include reference="Kwv-Pk-WUh"/>
                                 <exclude reference="Xvi-yy-Jz8"/>
                                 <exclude reference="bZo-P3-jBc"/>
-                                <include reference="ePJ-wY-rR7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="U02-se-IdI"/>
                                 <include reference="XT7-va-VJx"/>
-                                <include reference="QVY-3I-Zyd"/>
                                 <include reference="2Eq-fz-lZe"/>
+                                <include reference="QVY-3I-Zyd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -858,8 +858,6 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="EPn-vt-bmB"/>
                                 <exclude reference="LOX-NT-4UY"/>
                                 <exclude reference="boy-zh-JeV"/>
-                                <include reference="XGw-5c-fKA"/>
-                                <exclude reference="ZTS-Ml-nWZ"/>
                                 <include reference="FuU-Xx-beF"/>
                                 <include reference="KVK-Ah-xeD"/>
                                 <include reference="LY7-6o-WY6"/>
@@ -868,6 +866,8 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <exclude reference="eCd-tD-IXQ"/>
                                 <exclude reference="n7S-wb-f1Y"/>
                                 <exclude reference="zgH-ad-Zam"/>
+                                <include reference="XGw-5c-fKA"/>
+                                <exclude reference="ZTS-Ml-nWZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -880,9 +880,6 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <include reference="KEu-Kx-FCv"/>
                                 <include reference="ePR-3I-aXX"/>
                                 <exclude reference="grb-QT-Tk7"/>
-                                <exclude reference="Kwv-Pk-WUh"/>
-                                <include reference="QrB-2B-f9y"/>
-                                <exclude reference="Qv2-cu-aZI"/>
                                 <include reference="GXS-7B-Rbj"/>
                                 <exclude reference="OrF-yg-NKx"/>
                                 <include reference="R63-vf-tXk"/>
@@ -893,6 +890,9 @@ Todos los datos que calcula Radar STATS se obtienen a partir de fuentes pública
                                 <include reference="l5s-ek-eiH"/>
                                 <exclude reference="n7S-wb-f1Y"/>
                                 <exclude reference="zgH-ad-Zam"/>
+                                <exclude reference="Kwv-Pk-WUh"/>
+                                <include reference="QrB-2B-f9y"/>
+                                <exclude reference="Qv2-cu-aZI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">

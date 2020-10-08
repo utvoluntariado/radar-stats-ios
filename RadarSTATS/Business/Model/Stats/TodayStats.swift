@@ -9,16 +9,16 @@
 import Foundation
 
 struct TodayStats: Codable {
-    let covidCases: Int
+    let cases: Int
     let sharedTeksByUploadDate: Int
     let sharedDiagnoses: Int
     let teksPerSharedDiagnosis: Double
-    let sharedDiagnosesPerCovidCase: Double
+    let sharedDiagnosesPerCase: Double
 }
 
 extension TodayStats {
     func formattedUsageRatio() -> String {
-        let number = NSNumber(value: sharedDiagnosesPerCovidCase)
+        let number = NSNumber(value: sharedDiagnosesPerCase)
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
         numberFormatter.maximumFractionDigits = 2

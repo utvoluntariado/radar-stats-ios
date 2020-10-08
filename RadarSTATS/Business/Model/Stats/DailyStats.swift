@@ -10,17 +10,17 @@ import Foundation
 
 struct DailyStats: Codable {
     let sampleDate: TimeInterval
-    let covidCases: Int
+    let cases: Int
     let sharedTeksByGenerationDate: Int
     let sharedTeksByUploadDate: Int
     let sharedDiagnoses: Int
     let teksPerSharedDiagnosis: Double
-    let sharedDiagnosesPerCovidCase: Double
+    let sharedDiagnosesPerCase: Double
 }
 
 extension DailyStats {
     func preparedUsageRatio() -> Double {
-        let number = NSNumber(value: sharedDiagnosesPerCovidCase)
+        let number = NSNumber(value: sharedDiagnosesPerCase)
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
         numberFormatter.maximumFractionDigits = 2

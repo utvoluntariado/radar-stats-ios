@@ -3,7 +3,7 @@
         "tek": {
             "es": {
                 "title": "TEK (Clave de exposición temporal): ",
-                "description": "un identificador aleatorio generado diariamente en el dispositivo, que utilizan las aplicaciones de notificación de exposición como Radar COVID para detectar exposiciones y compartir diagnósticos positivos.\nDe cada TEK, derivan los 144 (24 x 6) identificadores móviles de proximidad (RPI) que se intercambian los terminales por Bluetooth de baja Energía (BLE) y que cambian cada 10 minutos.\n\n"
+                "description": "un identificador aleatorio generado diariamente en el dispositivo, que utilizan las aplicaciones de rastreo de contactos para detectar exposiciones y compartir diagnósticos positivos.\nDe cada TEK, derivan los 144 (24 x 6) identificadores móviles de proximidad (RPI) que se intercambian los terminales por Bluetooth de baja Energía (BLE) y que cambian cada 10 minutos.\n\n"
             }
         },
         "sharedPositives": {
@@ -18,35 +18,35 @@
             "id": 0,
             "es": {
                 "title": "Ratio de uso (Estimado)",
-                "description": "Estimación de la fracción de casos de COVID-19 que compartieron su diagnóstico a través de Radar COVID.\n\nIdealmente, debería ser del 100% (es decir, todos los casos confirmados que comparten sus TEKs con Radar COVID)."
+                "description": "Estimación de la fracción de casos positivos que compartieron su diagnóstico a través de la aplicación de rastreo de contactos de España.\n\nIdealmente, debería ser del 100% (es decir, todos los casos confirmados que comparten sus TEKs con la aplicación de rastreo de contactos de España)."
             }
         },
         {
             "id": 1,
             "es": {
-                "title": "Casos de COVID-19 (Estimados)",
-                "description": "Nuevos casos confirmados de COVID-19 en España estimados con una media móvil de 7 días."
+                "title": "Casos positivos (Estimados)",
+                "description": "Nuevos casos positivos confirmados en España, estimados con una media móvil de 7 días."
             }
         },
         {
             "id": 2,
             "es": {
                 "title": "Comunicaciones positivas (Estimadas)",
-                "description": "Estimación del número de diagnósticos positivos comunicados a través de la aplicación Radar COVID.\n\nLa estimación se infiere de la cantidad de TEKs cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos positivos que se compartieron a través de la aplicación, el número real puede ser menor."
+                "description": "Estimación del número de diagnósticos positivos comunicados a través de la aplicación de rastreo de contactos de España.\n\nLa estimación se infiere de la cantidad de TEKs cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos positivos que se compartieron a través de la aplicación, el número real puede ser menor."
             }
         },
         {
             "id": 3,
             "es": {
                 "title": "TEKs compartidos por fecha de generación",
-                "description": "TEKs cargados en el servidor Radar COVID en la fecha en que se generaron en el dispositivo."
+                "description": "TEKs cargados en el servidor de la aplicación de rastreo de contactos de España, en la fecha en que se generaron en el dispositivo."
             }
         },
         {
             "id": 4,
             "es": {
                 "title": "TEKs compartidos por fecha de carga",
-                "description": "TEKs cargados en el servidor Radar COVID en la fecha en que se cargaron utilizando el código único enviado por las autoridades sanitarias."
+                "description": "TEKs cargados en el servidor de la aplicación de rastreo de contactos de España, en la fecha en que se cargaron utilizando el código único enviado por las autoridades sanitarias."
             }
         },
         {
@@ -60,7 +60,7 @@
             "id": 6,
             "es": {
                 "title": "TEKs compartidos en la fecha de generación",
-                "description": "TEKs cargados al servidor Radar COVID en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
+                "description": "TEKs cargados al servidor de la aplicación de rastreo de contactos de España, en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
             }
         },
     ]
