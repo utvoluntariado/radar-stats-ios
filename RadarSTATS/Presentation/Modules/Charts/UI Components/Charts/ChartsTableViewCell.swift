@@ -11,7 +11,6 @@ import Charts
 
 enum ChartType: Int {
     case usageRatio
-    case cases
     case sharedDiagnoses
     case generationDateSharedTEKs
     case uploadDateSharedTEKs
@@ -46,7 +45,6 @@ final class ChartsTableViewCell: UITableViewCell {
 
         switch chartType {
         case .usageRatio: drawUsageRatioChart()
-        case .cases: drawCasesChart()
         case .sharedDiagnoses: drawSharedDiagnosesChart()
         case .generationDateSharedTEKs: drawGenerationDateSharedTEKsChart()
         case .uploadDateSharedTEKs: drawUploadDateSharedTEKsChart()
