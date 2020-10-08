@@ -22,9 +22,9 @@ class ChartsTests: XCTestCase {
         TestingInjector.resetInjections()
     }
 
-    func test_anErrorIsShownWhenGatherStatsFails() throws {
+    func test_anAlertIsShownWhenGatherStatsFails() throws {
         measure {
-            presenter.expectation = expectation(description: ChartsExpectation.anErrorIsShownWhenGatherStatsFails)
+            presenter.expectation = expectation(description: ChartsExpectation.anAlertIsShownWhenGatherStatsFails)
             (presenter.statsInteractor.repository as! StatsRepositoryMock).shouldFail = true
             presenter.gatherStats(viewIsAlreadyShowingValues: true)
 

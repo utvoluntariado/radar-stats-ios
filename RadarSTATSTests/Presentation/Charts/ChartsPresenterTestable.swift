@@ -29,10 +29,16 @@ final class ChartsPresenterTestable: ChartsPresenterDefault {
         expectation.fulfill()
     }
 
+    override func alert(with error: Error) {
+        guard let expectation = expectation else { return }
+        if expectation.description == ChartsExpectation.anAlertIsShownWhenGatherStatsFails {
+            expectation.fulfill()
+        }
+    }
+
     override func show(error: Error) {
         guard let expectation = expectation else { return }
-        if expectation.description == ChartsExpectation.anErrorIsShownWhenGatherStatsFails ||
-            expectation.description == ChartsExpectation.anErrorIsShownWhenGatherLocalizationFails {
+        if expectation.description == ChartsExpectation.anErrorIsShownWhenGatherLocalizationFails {
             expectation.fulfill()
         }
     }
