@@ -72,7 +72,7 @@ final class ChartsTableViewCell: UITableViewCell {
 
         var dataEntries: [ChartDataEntry] = []
         for (index, day) in sortedDailyResults.enumerated() {
-            let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.cases))
+            let dataEntry = ChartDataEntry(x: Double(index), y: Double(day.covidCases))
             dataEntries.append(dataEntry)
         }
         
