@@ -13,10 +13,11 @@ protocol ChartsView: Loadable, Noticeable {
 
     func update(using localization: Localization)
     func update(using stats: Stats)
+    func alert(using error: Error)
     func showCurrentData()
 }
 
-class ChartsViewController: UIViewController, ChartsView {
+class ChartsViewController: UIViewController, ChartsView, Alertable {
     var loadingView: UIView?
 
     var presenter: ChartsPresenter!
@@ -62,6 +63,13 @@ class ChartsViewController: UIViewController, ChartsView {
         summaryStackView.update(using: stats)
         chartsTable.update(modelset: stats)
         showCurrentData()
+    }
+
+    func alert(using error: Error) {
+        let retryAction = AlertAction(title: "Reintentar", action: {
+            self.presenter.gatherStats(viewIsAlreadyShowingValues: false)
+        }, style: .regular)
+        alert(title: "Atención", message: "Se ha producido un error consultando las estadísticas.", actions: [retryAction])
     }
 
     func showCurrentData() {
