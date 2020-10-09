@@ -9,7 +9,7 @@
 import Foundation
 
 struct ChartsExpectation {
-    static let anErrorIsShownWhenGatherStatsFails = "An error is shown when GatherStats fails for any reason"
+    static let anAlertIsShownWhenGatherStatsFails = "An alert is shown when GatherStats fails for any reason"
     static let statsArePassedToViewWhenGatherStatsSucceed = "Stats are passed to view when GatherStats succeed"
     static let obtainStatsWhenGatherStatsSucceedButKeepAlreadyShownValues = "Did obtain stats when GatherStats succeed, but it's the same info currently in view"
 

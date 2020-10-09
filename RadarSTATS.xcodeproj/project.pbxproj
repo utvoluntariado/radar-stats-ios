@@ -45,6 +45,8 @@
 		E98AE6A025261BBA00856D08 /* LocalizationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE69F25261BBA00856D08 /* LocalizationItem.swift */; };
 		E98AE6A625261EF200856D08 /* LocalizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */; };
 		E98AE6AA252623EC00856D08 /* LocalizationContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98AE6A9252623EC00856D08 /* LocalizationContent.swift */; };
+		E997986F252F018300F309CA /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E997986E252F018300F309CA /* Alertable.swift */; };
+		E9979873252F023400F309CA /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9979872252F023400F309CA /* AlertAction.swift */; };
 		E9ABE1362521058A00F85D74 /* ChartInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */; };
 		E9B5743925237211007B0012 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743825237211007B0012 /* Loadable.swift */; };
 		E9B5743E25237F72007B0012 /* SystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B5743D25237F72007B0012 /* SystemCoordinator.swift */; };
@@ -147,6 +149,8 @@
 		E98AE69F25261BBA00856D08 /* LocalizationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationItem.swift; sourceTree = "<group>"; };
 		E98AE6A525261EF200856D08 /* LocalizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationInteractor.swift; sourceTree = "<group>"; };
 		E98AE6A9252623EC00856D08 /* LocalizationContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationContent.swift; sourceTree = "<group>"; };
+		E997986E252F018300F309CA /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		E9979872252F023400F309CA /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		E9ABE1352521058A00F85D74 /* ChartInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouter.swift; sourceTree = "<group>"; };
 		E9B5743825237211007B0012 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		E9B5743D25237F72007B0012 /* SystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCoordinator.swift; sourceTree = "<group>"; };
@@ -386,9 +390,19 @@
 			path = Patterns;
 			sourceTree = "<group>";
 		};
+		E997986D252F017200F309CA /* Alertable */ = {
+			isa = PBXGroup;
+			children = (
+				E997986E252F018300F309CA /* Alertable.swift */,
+				E9979872252F023400F309CA /* AlertAction.swift */,
+			);
+			path = Alertable;
+			sourceTree = "<group>";
+		};
 		E9B5743725237206007B0012 /* Capabilities */ = {
 			isa = PBXGroup;
 			children = (
+				E997986D252F017200F309CA /* Alertable */,
 				E95A16942523B038003010F0 /* Noticeable */,
 				E9B57440252385AC007B0012 /* Loadable */,
 			);
@@ -888,6 +902,7 @@
 				E95A169F2523B686003010F0 /* MulticastDelegate.swift in Sources */,
 				E9E51E2C252301C700F222AB /* AboutAuthorsTableViewCell.swift in Sources */,
 				E914C3D4251CE81B004A578C /* ServicesContainer.swift in Sources */,
+				E9979873252F023400F309CA /* AlertAction.swift in Sources */,
 				E93CB85B25206AF300AE249C /* ChartValueNumberFormatter.swift in Sources */,
 				E9B9A0D4251CAEDF0092ABC5 /* CoordinatorsContainer.swift in Sources */,
 				E91F56AE2520FFA5005CD2CE /* ChartInfoPresenter.swift in Sources */,
@@ -919,6 +934,7 @@
 				E914C3B7251CDB3B004A578C /* ChartsView.swift in Sources */,
 				E9E51E302523024400F222AB /* AboutAppTableViewCell.swift in Sources */,
 				E9B9A0C9251B92C90092ABC5 /* PresentationContainer.swift in Sources */,
+				E997986F252F018300F309CA /* Alertable.swift in Sources */,
 				E914C39C251CD2DB004A578C /* LastHourStats.swift in Sources */,
 				E9E51E1E2522F17600F222AB /* AboutRouter.swift in Sources */,
 				E9B9A0E5251CB6F50092ABC5 /* HTTPClient.swift in Sources */,

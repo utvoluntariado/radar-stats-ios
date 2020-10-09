@@ -53,7 +53,7 @@ class ChartsPresenterDefault: ChartsPresenter {
                 self.showCurrentData()
             }
         }.catch { error in
-            self.show(error: error)
+            self.alert(with: error)
         }
     }
 
@@ -75,6 +75,10 @@ class ChartsPresenterDefault: ChartsPresenter {
 
     internal func show(error: Error) {
         view.hideLoading { self.view.show(error: error) }
+    }
+
+    internal func alert(with error: Error) {
+        view.hideLoading { self.view.alert(using: error) }
     }
 }
 
