@@ -11,13 +11,13 @@ import UIKit
 final class AboutDataTableViewCell: UITableViewCell {
     static let reuseIndentifier = "AboutDataCell"
 
-    @IBAction func didTapRadarCovidStatsDataButton(_ sender: UIButton) {
-        guard let radarCovidStatsURL = URL(string: "https://github.com/Radar-STATS/Radar-STATS") else { return }
-        UIApplication.shared.open(radarCovidStatsURL)
+    @IBAction func didTapRadarStatsDataButton(_ sender: UIButton) {
+        guard let radarStatsURL = URL(string: "https://github.com/Radar-STATS/Radar-STATS") else { return }
+        UIApplication.shared.open(radarStatsURL)
     }
 
-    @IBAction func didTapRadarCovidStatsiOSButton(_ sender: UIButton) {
-        guard let radarCovidStatsiOSURL = URL(string: "https://github.com/Radar-STATS/Radar-STATS-iOS") else { return }
-        UIApplication.shared.open(radarCovidStatsiOSURL)
+    @IBAction func didTapRadarStatsiOSButton(_ sender: UIButton) {
+        guard let radarStatsiOSURL = URL(string: "https://github.com/Radar-STATS/Radar-STATS-iOS") else { return }
+        UIApplication.shared.open(radarStatsiOSURL)
     }
 }

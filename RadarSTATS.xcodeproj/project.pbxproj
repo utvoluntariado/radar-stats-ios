@@ -1183,7 +1183,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgejramos.RadarCOVIDStats.RadarCOVID-STATSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1203,7 +1203,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgejramos.RadarCOVIDStats.RadarCOVID-STATSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
