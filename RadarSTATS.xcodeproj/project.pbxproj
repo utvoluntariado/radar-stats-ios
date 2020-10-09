@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA5084A5252BB50900945D59 /* RadarSTATSIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; };
+		AA5084A6252BB50900945D59 /* RadarSTATSIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA5084B6252BB58B00945D59 /* GetMetricsSummaryIntent+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B0252BB58A00945D59 /* GetMetricsSummaryIntent+Additions.swift */; };
+		AA5084B7252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */; };
+		AA5084B8252BB58B00945D59 /* IntentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B2252BB58B00945D59 /* IntentType.swift */; };
+		AA5084B9252BB58B00945D59 /* IntentHandlerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B3252BB58B00945D59 /* IntentHandlerProvider.swift */; };
+		AA5084BA252BB58B00945D59 /* IntentMetricsSummary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084B4252BB58B00945D59 /* IntentMetricsSummary+Additions.swift */; };
+		AA5084C1252BB5B800945D59 /* RadarSTATSKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA5084C0252BB5B800945D59 /* RadarSTATSKit */; };
+		AA5084CA252BB64E00945D59 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5084C9252BB64E00945D59 /* WidgetKit.framework */; };
+		AA5084CC252BB64E00945D59 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5084CB252BB64E00945D59 /* SwiftUI.framework */; };
+		AA5084D8252BB64F00945D59 /* RadarSTATSWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA5084C8252BB64E00945D59 /* RadarSTATSWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA5084EC252BB67B00945D59 /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084E7252BB67A00945D59 /* WidgetExtension.swift */; };
+		AA5084EE252BB67B00945D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5084EA252BB67B00945D59 /* Assets.xcassets */; };
+		AA5084EF252BB67B00945D59 /* MetricsSummaryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5084EB252BB67B00945D59 /* MetricsSummaryWidget.swift */; };
+		AA5084F6252BB68F00945D59 /* RadarSTATSIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; };
+		AA50850A252BB70A00945D59 /* RadarSTATSIntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA508503252BB70A00945D59 /* RadarSTATSIntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA50851C252BB72100945D59 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50851A252BB72100945D59 /* IntentHandler.swift */; };
+		AA508526252BB73F00945D59 /* RadarSTATSIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */; };
+		AAA3034A252BCC5900B969A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAA3034C252BCC5900B969A0 /* Localizable.strings */; };
+		AAA30361252BCEF300B969A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAA3035A252BCD4100B969A0 /* Localizable.strings */; };
+		AAA30366252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		AAA30367252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; };
+		AAA30368252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		AAA30369252BD10100B969A0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = AAA3036B252BD10100B969A0 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		E914C39C251CD2DB004A578C /* LastHourStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C39B251CD2DB004A578C /* LastHourStats.swift */; };
 		E914C3A0251CD2F4004A578C /* TodayStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C39F251CD2F4004A578C /* TodayStats.swift */; };
 		E914C3A3251CD321004A578C /* LastWeekStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914C3A2251CD321004A578C /* LastWeekStats.swift */; };
@@ -102,6 +126,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AA5084A3252BB50900945D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA50849D252BB50900945D59;
+			remoteInfo = RadarSTATSIntents;
+		};
+		AA5084D6252BB64F00945D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA5084C7252BB64E00945D59;
+			remoteInfo = RadarSTATSWidgetExtensionExtension;
+		};
+		AA5084F8252BB68F00945D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA50849D252BB50900945D59;
+			remoteInfo = RadarSTATSIntents;
+		};
+		AA508508252BB70A00945D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA508502252BB70A00945D59;
+			remoteInfo = RadarSTATSIntentsExtension;
+		};
+		AA508528252BB74000945D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA50849D252BB50900945D59;
+			remoteInfo = RadarSTATSIntents;
+		};
 		E9F9A1D72524535000448D15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9CBA6E2251B88BA00A7A2EC /* Project object */;
@@ -111,7 +170,58 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA5084AA252BB50900945D59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA5084A6252BB50900945D59 /* RadarSTATSIntents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5084DD252BB64F00945D59 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA50850A252BB70A00945D59 /* RadarSTATSIntentsExtension.appex in Embed App Extensions */,
+				AA5084D8252BB64F00945D59 /* RadarSTATSWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RadarSTATSIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5084A1252BB50900945D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA5084B0252BB58A00945D59 /* GetMetricsSummaryIntent+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GetMetricsSummaryIntent+Additions.swift"; sourceTree = "<group>"; };
+		AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMetricsSummaryIntentHandler.swift; sourceTree = "<group>"; };
+		AA5084B2252BB58B00945D59 /* IntentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentType.swift; sourceTree = "<group>"; };
+		AA5084B3252BB58B00945D59 /* IntentHandlerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentHandlerProvider.swift; sourceTree = "<group>"; };
+		AA5084B4252BB58B00945D59 /* IntentMetricsSummary+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IntentMetricsSummary+Additions.swift"; sourceTree = "<group>"; };
+		AA5084C8252BB64E00945D59 /* RadarSTATSWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RadarSTATSWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5084C9252BB64E00945D59 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AA5084CB252BB64E00945D59 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AA5084E7252BB67A00945D59 /* WidgetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetExtension.swift; sourceTree = "<group>"; };
+		AA5084E8252BB67A00945D59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA5084E9252BB67A00945D59 /* RadarSTATSWidgetExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RadarSTATSWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AA5084EA252BB67B00945D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA5084EB252BB67B00945D59 /* MetricsSummaryWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsSummaryWidget.swift; sourceTree = "<group>"; };
+		AA508503252BB70A00945D59 /* RadarSTATSIntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RadarSTATSIntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA508518252BB72000945D59 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA508519252BB72000945D59 /* RadarSTATSIntentsExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = RadarSTATSIntentsExtension.entitlements; sourceTree = "<group>"; };
+		AA50851A252BB72100945D59 /* IntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		AAA3034B252BCC5900B969A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAA30351252BCC6C00B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAA3035B252BCD4100B969A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAA3035C252BCD4100B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAA3036A252BD10100B969A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = en; path = en.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		AAA30395252BD24000B969A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Intents.strings; sourceTree = "<group>"; };
 		AAE0F35A251D27680077BC5F /* RadarSTATS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RadarSTATS.entitlements; sourceTree = "<group>"; };
 		E914C39B251CD2DB004A578C /* LastHourStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastHourStats.swift; sourceTree = "<group>"; };
 		E914C39F251CD2F4004A578C /* TodayStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStats.swift; sourceTree = "<group>"; };
@@ -210,11 +320,38 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA50849B252BB50900945D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5084C1252BB5B800945D59 /* RadarSTATSKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5084C5252BB64E00945D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5084CC252BB64E00945D59 /* SwiftUI.framework in Frameworks */,
+				AA5084F6252BB68F00945D59 /* RadarSTATSIntents.framework in Frameworks */,
+				AA5084CA252BB64E00945D59 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA508500252BB70A00945D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA508526252BB73F00945D59 /* RadarSTATSIntents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9CBA6E7251B88BA00A7A2EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E9B9A0B7251B900A0092ABC5 /* Swinject in Frameworks */,
+				AA5084A5252BB50900945D59 /* RadarSTATSIntents.framework in Frameworks */,
 				E914C3AB251CD9B3004A578C /* Charts in Frameworks */,
 				E9B9A0F0251CBDC60092ABC5 /* PromiseKit in Frameworks */,
 			);
@@ -230,6 +367,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA50849F252BB50900945D59 /* RadarSTATSIntents */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3036B252BD10100B969A0 /* Intents.intentdefinition */,
+				AA5084B2252BB58B00945D59 /* IntentType.swift */,
+				AA5084B3252BB58B00945D59 /* IntentHandlerProvider.swift */,
+				AA5084B1252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift */,
+				AA5084B0252BB58A00945D59 /* GetMetricsSummaryIntent+Additions.swift */,
+				AA5084B4252BB58B00945D59 /* IntentMetricsSummary+Additions.swift */,
+				AAA3035A252BCD4100B969A0 /* Localizable.strings */,
+				AA5084A1252BB50900945D59 /* Info.plist */,
+			);
+			path = RadarSTATSIntents;
+			sourceTree = "<group>";
+		};
+		AA5084BF252BB5B800945D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA5084C9252BB64E00945D59 /* WidgetKit.framework */,
+				AA5084CB252BB64E00945D59 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA5084CD252BB64E00945D59 /* RadarSTATSWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AA5084E7252BB67A00945D59 /* WidgetExtension.swift */,
+				AA5084EB252BB67B00945D59 /* MetricsSummaryWidget.swift */,
+				AA5084EA252BB67B00945D59 /* Assets.xcassets */,
+				AAA3034C252BCC5900B969A0 /* Localizable.strings */,
+				AA5084E8252BB67A00945D59 /* Info.plist */,
+				AA5084E9252BB67A00945D59 /* RadarSTATSWidgetExtension.entitlements */,
+			);
+			path = RadarSTATSWidgetExtension;
+			sourceTree = "<group>";
+		};
+		AA508504252BB70A00945D59 /* RadarSTATSIntentsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AA50851A252BB72100945D59 /* IntentHandler.swift */,
+				AA508518252BB72000945D59 /* Info.plist */,
+				AA508519252BB72000945D59 /* RadarSTATSIntentsExtension.entitlements */,
+			);
+			path = RadarSTATSIntentsExtension;
+			sourceTree = "<group>";
+		};
 		E914C39A251CD2CB004A578C /* Stats */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,8 +677,12 @@
 			isa = PBXGroup;
 			children = (
 				E9CBA6EC251B88BA00A7A2EC /* RadarSTATS */,
+				AA50849F252BB50900945D59 /* RadarSTATSIntents */,
+				AA508504252BB70A00945D59 /* RadarSTATSIntentsExtension */,
+				AA5084CD252BB64E00945D59 /* RadarSTATSWidgetExtension */,
 				E9F9A1D32524535000448D15 /* RadarSTATSTests */,
 				E9CBA6EB251B88BA00A7A2EC /* Products */,
+				AA5084BF252BB5B800945D59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -503,6 +691,9 @@
 			children = (
 				E9CBA6EA251B88BA00A7A2EC /* Radar STATS.app */,
 				E9F9A1D22524535000448D15 /* RadarSTATSTests.xctest */,
+				AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */,
+				AA5084C8252BB64E00945D59 /* RadarSTATSWidgetExtension.appex */,
+				AA508503252BB70A00945D59 /* RadarSTATSIntentsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -773,7 +964,74 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AA508499252BB50900945D59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		AA50849D252BB50900945D59 /* RadarSTATSIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5084A7252BB50900945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSIntents" */;
+			buildPhases = (
+				AA508499252BB50900945D59 /* Headers */,
+				AA50849A252BB50900945D59 /* Sources */,
+				AA50849B252BB50900945D59 /* Frameworks */,
+				AA50849C252BB50900945D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadarSTATSIntents;
+			packageProductDependencies = (
+				AA5084C0252BB5B800945D59 /* RadarSTATSKit */,
+			);
+			productName = RadarSTATSIntents;
+			productReference = AA50849E252BB50900945D59 /* RadarSTATSIntents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA5084C7252BB64E00945D59 /* RadarSTATSWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5084DA252BB64F00945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSWidgetExtension" */;
+			buildPhases = (
+				AA5084C4252BB64E00945D59 /* Sources */,
+				AA5084C5252BB64E00945D59 /* Frameworks */,
+				AA5084C6252BB64E00945D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA5084F9252BB68F00945D59 /* PBXTargetDependency */,
+			);
+			name = RadarSTATSWidgetExtension;
+			productName = RadarSTATSWidgetExtensionExtension;
+			productReference = AA5084C8252BB64E00945D59 /* RadarSTATSWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AA508502252BB70A00945D59 /* RadarSTATSIntentsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA50850C252BB70A00945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSIntentsExtension" */;
+			buildPhases = (
+				AA5084FF252BB70A00945D59 /* Sources */,
+				AA508500252BB70A00945D59 /* Frameworks */,
+				AA508501252BB70A00945D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA508529252BB74000945D59 /* PBXTargetDependency */,
+			);
+			name = RadarSTATSIntentsExtension;
+			productName = RadarSTATSIntentsExtension;
+			productReference = AA508503252BB70A00945D59 /* RadarSTATSIntentsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E9CBA6E9251B88BA00A7A2EC /* Radar STATS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9CBA6FE251B88BD00A7A2EC /* Build configuration list for PBXNativeTarget "Radar STATS" */;
@@ -781,10 +1039,15 @@
 				E9CBA6E6251B88BA00A7A2EC /* Sources */,
 				E9CBA6E7251B88BA00A7A2EC /* Frameworks */,
 				E9CBA6E8251B88BA00A7A2EC /* Resources */,
+				AA5084AA252BB50900945D59 /* Embed Frameworks */,
+				AA5084DD252BB64F00945D59 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA5084A4252BB50900945D59 /* PBXTargetDependency */,
+				AA5084D7252BB64F00945D59 /* PBXTargetDependency */,
+				AA508509252BB70A00945D59 /* PBXTargetDependency */,
 			);
 			name = "Radar STATS";
 			packageProductDependencies = (
@@ -820,9 +1083,21 @@
 		E9CBA6E2251B88BA00A7A2EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					AA50849D252BB50900945D59 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					AA5084C7252BB64E00945D59 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					AA508502252BB70A00945D59 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
 					E9CBA6E9251B88BA00A7A2EC = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -839,24 +1114,53 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = E9CBA6E1251B88BA00A7A2EC;
 			packageReferences = (
 				E9B9A0B5251B900A0092ABC5 /* XCRemoteSwiftPackageReference "Swinject" */,
 				E9B9A0EE251CBDC60092ABC5 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				E914C3A9251CD9B3004A578C /* XCRemoteSwiftPackageReference "Charts" */,
+				AA508496252BB4E900945D59 /* XCRemoteSwiftPackageReference "Radar-STATS-Swift" */,
 			);
 			productRefGroup = E9CBA6EB251B88BA00A7A2EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E9CBA6E9251B88BA00A7A2EC /* Radar STATS */,
+				AA50849D252BB50900945D59 /* RadarSTATSIntents */,
+				AA5084C7252BB64E00945D59 /* RadarSTATSWidgetExtension */,
+				AA508502252BB70A00945D59 /* RadarSTATSIntentsExtension */,
 				E9F9A1D12524535000448D15 /* RadarSTATSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AA50849C252BB50900945D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA30361252BCEF300B969A0 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5084C6252BB64E00945D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5084EE252BB67B00945D59 /* Assets.xcassets in Resources */,
+				AAA3034A252BCC5900B969A0 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA508501252BB70A00945D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9CBA6E8251B88BA00A7A2EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -880,6 +1184,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA50849A252BB50900945D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA30367252BD10100B969A0 /* Intents.intentdefinition in Sources */,
+				AA5084B9252BB58B00945D59 /* IntentHandlerProvider.swift in Sources */,
+				AA5084B6252BB58B00945D59 /* GetMetricsSummaryIntent+Additions.swift in Sources */,
+				AA5084B7252BB58B00945D59 /* GetMetricsSummaryIntentHandler.swift in Sources */,
+				AA5084BA252BB58B00945D59 /* IntentMetricsSummary+Additions.swift in Sources */,
+				AA5084B8252BB58B00945D59 /* IntentType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5084C4252BB64E00945D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA30368252BD10100B969A0 /* Intents.intentdefinition in Sources */,
+				AA5084EF252BB67B00945D59 /* MetricsSummaryWidget.swift in Sources */,
+				AA5084EC252BB67B00945D59 /* WidgetExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA5084FF252BB70A00945D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA30369252BD10100B969A0 /* Intents.intentdefinition in Sources */,
+				AA50851C252BB72100945D59 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9CBA6E6251B88BA00A7A2EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -887,6 +1223,7 @@
 				E9B86C262526175000EE9642 /* Localization.swift in Sources */,
 				E9B9A0EC251CBCA70092ABC5 /* StatsInteractor.swift in Sources */,
 				E914C3CA251CE497004A578C /* StorageService.swift in Sources */,
+				AAA30366252BD10100B969A0 /* Intents.intentdefinition in Sources */,
 				E9E51E362523026700F222AB /* AboutThirdPartiesTableViewCell.swift in Sources */,
 				E9B9A0F9251CBE530092ABC5 /* Stats.swift in Sources */,
 				E9E51E29252301B900F222AB /* AboutTableView.swift in Sources */,
@@ -980,6 +1317,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AA5084A4252BB50900945D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA50849D252BB50900945D59 /* RadarSTATSIntents */;
+			targetProxy = AA5084A3252BB50900945D59 /* PBXContainerItemProxy */;
+		};
+		AA5084D7252BB64F00945D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA5084C7252BB64E00945D59 /* RadarSTATSWidgetExtension */;
+			targetProxy = AA5084D6252BB64F00945D59 /* PBXContainerItemProxy */;
+		};
+		AA5084F9252BB68F00945D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA50849D252BB50900945D59 /* RadarSTATSIntents */;
+			targetProxy = AA5084F8252BB68F00945D59 /* PBXContainerItemProxy */;
+		};
+		AA508509252BB70A00945D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA508502252BB70A00945D59 /* RadarSTATSIntentsExtension */;
+			targetProxy = AA508508252BB70A00945D59 /* PBXContainerItemProxy */;
+		};
+		AA508529252BB74000945D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA50849D252BB50900945D59 /* RadarSTATSIntents */;
+			targetProxy = AA508528252BB74000945D59 /* PBXContainerItemProxy */;
+		};
 		E9F9A1D82524535000448D15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9CBA6E9251B88BA00A7A2EC /* Radar STATS */;
@@ -988,6 +1350,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AAA3034C252BCC5900B969A0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAA3034B252BCC5900B969A0 /* en */,
+				AAA30351252BCC6C00B969A0 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AAA3035A252BCD4100B969A0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAA3035B252BCD4100B969A0 /* en */,
+				AAA3035C252BCD4100B969A0 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AAA3036B252BD10100B969A0 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAA3036A252BD10100B969A0 /* en */,
+				AAA30395252BD24000B969A0 /* es */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
 		E9CBA6F3251B88BA00A7A2EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1007,10 +1396,176 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA5084A8252BB50900945D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RadarSTATSIntents/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATSIntents;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA5084A9252BB50900945D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = RadarSTATSIntents/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATSIntents;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA5084DB252BB64F00945D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RadarSTATSWidgetExtension/RadarSTATSWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = RadarSTATSWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATS.RadarSTATSWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA5084DC252BB64F00945D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RadarSTATSWidgetExtension/RadarSTATSWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = RadarSTATSWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATS.RadarSTATSWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA50850D252BB70A00945D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RadarSTATSIntentsExtension/RadarSTATSIntentsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = RadarSTATSIntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATS.RadarSTATSIntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA50850E252BB70A00945D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RadarSTATSIntentsExtension/RadarSTATSIntentsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = T7MC635YG5;
+				INFOPLIST_FILE = RadarSTATSIntentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeramos.RadarSTATS.RadarSTATSIntentsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E9CBA6FC251B88BD00A7A2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1072,6 +1627,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1126,6 +1682,7 @@
 		E9CBA6FF251B88BD00A7A2EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RadarSTATS/Infrastructure/Supporting files/RadarSTATS.entitlements";
@@ -1150,6 +1707,7 @@
 		E9CBA700251B88BD00A7A2EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "RadarSTATS/Infrastructure/Supporting files/RadarSTATS.entitlements";
@@ -1214,6 +1772,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA5084A7252BB50900945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5084A8252BB50900945D59 /* Debug */,
+				AA5084A9252BB50900945D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5084DA252BB64F00945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5084DB252BB64F00945D59 /* Debug */,
+				AA5084DC252BB64F00945D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA50850C252BB70A00945D59 /* Build configuration list for PBXNativeTarget "RadarSTATSIntentsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA50850D252BB70A00945D59 /* Debug */,
+				AA50850E252BB70A00945D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9CBA6E5251B88BA00A7A2EC /* Build configuration list for PBXProject "RadarSTATS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1244,6 +1829,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA508496252BB4E900945D59 /* XCRemoteSwiftPackageReference "Radar-STATS-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Radar-STATS/Radar-STATS-Swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E914C3A9251CD9B3004A578C /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts";
@@ -1271,6 +1864,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA5084C0252BB5B800945D59 /* RadarSTATSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA508496252BB4E900945D59 /* XCRemoteSwiftPackageReference "Radar-STATS-Swift" */;
+			productName = RadarSTATSKit;
+		};
 		E914C3AA251CD9B3004A578C /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E914C3A9251CD9B3004A578C /* XCRemoteSwiftPackageReference "Charts" */;
