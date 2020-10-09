@@ -24,43 +24,43 @@
         {
             "id": 1,
             "es": {
-                "title": "Casos positivos (Estimados)",
-                "description": "Nuevos casos positivos confirmados en España, estimados con una media móvil de 7 días."
-            }
-        },
-        {
-            "id": 2,
-            "es": {
                 "title": "Comunicaciones positivas (Estimadas)",
                 "description": "Estimación del número de diagnósticos positivos comunicados a través de la aplicación de rastreo de contactos de España.\n\nLa estimación se infiere de la cantidad de TEKs cargados cada día que se generaron en el dispositivo el día anterior: por lo general, cada dispositivo que comparte un diagnóstico positivo debe cargar al menos el TEK generado en el dispositivo el día anterior.\nEsta estimación representa el número máximo de diagnósticos positivos que se compartieron a través de la aplicación, el número real puede ser menor."
             }
         },
         {
-            "id": 3,
+            "id": 2,
             "es": {
                 "title": "TEKs compartidos por fecha de generación",
                 "description": "TEKs cargados en el servidor de la aplicación de rastreo de contactos de España, en la fecha en que se generaron en el dispositivo."
             }
         },
         {
-            "id": 4,
+            "id": 3,
             "es": {
                 "title": "TEKs compartidos por fecha de carga",
                 "description": "TEKs cargados en el servidor de la aplicación de rastreo de contactos de España, en la fecha en que se cargaron utilizando el código único enviado por las autoridades sanitarias."
             }
         },
         {
-            "id": 5,
+            "id": 4,
             "es": {
                 "title": "TEKs compartidos por comunicación positiva",
                 "description": "Estimación del número medio de TEKs cargados con cada comunicación positiva.\nIdealmente, este número debería ser de alrededor de 14 TEKs cargados por comunicación positiva."
             }
         },
         {
-            "id": 6,
+            "id": 5,
             "es": {
                 "title": "TEKs compartidos en la fecha de generación",
                 "description": "TEKs cargados al servidor de la aplicación de rastreo de contactos de España, en la misma fecha en que se generaron en el dispositivo.\nEsta métrica mide el número de diagnósticos compartidos por dispositivos que ya son compatibles con la nueva versión de la API de notificación de exposición con la versión temprana de TEK (es decir, la fecha actual de lanzamiento de TEK junto con las TEK de días anteriores)."
+            }
+        },
+        {
+            "id": 6,
+            "es": {
+                "title": "Casos positivos (Estimados)",
+                "description": "Nuevos casos positivos confirmados en España, estimados con una media móvil de 7 días."
             }
         },
     ]
