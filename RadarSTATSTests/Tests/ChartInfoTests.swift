@@ -73,16 +73,7 @@ class ChartInfoTests: XCTestCase {
             XCTAssert(description.contains("Glosario"), "Glossary not found on .uploadedTEKsPerSharedDiagnosis chart description")
         }
     }
-
-    func test_glossaryIsNotPresentOnCasesChartDescription() throws {
-        measure {
-            presenter = (ChartInfoBuilder.build(chartType: .sharedDiagnoses).presenter as! ChartInfoPresenterTestable)
-            let description = presenter.descriptionGenerator()
-
-            XCTAssert(!description.contains("Glosario"), "Glossary found on .cases chart description")
-        }
-    }
-
+    
     func test_glossaryIsNotPresentOnUsageRatioDescription() throws {
         measure {
             presenter = (ChartInfoBuilder.build(chartType: .usageRatio).presenter as! ChartInfoPresenterTestable)
