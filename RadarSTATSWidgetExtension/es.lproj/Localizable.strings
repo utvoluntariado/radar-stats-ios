@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  RadarSTATS
+
+  Created by Pedro José Pereira Vieito on 5/10/20.
+*/
+
+"SHARED_DIAGNOSES" = "Comunicaciones positivas";
+"USAGE_RATIO" = "Ratio de uso";
+"UPLOADED_TEKS" = "TEKs compartidos";
+
+"METRICS_SUMMARY_WIDGET_NAME" = "Resumen de métricas";
+"METRICS_SUMMARY_WIDGET_DESCRIPTION" = "Muestra métricas de uso de la aplicación de rastreo de contactos de España.";

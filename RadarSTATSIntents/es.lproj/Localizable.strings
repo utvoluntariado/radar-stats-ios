@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  RadarSTATS
+
+  Created by Pedro José Pereira Vieito on 5/10/20.
+*/
+
+"INTENTS_METRICS_PERIOD_LAST_7_DAYS" = "Semana";
+"INTENTS_METRICS_PERIOD_TODAY" = "Hoy";
+
+"INTENTS_METRICS_SUMMARY_DISPLAY_NAME" = "Métricas";
+"INTENTS_UNKNOWN_DISPLAY_STRING" = "";
