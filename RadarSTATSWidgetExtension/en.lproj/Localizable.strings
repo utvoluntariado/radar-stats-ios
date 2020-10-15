@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  RadarSTATS
+
+  Created by Pedro José Pereira Vieito on 5/10/20.
+*/
+
+"SHARED_DIAGNOSES" = "Positive Communications";
+"USAGE_RATIO" = "Usage Ratio";
+"UPLOADED_TEKS" = "Uploaded TEKs";
+
+"METRICS_SUMMARY_WIDGET_NAME" = "Metrics Summary";
+"METRICS_SUMMARY_WIDGET_DESCRIPTION" = "Shows Spain's contact tracing app metrics summary.";
