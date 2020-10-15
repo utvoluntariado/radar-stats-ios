@@ -39,7 +39,7 @@ final class ChartsTableView: UITableView {
 
 extension ChartsTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modelset != nil ? 5 : 0
+        return modelset != nil ? 6 : 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
