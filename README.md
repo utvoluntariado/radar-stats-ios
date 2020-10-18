@@ -2,7 +2,7 @@
 >
 > Dado que estamos teniendo problemas para obtener la validación por parte de Apple de la aplicación, al contener información sensible acerca de la pandemia de COVID-19, dejamos este enlace público en TestFlight, desde el cual puedes descargarla en modo beta.
 >
-> [Haga clic aquí para descargar Radar STATS de TestFlight](https://testflight.apple.com/join/QelyuSYZ)
+> [Haz clic aquí para descargar Radar STATS desde TestFlight](https://testflight.apple.com/join/QelyuSYZ)
 
 # Tabla de contenido
 - [Acerca de este proyecto](#acerca-de-este-proyecto)
