@@ -43,6 +43,7 @@ final class SummaryStackView: UIStackView {
     }
 
     func layout(mode: SummaryMode) {
+        guard self.stats != nil else { return }
         switch mode {
         case .today:
             updateTodayStats()

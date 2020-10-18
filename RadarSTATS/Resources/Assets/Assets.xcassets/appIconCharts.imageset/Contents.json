@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "50@1x.png",
+      "filename" : "RadarStats50@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "50@2x.png",
+      "filename" : "RadarStats50@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "50@3x.png",
+      "filename" : "RadarStats50@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
